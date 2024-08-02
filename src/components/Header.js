@@ -23,7 +23,7 @@ const Header = () => {
         <img src={LOGO6} alt="Logo" className="logo" />
         <div className="brand-text">
           <span className="brand-title">Hire</span>Check
-          <p className="subtitle">Get your dream job1</p>
+          <p className="subtitle">Get your dream job</p>
         </div>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
