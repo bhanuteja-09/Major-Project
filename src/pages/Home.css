@@ -1,23 +1,147 @@
-/* src/pages/Home.css */
-.home-container {
-    padding: 0;
+/* General styling for sections */
+.home-section-one, .home-section-two, .home-section-three, .home-section-four, .home-section-five {
+  width: 98%;
+  margin: 0 auto;
+  padding: 60px 0;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensures full viewport height */
+}
+
+/* Section One */
+.home-section-one {
+  background-image: url('F:\Scifor Technologies internship Materials\Major-Project\hirecheck\src\assets\homebackgroundimage4.png'); 
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  display: flex;
+  align-items: center;
+}
+
+.home-section-one .welcome-message {
+  text-align: left;
+  color: #ffffff; /* Ensure text is visible over background */
+  z-index: 1; /* Ensure text is on top of the background image */
+}
+
+/* Section Two */
+.home-section-two {
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0; /* Placeholder for background image */
+}
+
+.btn-post-job {
+  margin-top: 20px;
+}
+
+/* Section Three */
+.home-section-three {
+  background-color: #d0d0d0; /* Placeholder for background image */
+  color: #ffffff;
+  text-align: center;
+}
+
+.btn-upload-cv {
+  margin-top: 20px;
+}
+
+/* Section Four */
+.home-section-four {
+  background-color: #c0c0c0;
+}
+
+.process-box {
+  text-align: center;
+  padding: 20px;
+}
+
+.process-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Section Five */
+.home-section-five {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.director-photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0; /* Placeholder for the photo */
+}
+
+.director-name {
+  font-weight: bold;
+}
+
+.director-title {
+  font-style: italic;
+}
+
+/* Footer */
+.home-footer {
+  width: 98%;
+  margin: 0 auto;
+  background-color: #333;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.home-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.home-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-footer ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  /* Adjustments for tablets */
+  .home-section-two, .home-section-four, .home-section-five {
+    text-align: center;
   }
-  
-  .home-jumbotron {
-    background-color: #9ccffc; /* Light Alice Blue background color */
-    padding: 4rem 2rem; /* Adjust padding as needed */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .btn-post-job, .btn-upload-cv {
+    margin-top: 10px;
   }
-  
-  .home-jumbotron h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333; /* Dark text color */
+
+  .process-box {
+    margin-bottom: 20px;
   }
-  
-  .home-jumbotron p {
-    font-size: 1.25rem;
-    color: #666; /* Medium dark text color */
+
+  .home-footer {
+    padding: 20px 0;
   }
-  
+}
+
+@media (max-width: 576px) {
+  .home-section-one, .home-section-two, .home-section-three, .home-section-four, .home-section-five {
+    padding: 30px 0;
+  }
+
+  .home-section-two, .home-section-four, .home-section-five {
+    text-align: center;
+  }
+
+  .btn-post-job, .btn-upload-cv {
+    margin-top: 10px;
+  }
+
+  .process-box {
+    margin-bottom: 20px;
+  }
+
+  .home-footer {
+    padding: 15px 0;
+  }
+}

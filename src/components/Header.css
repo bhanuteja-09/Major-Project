@@ -1,6 +1,9 @@
 /* Header styling */
 .header-navbar {
-    background-color: #f08ff2; /* Background color */
+    /* background-color: #c9bbc9; */
+    background-color: #bfaea9; /*fixed
+    /* background-color: #f08ff2;  */
+    /* Background color */
     z-index: 1000; /* Ensure header is on top */
     width: 98%; /* Set the width to 98% of the viewport */
     margin: 0 auto; /* Center the header */
