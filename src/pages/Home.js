@@ -1,5 +1,8 @@
 import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
 import './Home.css';
+import profileImage from '../assets/profile1.png'; // Make sure this path is correct
+import { Animate } from 'react-simple-animate';
 
 const Home = () => {
   return (
@@ -9,12 +12,19 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 welcome-message">
-              <h1>Welcome to HireCheck</h1>
+              <Typewriter
+                words={['Welcome to HireCheck']}
+                loop
+                cursor
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={1500}
+              />
               <p>Your one-stop solution for job postings and applications.</p>
             </div>
-            <div className="col-md-6">
-              {/* <div className="image-placeholder">Image Placeholder</div> */}
-            </div>
+            {/* <div className="col-md-6 profile-photo">
+              <img src={profileImage} alt="Profile" />
+            </div> */}
           </div>
         </div>
       </section>
@@ -22,15 +32,48 @@ const Home = () => {
       {/* Section Two */}
       <section className="home-section-two">
         <div className="container">
-          <div className="row">
-            <div className="col-md-6">
+          <div className="text-content">
+            <Animate
+              play
+              duration={1.5}
+              delay={0}
+              start={{
+                transform: 'translateX(-500px)', 
+              }}
+              end={{
+                 transform: 'translateY(0)',
+                 }}  
+            >
               <h2>What We Are Doing</h2>
-              <p>We help you find the perfect job or post your job openings efficiently.</p>
+              <h3>24k Talented People are Getting Jobs</h3>
+              </Animate>
+              <Animate
+              play
+              duration={1.5}
+              delay={0}
+              start={{
+                transform: 'translateX(500px)', 
+              }}
+              end={{
+                 transform: 'translateY(0)',
+                 }}  
+            >
+              <p>
+                We help you find the perfect job or post your job openings efficiently.
+                Our platform is designed to be user-friendly, offering easy navigation and powerful search features.
+                Employers can reach a wide audience and job seekers can explore various opportunities that match their skills and interests.
+              </p>
               <button className="btn-post-job">Post a Job</button>
-            </div>
-            <div className="col-md-6">
-              <div className="image-placeholder">Image Placeholder</div>
-            </div>
+            </Animate>
+          </div>
+          <div className="profile-photo">
+            <img src={profileImage} alt="Profile" style={{
+    width: '90%',
+    height: '90%',
+    position: 'relative',
+    left: '650px',
+    bottom: '450px',
+  }}/>
           </div>
         </div>
       </section>
@@ -73,7 +116,9 @@ const Home = () => {
       <section className="home-section-five">
         <div className="container">
           <div className="director-info">
-            <div className="director-photo">Director Photo</div>
+            <div className="director-photo">
+              <img src={profileImage} alt="Director" />
+            </div>
             <h4 className="director-name">John Doe</h4>
             <p className="director-title">Creative Director</p>
             <p>John Doe is a seasoned professional with years of experience in the industry.</p>

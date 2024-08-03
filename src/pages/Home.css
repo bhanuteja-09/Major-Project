@@ -9,7 +9,7 @@
 
 /* Section One */
 .home-section-one {
-  background-image: url('F:\Scifor Technologies internship Materials\Major-Project\hirecheck\src\assets\homebackgroundimage4.png'); 
+  background-image: url('../assets/homebackgroundimage4.png'); /* Update with your image path */
   background-size: cover; /* Cover the entire section */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating the image */
@@ -21,17 +21,65 @@
   text-align: left;
   color: #ffffff; /* Ensure text is visible over background */
   z-index: 1; /* Ensure text is on top of the background image */
+  font-size: 3rem; /* Default font size */
+}
+
+.home-section-one .welcome-message p {
+  font-size: 1.2rem; /* Font size for additional text */
 }
 
 /* Section Two */
 .home-section-two {
   display: flex;
-  align-items: center;
-  background-color: #e0e0e0; /* Placeholder for background image */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  background-color: #9a8888;
+  padding: 0;
+  min-height: 100vh; /* Ensure section takes up full viewport height */
 }
 
-.btn-post-job {
-  margin-top: 20px;
+.text-content, .profile-photo {
+  width: 50%;
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+.text-content {
+  position: relative;
+  top:100px;
+  left:-30px;
+  margin: 10px 10px;
+  text-align: left;
+}
+
+.profile-photo {
+  text-align: center;
+}
+
+.home-section-two .text-content h2 {
+  font-size: 2.5rem; /* Title font size */
+  margin-bottom: 10px;
+}
+
+.home-section-two .text-content h3 {
+  color: #1500ff;
+  font-size: 1.5rem; /* Subtitle font size */
+  margin-bottom: 20px;
+}
+
+.home-section-two .text-content p {
+  font-size: 1rem; /* Information text size */
+  margin-bottom: 20px;
+}
+
+.home-section-two .btn-post-job {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.home-section-two .profile-photo img {
+  max-width: 100%; /* Ensure the image fits within the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Section Three */
@@ -105,10 +153,29 @@
 }
 
 /* Responsive Styles */
+@media (max-width: 1100px) {
+  .home-section-one .welcome-message {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+  .home-section-two {
+    min-width: 100vh;
+  }
+}
+
 @media (max-width: 992px) {
   /* Adjustments for tablets */
-  .home-section-two, .home-section-four, .home-section-five {
-    text-align: center;
+  .home-section-two {
+    flex-direction: row; /* Maintain row direction */
+  }
+
+  .home-section-two .text-content {
+    width: 50%; /* Ensure text-content takes up half the width */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .home-section-two .profile-photo {
+    width: 50%; /* Ensure profile-photo takes up half the width */
+    margin-top: 0; /* Remove top margin */
   }
 
   .btn-post-job, .btn-upload-cv {
@@ -125,20 +192,24 @@
 }
 
 @media (max-width: 576px) {
-  .home-section-one, .home-section-two, .home-section-three, .home-section-four, .home-section-five {
+  .home-section-one .welcome-message {
+    font-size: 2rem; /* Further reduce font size for mobile screens */
+  }
+
+  .home-section-two {
+    flex-direction: column; /* Stack content and image vertically on mobile */
     padding: 30px 0;
+    text-align: center; /* Center text on mobile */
   }
 
-  .home-section-two, .home-section-four, .home-section-five {
-    text-align: center;
+  .home-section-two .text-content {
+    width: 100%; /* Full width on smaller screens */
+    padding: 20px;
   }
 
-  .btn-post-job, .btn-upload-cv {
-    margin-top: 10px;
-  }
-
-  .process-box {
-    margin-bottom: 20px;
+  .home-section-two .profile-photo {
+    width: 100%; /* Full width on smaller screens */
+    margin-top: 10px; /* Add space between text and image */
   }
 
   .home-footer {
