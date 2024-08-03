@@ -10,7 +10,7 @@ const Home = () => {
         <Row>
           <Col md={6} className="text-md-left">
             <h1>Welcome to HireCheck!</h1>
-            <p>Your gateway to finding the perfect job123.</p>
+            <p>Your gateway to finding the perfect job123 and added.</p>
           </Col>
           <Col md={6} className="text-md-right">
             <Image src={profileImage} roundedCircle />
