@@ -14,9 +14,11 @@
 }
 
 .header-navbar .brand .logo {
+    position: relative;
+    left: 10px;
     border-radius: 50%; /* Make the logo circular */
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Ensure height matches width for circular shape */
+    width: 95px; /* Adjust size as needed */
+    height: 90px; /* Ensure height matches width for circular shape */
     margin-right: 15px; /* Space between logo and text */
 }
 
@@ -26,6 +28,7 @@
 }
 
 .header-navbar .brand .brand-title {
+    font-weight: bold;
     font-size: 1.5rem; /* Adjust size as needed */
     color: #ffffff; /* Text color */
 }
@@ -35,6 +38,34 @@
     color: #ffffff; /* Text color */
     margin-top: 5px; /* Space between brand title and subtitle */
 }
+
+.header-navbar .navbar-nav .nav-link {
+    color: #ffffff; /* White text color */
+    font-weight: bold; /* Make text bold */
+    margin: 0 15px; /* Space between navigation links */
+}
+
+.nav-link {
+    position:relative;
+    /* right: 200px; */
+    font-size: 18px;
+}
+
+.nav-link::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #1500ff;
+    position: absolute;
+    left:10px;
+    bottom: 6px;
+    transition: 0.5s;
+    
+}
+.nav-link:hover::after{
+    width:80%;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 992px) {
@@ -51,11 +82,36 @@
     }
 
     .header-navbar .navbar-nav .nav-link {
+        font-weight: bold;
         margin: 0 25px; /* Space between navigation links */
     }
 
     .header-navbar .header-buttons {
         display: none; /* Hide buttons on smaller screens */
+    }
+    .nav-link {
+        position:relative;
+        /* right: 200px; */
+        font-size: 18px;
+    }
+    
+    .nav-link::after{
+        content:'';
+        width: 0;
+        height: 3px;
+        background: #1500ff;
+        position: absolute;
+        left:0px;
+        bottom: 6px;
+        transition: 0.5s;
+        
+    }
+    .nav-link:hover::after{
+        width:100%;
+    }
+    .header-navbar .navbar-toggler {
+        position: relative;
+        right: 30px;
     }
 }
 
@@ -66,12 +122,58 @@
 
     .header-navbar .navbar-nav {
         font-size: 0.9rem; /* Adjust font size for smaller screens */
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align items */
     }
 
     .header-navbar .navbar-nav .nav-link {
-        margin: 0px 0; /* Space between navigation links */
+        font-weight: bold;
+        margin: 10px 0; /* Space between navigation links */
+    }
+
+    .header-navbar .header-buttons {
+        display: flex; /* Show buttons */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+        margin-top: 10px; /* Space above buttons */
+    }
+
+    .header-navbar .header-buttons .nav-btn {
+        
+        margin: 10px 0; /* Space between buttons */
+        position: static; /* Remove any absolute positioning */
+    }
+    .nav-link {
+        position:relative;
+        /* right: 200px; */
+        font-size: 18px;
+    }
+    
+    .nav-link::after{
+        content:'';
+        width: 0;
+        height: 3px;
+        background: #1500ff;
+        position: absolute;
+        left:0px;
+        bottom: 6px;
+        transition: 0.5s;
+        
+    }
+    .nav-link:hover::after{
+        width:100%;
+    }
+    .header-navbar .navbar-toggler {
+        position: relative;
+        right: 30px;
+        /* border: none; */
+         /* Remove default border */
+        /* background: transparent;  */
+        /* Make background transparent */
+        /* outline: none;  */
+        /* Remove focus outline */
+        /* padding: 0;  */
+        /* Remove default padding */
     }
 }
 
@@ -80,7 +182,7 @@
     color: #ffffff !important; /* Force text color */
     background-color: #7754d7 !important; /* Custom background color */
     border: 1px solid #f4f6f4 !important; /* Border color */
-    margin: 0 5px; /* Spacing between buttons */
+    margin: 5px; /* Spacing between buttons */
     padding: 10px 20px; /* Consistent padding */
     border-radius: 5px; /* Rounded corners */
     font-size: 1rem; /* Consistent font size */
@@ -88,6 +190,7 @@
     text-align: center; /* Center text */
     display: inline-block; /* Ensure buttons are displayed correctly */
     box-shadow: none; /* Remove default button shadow if any */
+    font-weight: bold;
 }
 
 .header-navbar .nav-btn:hover {
