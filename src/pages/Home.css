@@ -258,7 +258,7 @@
 }
 
 /* Adjust for mobile devices */
-@media(max-width: 400px) {
+@media (min-width:400px) and (max-width: 450px) {
   /* Section One */
   .home-section-one .welcome-message {
     font-size: 2rem; /* Further reduce font size for mobile screens */
@@ -329,7 +329,7 @@
 /* Small box styling */
 .since-box {
   position: absolute;
-  bottom: 410px; /* Adjust as needed */
+  bottom: 395px; /* Adjust as needed */
   left: 55px; /* Adjust as needed */
   width: 60px; /* Adjust width */
   height: 60px; /* Adjust height */
