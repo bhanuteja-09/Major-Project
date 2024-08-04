@@ -258,7 +258,7 @@
 }
 
 /* Adjust for mobile devices */
-@media(max-width: 576px) {
+@media(max-width: 450px) {
   /* Section One */
   .home-section-one .welcome-message {
     font-size: 2rem; /* Further reduce font size for mobile screens */
