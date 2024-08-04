@@ -1,8 +1,24 @@
 /* src/App.css */
+
+/* Body padding to account for the fixed navbar */
 body {
-  padding-top: 56px; /* To account for the fixed navbar */
+  margin: 0;
 }
 
+/* Ensure the header is positioned correctly and content does not overlap */
+.header-navbar {
+  position: fixed;
+  top: 0;
+  width: 98%;
+  z-index: 1000; /* Keeps the header above other content */
+}
+
+/* Add padding to the top of the main content to avoid overlap with the header */
+.app-content {
+  padding-top: 56px; /* Adjust this based on the height of your header */
+}
+
+/* Additional CSS */
 .jumbotron {
   background-color: #f8f9fa;
 }

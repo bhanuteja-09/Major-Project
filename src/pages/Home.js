@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import './Home.css';
+
 import profileImage from '../assets/profile1.png'; // Ensure the path is correct
 import mobileProfileImage from '../assets/profile1 (2).png'; // Ensure the path is correct
 import {Animate} from 'react-simple-animate';
