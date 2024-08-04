@@ -259,6 +259,17 @@
 
 /* Adjust for mobile devices */
 @media (max-width: 420px) {
+  .home-section-one {
+  background-image: url('F:\Scifor Technologies internship Materials\Major-Project\hirecheck\src\assets\homebackgroundimage4 (1).png'); /* Update with your image path */
+  background-size: cover; /* Cover the entire section */
+  background-position: center center; /* Center the image both horizontally and vertically */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  height: 100vh; /* Full viewport height */
+  position: relative; /* Ensure that the z-index works properly */
+}
   /* Section One */
   .home-section-one .welcome-message {
     font-size: 2rem; /* Further reduce font size for mobile screens */
