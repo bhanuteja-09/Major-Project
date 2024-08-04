@@ -36,7 +36,7 @@ const Header = () => {
           <Button 
             as={Link} 
             to="/register" 
-            className="nav-btn" 
+            className="nav-btn1" 
             onClick={handleNavClick}
           >
             Register

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import './Home.css';
-import profileImage from '../assets/profile1.png'; // Make sure this path is correct
-import { Animate } from 'react-simple-animate';
+import profileImage from '../assets/profile1.png'; // Ensure the path is correct
+import {Animate} from 'react-simple-animate';
 
 const Home = () => {
   return (
@@ -32,7 +32,7 @@ const Home = () => {
       {/* Section Two */}
       <section className="home-section-two">
         <div className="container">
-          <div className="text-content">
+        <div className="text-content">
             <Animate
               play
               duration={1.5}
@@ -67,13 +67,8 @@ const Home = () => {
             </Animate>
           </div>
           <div className="profile-photo">
-            <img src={profileImage} alt="Profile" style={{
-    width: '90%',
-    height: '90%',
-    position: 'relative',
-    left: '650px',
-    bottom: '450px',
-  }}/>
+            <img src={profileImage} alt="Profile" />
+            <div class="since-box">Since 1995</div>
           </div>
         </div>
       </section>
