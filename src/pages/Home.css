@@ -258,7 +258,7 @@
 }
 
 /* Adjust for mobile devices */
-@media(max-width: 450px) {
+@media(max-width: 400px) {
   /* Section One */
   .home-section-one .welcome-message {
     font-size: 2rem; /* Further reduce font size for mobile screens */
@@ -284,6 +284,11 @@
   .home-section-two .text-content h2 {
     text-align: center;
     font-size: 1.6rem; /* Adjust font size for h2 */
+    margin-bottom: 15px; /* Adjust margin */
+  }
+  .home-section-two .text-content h3 {
+    text-align:justify;
+    font-size: 1.3rem; /* Adjust font size for h2 */
     margin-bottom: 15px; /* Adjust margin */
   }
   .home-section-two .profile-photo {
@@ -324,7 +329,7 @@
 /* Small box styling */
 .since-box {
   position: absolute;
-  bottom: 390px; /* Adjust as needed */
+  bottom: 410px; /* Adjust as needed */
   left: 55px; /* Adjust as needed */
   width: 60px; /* Adjust width */
   height: 60px; /* Adjust height */
