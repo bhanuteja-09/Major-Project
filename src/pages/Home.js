@@ -2,6 +2,7 @@ import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import './Home.css';
 import profileImage from '../assets/profile1.png'; // Ensure the path is correct
+import mobileProfileImage from '../assets/profile1 (2).png'; // Ensure the path is correct
 import {Animate} from 'react-simple-animate';
 
 const Home = () => {
@@ -70,6 +71,11 @@ const Home = () => {
             <img src={profileImage} alt="Profile" />
             <div class="since-box">Since 1995</div>
           </div>
+          
+          <div className="mobile-profile-photo">
+        <img src={mobileProfileImage} alt="Mobile Profile Photo" />
+        <div class="mobile-since-box">Since 1995</div>
+      </div>
         </div>
       </section>
 
