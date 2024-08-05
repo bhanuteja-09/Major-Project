@@ -1,5 +1,10 @@
 /* src/App.css */
 
+/* Ensure your content doesn’t get hidden behind the fixed header */
+main {
+  margin-top: 70px; /* Adjust based on the height of your Header */
+}
+
 /* Body padding to account for the fixed navbar */
 body {
   margin: 0;
