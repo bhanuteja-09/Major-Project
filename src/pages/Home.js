@@ -5,6 +5,9 @@ import './Home.css';
 import profileImage from '../assets/profile1.png'; // Ensure the path is correct
 import mobileProfileImage from '../assets/profile1 (2).png'; // Ensure the path is correct
 import {Animate} from 'react-simple-animate';
+import profileImage1 from '../assets/profile1.png';
+import profileImage2 from '../assets/profile1.png';
+import profileImage3 from '../assets/profile1.png';
 
 const Home = () => {
   return (
@@ -149,23 +152,63 @@ const Home = () => {
   </div>
 </section>
 
-
-
-
-      {/* Section Five */}
-      <section className="home-section-five">
-        <div className="container">
-          <div className="director-info">
-            <div className="director-photo">
-              <img src={profileImage} alt="Director" />
+{/* <!-- Section Five --> */}
+<section className="home-section-five">
+      <div id="directorCarousel" className="carousel slide">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="director-info">
+              <div className="director-photo">
+                <img src={profileImage1} alt="Director 1" />
+              </div>
+              <h4 className="director-name">John Doe</h4>
+              <p className="director-title">Creative Director</p>
+              <p className="director-description">John Doe is a seasoned professional with over 20 years of experience in the industry. He specializes in creative direction and has led numerous successful projects across various sectors. His innovative approach and strategic vision make him a key asset to our team.</p>
+              {/* <button className="btn-view-director">View Other Directors</button> */}
             </div>
-            <h4 className="director-name">John Doe</h4>
-            <p className="director-title">Creative Director</p>
-            <p>John Doe is a seasoned professional with years of experience in the industry.</p>
-            <button className="btn-view-director">View Other Directors</button>
+          </div>
+          <div className="carousel-item">
+            <div className="director-info">
+              <div className="director-photo">
+                <img src={profileImage2} alt="Director 2" />
+              </div>
+              <h4 className="director-name">Jane Smith</h4>
+              <p className="director-title">Marketing Director</p>
+              <p className="director-description">Jane Smith brings a wealth of expertise in marketing and brand management. With a proven track record of elevating brand profiles and executing high-impact campaigns, she is instrumental in shaping our marketing strategies and driving growth.</p>
+              {/* <button className="btn-view-director">View Other Directors</button> */}
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="director-info">
+              <div className="director-photo">
+                <img src={profileImage3} alt="Director 3" />
+              </div>
+              <h4 className="director-name">Alice Johnson</h4>
+              <p className="director-title">Technical Director</p>
+              <p className="director-description">Michael Johnson is an expert in technology and innovation, with a strong background in software development and IT infrastructure. His leadership in technical projects ensures our technology strategies are cutting-edge and effective.</p>
+              {/* <button className="btn-view-director">View Other Directors</button> */}
+            </div>
           </div>
         </div>
-      </section>
+        <a className="carousel-control-prev" href="#directorCarousel" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#directorCarousel" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
+        </a>
+        <ol className="carousel-indicators">
+          <li data-target="#directorCarousel" data-slide-to="0" className="active"></li>
+          <li data-target="#directorCarousel" data-slide-to="1"></li>
+          <li data-target="#directorCarousel" data-slide-to="2"></li>
+        </ol>
+      </div>
+    </section>
+
+
+
+
 
       {/* Footer */}
       <footer className="home-footer">
