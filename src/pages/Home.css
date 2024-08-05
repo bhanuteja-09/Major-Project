@@ -198,18 +198,138 @@
 
 /* Section Four */
 .home-section-four {
-  background-color: #c0c0c0;
+  background-color: #8d7d7d; /* Gray background for the section */
+  padding: 60px 0; /* Padding for spacing */
+  display: flex; /* Use flexbox for vertical centering */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
 }
 
+.home-section-four .container {
+  display: flex;
+  flex-direction: column; /* Stack headings and boxes vertically initially */
+  align-items: center; /* Center align the content */
+  text-align: center; /* Center align the text */
+}
+
+/* Headings Styling */
+.headings {
+  margin-bottom: 40px; /* Space below headings */
+}
+
+.headings h5 {
+  color: #191a1c; /* Color for h5 */
+  font-size: 1.3rem; /* Font size for h5 */
+  margin-bottom: 10px; /* Space below h5 */
+}
+
+.headings h3 {
+  color: #f3f4f7; /* Color for h2 */
+  font-size: 2.5rem; /* Font size for h2 */
+}
+
+/* Boxes Container */
+.boxes {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for responsive design */
+  justify-content: center; /* Center align the boxes */
+  gap: 20px; /* Space between boxes */
+  max-width: 1000px; /* Limit width of boxes container */
+}
+
+/* Process Box Styling */
 .process-box {
   text-align: center;
   padding: 20px;
+  background-color: #0033cc; /* Blue background for the boxes */
+  color: #ffffff; /* White text color */
+  border-radius: 8px; /* Rounded corners for the boxes */
+  flex: 1 1 calc(33.333% - 20px); /* 3 boxes per row with space for margins */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Center child elements horizontally */
+  justify-content: center; /* Center child elements vertically */
+  aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio (square) */
+  max-width: 300px; /* Limit the maximum width of each box */
 }
 
-.process-icon {
-  width: 50px;
-  height: 50px;
+/* Icon Container */
+.icon-container {
+  perspective: 1000px; /* Allows for 3D space */
+  width: 60px; /* Size of the icon container */
+  height: 60px; /* Size of the icon container */
 }
+
+/* Icon Flip Effect */
+.icon-flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /* Ensure 3D effect is preserved */
+  transition: transform 0.6s; /* Duration of the flip effect */
+}
+
+/* Icon Front and Back */
+.icon-flip .icon-front, 
+.icon-flip .icon-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back face when flipped */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem; /* Adjust font size as needed */
+}
+
+/* Back face of the icon */
+.icon-flip .icon-back {
+  transform: rotateY(180deg); /* Flip the back face */
+}
+
+/* Flip Effect on Hover */
+.process-box:hover .icon-flip {
+  transform: rotateY(180deg); /* Rotate icon on hover */
+}
+
+/* For tablets and smaller desktops */
+@media (max-width: 992px) {
+  .process-box {
+    flex: 1 1 calc(33.333% - 20px); /* 2 boxes per row with space for margins */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 420px) {
+  .home-section-four .container {
+    flex-direction: column; /* Stack headings and boxes vertically on mobile screens */
+    align-items: center; /* Center align the content */
+  }
+
+  .boxes {
+    flex-direction: column; /* Stack boxes vertically on mobile screens */
+    align-items: center; /* Center align the boxes */
+  }
+
+  .process-box {
+    flex: 1 1 100%; /* Full width for each box */
+    margin: 10px 0; /* Vertical margin only */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Section Five */
 .home-section-five {

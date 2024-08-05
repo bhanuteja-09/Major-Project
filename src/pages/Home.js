@@ -91,28 +91,66 @@ const Home = () => {
 
       {/* Section Four */}
       <section className="home-section-four">
-        <div className="container">
-          <h2>Apply Process</h2>
-          <h3>How It Works</h3>
-          <div className="row">
-            <div className="col-md-4 process-box">
-              <div className="process-icon">Icon</div>
-              <h4>Search a Job</h4>
-              <p>Find job opportunities that match your skills and interests.</p>
+  <div className="container">
+    <div className="headings">
+      <h5>Apply Process</h5>
+      <h3>How it works</h3>
+    </div>
+    <div className="boxes">
+      <div className="process-box">
+        <div className="icon-container">
+          <div className="icon-flip">
+            <div className="icon-front">
+              <i class="fas fa-search"></i> 
+              {/* <!-- Front icon --> */}
             </div>
-            <div className="col-md-4 process-box">
-              <div className="process-icon">Icon</div>
-              <h4>Apply for a Job</h4>
-              <p>Submit your application to potential employers.</p>
-            </div>
-            <div className="col-md-4 process-box">
-              <div className="process-icon">Icon</div>
-              <h4>Get Your Job</h4>
-              <p>Secure the job and start your new career path.</p>
+            <div className="icon-back">
+              <i class="fas fa-search"></i> 
+              {/* <!-- Back icon (can be the same or different) --> */}
             </div>
           </div>
         </div>
-      </section>
+        <h4>Search a Job</h4>
+        <p>Find job opportunities that match your skills.</p>
+      </div>
+      <div className="process-box">
+        <div className="icon-container">
+          <div className="icon-flip">
+            <div className="icon-front">
+              <i class="fas fa-briefcase"></i> 
+              {/* <!-- Front icon --> */}
+            </div>
+            <div className="icon-back">
+              <i class="fas fa-briefcase"></i> 
+              {/* <!-- Back icon (can be the same or different) --> */}
+            </div>
+          </div>
+        </div>
+        <h4>Apply for a Job</h4>
+        <p>Submit your application to potential employers.</p>
+      </div>
+      <div className="process-box">
+        <div className="icon-container">
+          <div className="icon-flip">
+            <div className="icon-front">
+              <i class="fas fa-check"></i> 
+              {/* <!-- Front icon --> */}
+            </div>
+            <div className="icon-back">
+              <i class="fas fa-check"></i> 
+              {/* <!-- Back icon (can be the same or different) --> */}
+            </div>
+          </div>
+        </div>
+        <h4>Get Your Job</h4>
+        <p>Secure the job and start your new career path.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* Section Five */}
       <section className="home-section-five">
