@@ -13,6 +13,7 @@ import profileImage2 from '../assets/profile1.png';
 import profileImage3 from '../assets/profile1.png';
 
 const Home = () => {
+  // For header
   const [expanded, setExpanded] = useState(false);
   const location = useLocation(); // Get the current location
 
