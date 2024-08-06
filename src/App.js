@@ -15,7 +15,7 @@ import './App.css'; // Import global CSS
 
 const App = () => {
   return (
-    <Router basename="/Major-Project">
+    <Router basename="/">
       <Header />
       {/* <DebugLocation /> */}
       <Routes>
