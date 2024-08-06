@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import FindAJob from './pages/FindAJob';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import FindAJob from './components/FindAJob';
+import About from './components/About';
+import Contact from './components/Contact';
 import Header from './components/Header';
 
 // import Login from './components/Login';
