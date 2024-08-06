@@ -1,79 +1,71 @@
-/* Header styling */
-.header-navbar {
-    /* background-color: #c9bbc9; */
-    background-color: #bfaea9; /*fixed
-    /* background-color: #f08ff2;  */
-    /* Background color */
-    z-index: 1000; /* Ensure header is on top */
-    width: 98%; /* Set the width to 98% of the viewport */
-    margin: 0 auto; /* Center the header */
-    padding: 0 15px; /* Add padding to the left and right */
+/* .header-navbar {
+    background-color: #bfaea9;
+    z-index: 1000;
+    width: 98%;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* Ensure the brand section adjusts with the header width */
 .header-navbar .brand {
     display: flex;
-    align-items: center; /* Center align items vertically */
+    align-items: center;
 }
 
 .header-navbar .brand .logo {
     position: relative;
     left: 10px;
-    border-radius: 50%; /* Make the logo circular */
-    width: 95px; /* Adjust size as needed */
-    height: 90px; /* Ensure height matches width for circular shape */
-    margin-right: 15px; /* Space between logo and text */
+    border-radius: 50%;
+    width: 95px;
+    height: 90px;
+    margin-right: 15px;
 }
 
 .header-navbar .brand .brand-text {
     position: relative;
-    top: 10px; /* Adjust vertical alignment */
+    top: 10px;
 }
 
 .header-navbar .brand .brand-title {
     font-weight: bold;
-    font-size: 1.5rem; /* Adjust size as needed */
-    color: #ffffff; /* Text color */
+    font-size: 1.5rem;
+    color: #ffffff;
 }
 
 .header-navbar .brand .subtitle {
-    font-size: 0.8rem; /* Smaller text size for the subtitle */
-    color: #ffffff; /* Text color */
-    margin-top: 5px; /* Space between brand title and subtitle */
+    font-size: 0.8rem;
+    color: #ffffff;
+    margin-top: 5px;
 }
 
 .header-navbar .navbar-nav .nav-link {
-    color: #ffffff; /* White text color */
-    font-weight: bold; /* Make text bold */
-    margin: 0 15px; /* Space between navigation links */
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 15px;
 }
 
 .nav-link {
-    position:relative;
-    /* right: 200px; */
+    position: relative;
     font-size: 18px;
 }
 
-.nav-link::after{
-    content:'';
+.nav-link::after {
+    content: '';
     width: 0;
     height: 3px;
     background: #1500ff;
     position: absolute;
-    left:10px;
+    left: 10px;
     bottom: 6px;
     transition: 0.5s;
-    
-}
-.nav-link:hover::after{
-    width:80%;
 }
 
+.nav-link:hover::after {
+    width: 80%;
+}
 
-/* Responsive Styles */
 @media (max-width: 992px) {
     .header-navbar {
-        width: 98%; /* Ensure header width on tablets */
+        width: 98%;
     }
 
     .header-navbar .navbar-nav {
@@ -86,32 +78,33 @@
 
     .header-navbar .navbar-nav .nav-link {
         font-weight: bold;
-        margin: 0 25px; /* Space between navigation links */
+        margin: 0 25px;
     }
 
     .header-navbar .header-buttons {
-        display: none; /* Hide buttons on smaller screens */
+        display: none;
     }
+
     .nav-link {
-        position:relative;
-        /* right: 200px; */
+        position: relative;
         font-size: 18px;
     }
-    
-    .nav-link::after{
-        content:'';
+
+    .nav-link::after {
+        content: '';
         width: 0;
         height: 3px;
         background: #1500ff;
         position: absolute;
-        left:0px;
+        left: 0px;
         bottom: 6px;
         transition: 0.5s;
-        
     }
-    .nav-link:hover::after{
-        width:100%;
+
+    .nav-link:hover::after {
+        width: 100%;
     }
+
     .header-navbar .navbar-toggler {
         position: relative;
         right: 30px;
@@ -120,105 +113,96 @@
 
 @media (max-width: 576px) {
     .header-navbar {
-        width: 98%; /* Ensure header width on mobile devices */
+        width: 98%;
     }
 
     .header-navbar .navbar-nav {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
-        flex-direction: column; /* Stack links vertically */
-        align-items: center; /* Center align items */
+        font-size: 0.9rem;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header-navbar .navbar-nav .nav-link {
         font-weight: bold;
-        margin: 10px 0; /* Space between navigation links */
+        margin: 10px 0;
     }
 
     .header-navbar .header-buttons {
-        display: flex; /* Show buttons */
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center align buttons */
-        margin-top: 10px; /* Space above buttons */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
     }
 
     .header-navbar .header-buttons .nav-btn {
-        
-        margin: 10px 0; /* Space between buttons */
-        position: static; /* Remove any absolute positioning */
+        margin: 10px 0;
+        position: static;
     }
+
     .nav-link {
-        position:relative;
-        /* right: 200px; */
+        position: relative;
         font-size: 18px;
     }
-    
-    .nav-link::after{
-        content:'';
+
+    .nav-link::after {
+        content: '';
         width: 0;
         height: 3px;
         background: #1500ff;
         position: absolute;
-        left:0px;
+        left: 0px;
         bottom: 6px;
         transition: 0.5s;
-        
     }
-    .nav-link:hover::after{
-        width:100%;
+
+    .nav-link:hover::after {
+        width: 100%;
     }
+
     .header-navbar .navbar-toggler {
         position: relative;
         right: 30px;
-        /* border: none; */
-         /* Remove default border */
-        /* background: transparent;  */
-        /* Make background transparent */
-        /* outline: none;  */
-        /* Remove focus outline */
-        /* padding: 0;  */
-        /* Remove default padding */
     }
 }
 
-/* Style nav links as buttons */
 .header-navbar .nav-btn {
-    color: #ffffff !important; /* Force text color */
-    background-color: #7754d7 !important; /* Custom background color */
-    border: 1px solid #f4f6f4 !important; /* Border color */
-    margin: 5px; /* Spacing between buttons */
-    padding: 10px 20px; /* Consistent padding */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Consistent font size */
-    width: 120px; /* Adjust width as needed */
-    text-align: center; /* Center text */
-    display: inline-block; /* Ensure buttons are displayed correctly */
-    box-shadow: none; /* Remove default button shadow if any */
+    color: #ffffff !important;
+    background-color: #7754d7 !important;
+    border: 1px solid #f4f6f4 !important;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: none;
     font-weight: bold;
 }
 
 .header-navbar .nav-btn:hover {
-    background-color: #4538b6 !important; /* Darker background on hover */
-    color: #ffffff !important; /* White text color on hover */
-    border-color: #e3eae6 !important; /* Border color on hover */
+    background-color: #4538b6 !important;
+    color: #ffffff !important;
+    border-color: #e3eae6 !important;
 }
 
 .header-navbar .nav-btn1 {
-    color: #ffffff !important; /* Force text color */
-    background-color: #46444b !important; /* Custom background color */
-    border: 1px solid #f4f6f4 !important; /* Border color */
-    margin: 5px; /* Spacing between buttons */
-    padding: 10px 20px; /* Consistent padding */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Consistent font size */
-    width: 120px; /* Adjust width as needed */
-    text-align: center; /* Center text */
-    display: inline-block; /* Ensure buttons are displayed correctly */
-    box-shadow: none; /* Remove default button shadow if any */
+    color: #ffffff !important;
+    background-color: #46444b !important;
+    border: 1px solid #f4f6f4 !important;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: none;
     font-weight: bold;
 }
 
 .header-navbar .nav-btn1:hover {
-    background-color: #313135 !important; /* Darker background on hover */
-    color: #ffffff !important; /* White text color on hover */
-    border-color: #e3eae6 !important; /* Border color on hover */
-}
+    background-color: #313135 !important;
+    color: #ffffff !important;
+    border-color: #e3eae6 !important;
+} */
