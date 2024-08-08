@@ -238,6 +238,8 @@
 
 /* Section One */
 .home-section-one {
+  position:relative;
+  top:60px;
   background-image: url('../assets/homebackgroundimage4.png'); /* Update with your image path */
   background-size: cover;
   background-position: center;
@@ -361,10 +363,11 @@
 
 /* Section Three Styling */
 .home-section-three {
+
   position: relative; /* Position relative for layering */
   background-color: rgba(0, 0, 139, 0.7); /* Dark blue with some opacity */
-  background-image: url('../assets/resumeimage1.jpg'); /* Background image */
-  background-size: cover; /* Cover the entire section */
+  background-image: url('../assets/resumeimage1 (1).jpg'); /* Background image */
+  background-size:cover; /* Cover the entire section */
   background-position: center; /* Center the image */
   text-align: center;
   padding: 60px 0;
@@ -522,6 +525,42 @@
   transform: rotateY(180deg); /* Rotate icon on hover */
 }
 
+
+/* Responsive Styles */
+@media (min-width: 768px) and (max-width:859px) {
+  .director-photo {
+    width: 80px;
+    height: 80px;
+  }
+  .home-section-two .text-content h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+  }
+  
+  .home-section-two .text-content h3 {
+    color: #1500ff;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  .since-box {
+    position:relative;
+    top:230px;
+    bottom: 10px;
+    left: 60px;
+    width: 120px;
+    height: 120px;
+    background-color: #3d3599;
+    color: #c4bbbb;
+    border: 2px solid #bfbfc8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+}
+
 /* For tablets and smaller desktops */
 @media (max-width: 992px) {
   .process-box {
@@ -646,13 +685,7 @@
   background-color: #0033cc; /* Color for the control icons */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .director-photo {
-    width: 80px;
-    height: 80px;
-  }
-}
+
 
 
 
@@ -684,6 +717,18 @@
 
 /* Adjust for tablets and smaller desktops */
 @media (max-width: 992px) {
+  .home-section-one {
+    position:relative;
+    top:5px;
+    /* right:30px; */
+    background-image: url('../assets/homebackgroundimage4 (2).png'); /* Update with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .home-section-two {
     flex-direction: column;
   }
@@ -746,6 +791,8 @@
 /* Adjust for mobile devices */
 @media (max-width: 420px) {
   .home-section-one {
+    position:relative;
+    top:60px;
     background-image: url('../assets/homebackgroundimage4 (1).png'); /* Update with your image path */
     background-size: cover;
     background-position: center center;
