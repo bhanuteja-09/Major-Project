@@ -225,11 +225,11 @@ const About = () => {
       <div className="col-md-4">
         <h5 className="importantlinks">Important Links</h5>
         <ul>
-          <li><a href="/Home" className="footer-link">Home</a></li>
-          <li><a href="/find-a-job" className="footer-link">Find a Job</a></li>
-          <li><a href="/about" className="footer-link">About Us</a></li>
-          <li><a href="/contact" className="footer-link">Contact Us</a></li>
-          <li><a href="#login" className="footer-link">Login</a></li>
+        <li><Link to="/" className="footer-link">Home</Link></li>
+              <li><Link to="/find-a-job" className="footer-link">Find a Job</Link></li>
+              <li><Link to="/about" className="footer-link">About Us</Link></li>
+              <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
+              <li><Link to="#login" className="footer-link">Login</Link></li>
         </ul>
       </div>
     </div>
