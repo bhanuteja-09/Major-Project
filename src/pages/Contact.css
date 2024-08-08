@@ -123,6 +123,28 @@
     font-size: 1rem;
   }
 
+
+@media (max-width: 420px) {
+  .contact-form-section{
+    position:relative;
+    /* left:30px; */
+    height:800px;
+    right:30px;
+  width: 100%; /* Increase width to 70% for tablets and desktops */
+  margin-right: 20px; /* Space between form and contact details */
+  }
+  .contact-details-list {
+    position:relative;
+    left:30px;
+    /* top:50px; */
+    bottom: 100px;
+    width: 60%; /* Adjust width to 30% for contact details */
+  }
+  .contactheading{
+    position: relative;
+    left:140px;
+  }
+  }
 /* Responsive adjustments for tablets and desktops */
 @media (max-width: 1024px) {
   .contact-form-section {
@@ -150,7 +172,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width:425px) and (max-width: 768px) {
   .contact-form-section {
     padding: 30px 15px;
     flex-direction: column;
