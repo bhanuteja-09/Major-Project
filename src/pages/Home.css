@@ -654,7 +654,7 @@
 /* Style for carousel indicators */
 .carousel-indicators {
   position: absolute;
-  top:295px;
+  top:310px;
   bottom: 20px; /* Move indicators down */
   left: 50%;
   /* transform: translateX(-50%);  */
