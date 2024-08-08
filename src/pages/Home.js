@@ -11,15 +11,21 @@ import {Animate} from 'react-simple-animate';
 import profileImage1 from '../assets/profile1.png';
 import profileImage2 from '../assets/profile1.png';
 import profileImage3 from '../assets/profile1.png';
+import Modal from '../components/Modal/Modal';
+// import '../components/Modal/Modal.css';
 
 const Home = () => {
   // For header
   const [expanded, setExpanded] = useState(false);
   const location = useLocation(); // Get the current location
+  const [modalShow, setModalShow] = useState(false);
 
   const handleNavClick = () => {
     setExpanded(false); // Collapse the navbar
   };
+
+  const handleOpenModal = () => setModalShow(true);
+  const handleCloseModal = () => setModalShow(false);
   return (
     <div>
       {/* Header */}
@@ -166,12 +172,15 @@ const Home = () => {
 
       {/* Section Three */}
       <section className="home-section-three">
-        <div className="container">
-          <h2>Featured Tours Packages</h2>
-          <h3>Make a Difference with Your Online Resume</h3>
-          <button className="btn-upload-cv">Upload Your CV</button>
-        </div>
-      </section>
+      <div className="container">
+        <h2>Featured Tours Packages</h2>
+        <h3>Make a Difference with Your Online Resume</h3>
+        <button className="btn-upload-cv" onClick={handleOpenModal}>
+          Upload Your CV
+        </button>
+        <Modal show={modalShow} handleClose={handleCloseModal} />
+      </div>
+    </section>
 
       {/* Section Four */}
       <section className="home-section-four">
@@ -291,31 +300,46 @@ const Home = () => {
 
 
 
-      {/* Footer */}
-      <footer className="home-footer">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4">
-              <h5>About Us</h5>
-              <p>Learn more about our mission and values.</p>
-            </div>
-            <div className="col-md-4">
-              <h5>Contact Info</h5>
-              <p>Get in touch with us for any inquiries.</p>
-            </div>
-            <div className="col-md-4">
-              <h5>Important Links</h5>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#find-job">Find a Job</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-                <li><a href="#login">Login</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+ {/* Footer */}
+<footer className="home-footer">
+  <div className="container">
+    <div className="row">
+      <div className="col-md-4">
+        <h5 className="aboutus">About Us</h5>
+        <p>Learn more about our mission and values.</p>
+      </div>
+      <div className="col-md-4">
+        <h5 className="contactinfo">Contact Info</h5>
+        <p>Get in touch with us for any inquiries.</p>
+        <p>Phone: +888044338899</p>
+        <p>Email: <a href="mailto:info@hirecheck.com">info@hirecheck.com</a></p>
+      </div>
+      <div className="col-md-4">
+        <h5 className="importantlinks">Important Links</h5>
+        <ul>
+          <li><a href="/Home" className="footer-link">Home</a></li>
+          <li><a href="/find-a-job" className="footer-link">Find a Job</a></li>
+          <li><a href="/about" className="footer-link">About Us</a></li>
+          <li><a href="/contact" className="footer-link">Contact Us</a></li>
+          <li><a href="#login" className="footer-link">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="row footer-bottom">
+      <div className="col-md-6 text-center text-md-left">
+        <p>&copy; 2024 HireCheck. All rights reserved.</p>
+      </div>
+      <div className="col-md-6 text-center text-md-right">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
     </div>
   );
 };

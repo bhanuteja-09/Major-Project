@@ -148,74 +148,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Section Three */}
-      <section className="home-section-three">
-        <div className="container">
-          <h2>Featured Tours Packages</h2>
-          <h3>Make a Difference with Your Online Resume</h3>
-          <button className="btn-upload-cv">Upload Your CV</button>
-        </div>
-      </section>
-
-      {/* Section Four */}
-      <section className="home-section-four">
-  <div className="container">
-    <div className="headings">
-      <h5>Apply Process</h5>
-      <h3>How it works</h3>
-    </div>
-    <div className="boxes">
-      <div className="process-box">
-        <div className="icon-container">
-          <div className="icon-flip">
-            <div className="icon-front">
-              <i class="fas fa-search"></i> 
-              {/* <!-- Front icon --> */}
-            </div>
-            <div className="icon-back">
-              <i class="fas fa-search"></i> 
-              {/* <!-- Back icon (can be the same or different) --> */}
-            </div>
-          </div>
-        </div>
-        <h4>Search a Job</h4>
-        <p>Find job opportunities that match your skills.</p>
-      </div>
-      <div className="process-box">
-        <div className="icon-container">
-          <div className="icon-flip">
-            <div className="icon-front">
-              <i class="fas fa-briefcase"></i> 
-              {/* <!-- Front icon --> */}
-            </div>
-            <div className="icon-back">
-              <i class="fas fa-briefcase"></i> 
-              {/* <!-- Back icon (can be the same or different) --> */}
-            </div>
-          </div>
-        </div>
-        <h4>Apply for a Job</h4>
-        <p>Submit your application to potential employers.</p>
-      </div>
-      <div className="process-box">
-        <div className="icon-container">
-          <div className="icon-flip">
-            <div className="icon-front">
-              <i class="fas fa-check"></i> 
-              {/* <!-- Front icon --> */}
-            </div>
-            <div className="icon-back">
-              <i class="fas fa-check"></i> 
-              {/* <!-- Back icon (can be the same or different) --> */}
-            </div>
-          </div>
-        </div>
-        <h4>Get Your Job</h4>
-        <p>Secure the job and start your new career path.</p>
-      </div>
-    </div>
-  </div>
-</section>
+      
 
 {/* <!-- Section Five --> */}
 <section className="home-section-five">
@@ -276,30 +209,43 @@ const About = () => {
 
 
       {/* Footer */}
-      <footer className="home-footer">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4">
-              <h5>About Us</h5>
-              <p>Learn more about our mission and values.</p>
-            </div>
-            <div className="col-md-4">
-              <h5>Contact Info</h5>
-              <p>Get in touch with us for any inquiries.</p>
-            </div>
-            <div className="col-md-4">
-              <h5>Important Links</h5>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#find-job">Find a Job</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-                <li><a href="#login">Login</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+<footer className="home-footer">
+  <div className="container">
+    <div className="row">
+      <div className="col-md-4">
+        <h5 className="aboutus">About Us</h5>
+        <p>Learn more about our mission and values.</p>
+      </div>
+      <div className="col-md-4">
+        <h5 className="contactinfo">Contact Info</h5>
+        <p>Get in touch with us for any inquiries.</p>
+        <p>Phone: +888044338899</p>
+        <p>Email: <a href="mailto:info@hirecheck.com">info@hirecheck.com</a></p>
+      </div>
+      <div className="col-md-4">
+        <h5 className="importantlinks">Important Links</h5>
+        <ul>
+          <li><a href="/Home" className="footer-link">Home</a></li>
+          <li><a href="/find-a-job" className="footer-link">Find a Job</a></li>
+          <li><a href="/about" className="footer-link">About Us</a></li>
+          <li><a href="/contact" className="footer-link">Contact Us</a></li>
+          <li><a href="#login" className="footer-link">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="row footer-bottom">
+      <div className="col-md-6 text-center text-md-left">
+        <p>&copy; 2024 HireCheck. All rights reserved.</p>
+      </div>
+      <div className="col-md-6 text-center text-md-right">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };
