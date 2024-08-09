@@ -5,6 +5,240 @@
   z-index: 10; /* Ensure the header is on top */
 }
 
+
+/* Header styling */
+.header-navbar {
+  /* background-color: #c9bbc9; */
+  background-color: #bfaea9; /*fixed
+  /* background-color: #f08ff2;  */
+  /* Background color */
+  z-index: 1000; /* Ensure header is on top */
+  width: 98%; /* Set the width to 98% of the viewport */
+  margin: 0 auto; /* Center the header */
+  padding: 0 15px; /* Add padding to the left and right */
+}
+
+/* Ensure the brand section adjusts with the header width */
+.header-navbar .brand {
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+.header-navbar .brand .logo {
+  position: relative;
+  left: 10px;
+  border-radius: 50%; /* Make the logo circular */
+  width: 95px; /* Adjust size as needed */
+  height: 90px; /* Ensure height matches width for circular shape */
+  margin-right: 15px; /* Space between logo and text */
+}
+
+.header-navbar .brand .brand-text {
+  position: relative;
+  top: 10px; /* Adjust vertical alignment */
+}
+
+.header-navbar .brand .brand-title {
+  font-weight: bold;
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: #ffffff; /* Text color */
+}
+
+.header-navbar .brand .subtitle {
+  font-size: 0.8rem; /* Smaller text size for the subtitle */
+  color: #ffffff; /* Text color */
+  margin-top: 5px; /* Space between brand title and subtitle */
+}
+
+.header-navbar .navbar-nav .nav-link {
+  color: #ffffff; /* White text color */
+  font-weight: bold; /* Make text bold */
+  margin: 0 15px; /* Space between navigation links */
+}
+
+.nav-link {
+  position:relative;
+  /* right: 200px; */
+  font-size: 18px;
+}
+
+.nav-link::after{
+  content:'';
+  width: 0;
+  height: 3px;
+  background: #1500ff;
+  position: absolute;
+  left:10px;
+  bottom: 6px;
+  transition: 0.5s;
+  
+}
+.nav-link:hover::after{
+  width:80%;
+}
+
+/* @media (max-width:420px){
+  .header-navbar {
+    width:38%;
+  }
+} */
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .header-navbar {
+      width: 98%; /* Ensure header width on tablets */
+  }
+
+  .header-navbar .navbar-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      left: 60px;
+  }
+
+  .header-navbar .navbar-nav .nav-link {
+      font-weight: bold;
+      margin: 0 25px; /* Space between navigation links */
+  }
+
+  .header-navbar .header-buttons {
+      display: none; /* Hide buttons on smaller screens */
+  }
+  .nav-link {
+      position:relative;
+      /* right: 200px; */
+      font-size: 18px;
+  }
+  
+  .nav-link::after{
+      content:'';
+      width: 0;
+      height: 3px;
+      background: #1500ff;
+      position: absolute;
+      left:0px;
+      bottom: 6px;
+      transition: 0.5s;
+      
+  }
+  .nav-link:hover::after{
+      width:100%;
+  }
+  .header-navbar .navbar-toggler {
+      position: relative;
+      right: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-navbar {
+    position: relative;
+    left: 0;
+    right: 0; /* Reset right position */
+    width: 82%; /* Ensure header width on mobile devices */
+    max-width: 82%;
+    margin: 0; /* Remove any extra margin */
+    padding: 0; /* Remove any extra padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+
+  .header-navbar .navbar-nav {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center align items */
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+  }
+
+  .header-navbar .navbar-nav .nav-link {
+    font-weight: bold;
+    margin: 10px 0; /* Space between navigation links */
+  }
+
+  .header-navbar .header-buttons {
+    display: flex; /* Show buttons */
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+    margin-top: 10px; /* Space above buttons */
+  }
+
+  .header-navbar .header-buttons .nav-btn {
+    margin: 10px 0; /* Space between buttons */
+    position: static; /* Remove any absolute positioning */
+  }
+
+  .nav-link {
+    position: relative;
+    font-size: 18px;
+  }
+
+  .nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1500ff;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    transition: 0.5s;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .header-navbar .navbar-toggler {
+    position: relative;
+    right: 30px; /* Adjust position to fit within the viewport */
+  }
+}
+
+
+/* Style nav links as buttons */
+.header-navbar .nav-btn {
+  color: #ffffff !important; /* Force text color */
+  background-color: #7754d7 !important; /* Custom background color */
+  border: 1px solid #f4f6f4 !important; /* Border color */
+  margin: 5px; /* Spacing between buttons */
+  padding: 10px 20px; /* Consistent padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Consistent font size */
+  width: 120px; /* Adjust width as needed */
+  text-align: center; /* Center text */
+  display: inline-block; /* Ensure buttons are displayed correctly */
+  box-shadow: none; /* Remove default button shadow if any */
+  font-weight: bold;
+}
+
+.header-navbar .nav-btn:hover {
+  background-color: #4538b6 !important; /* Darker background on hover */
+  color: #ffffff !important; /* White text color on hover */
+  border-color: #e3eae6 !important; /* Border color on hover */
+}
+
+.header-navbar .nav-btn1 {
+  color: #ffffff !important; /* Force text color */
+  background-color: #46444b !important; /* Custom background color */
+  border: 1px solid #f4f6f4 !important; /* Border color */
+  margin: 5px; /* Spacing between buttons */
+  padding: 10px 20px; /* Consistent padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Consistent font size */
+  width: 120px; /* Adjust width as needed */
+  text-align: center; /* Center text */
+  display: inline-block; /* Ensure buttons are displayed correctly */
+  box-shadow: none; /* Remove default button shadow if any */
+  font-weight: bold;
+}
+
+.header-navbar .nav-btn1:hover {
+  background-color: #313135 !important; /* Darker background on hover */
+  color: #ffffff !important; /* White text color on hover */
+  border-color: #e3eae6 !important; /* Border color on hover */
+}
+
+
 /* Section One: Google Map */
 .map-section {
   margin-top: 170px; /* Adjust based on your header height */
