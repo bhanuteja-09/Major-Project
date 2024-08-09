@@ -9,86 +9,96 @@ import {Animate} from 'react-simple-animate';
 import profileImage1 from '../assets/profile1.png';
 import profileImage2 from '../assets/profile1.png';
 import profileImage3 from '../assets/profile1.png';
+// import Header from '../components/Header';
+// import '../components/Header.css';
 
 const About = () => {
  // For header
  const [expanded, setExpanded] = useState(false);
- const location = useLocation(); // Get the current location
+ const location = useLocation(); 
+ // Get the current location
 
  const handleNavClick = () => {
-   setExpanded(false); // Collapse the navbar
+   setExpanded(false); 
+   // Collapse the navbar
  };
  return (
    <div>
-     {/* Header */}
-     <Navbar 
-       expand="lg" 
-       fixed="top" 
-       className="header-navbar" 
-       expanded={expanded} 
-       onToggle={() => setExpanded(!expanded)} // Toggle state when the button is clicked
-     >
-       <Navbar.Brand className="brand">
-         <img src={LOGO6} alt="Logo" className="logo" />
-         <div className="brand-text">
-           <span className="brand-title">Hire</span>Check
-           <p className="subtitle">Get your dream job</p>
-         </div>
-       </Navbar.Brand>
-       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-       <Navbar.Collapse id="basic-navbar-nav">
-         <Nav className="mx-auto">
-           <Nav.Link 
-             as={Link} 
-             to="/" 
-             onClick={handleNavClick} 
-             active={location.pathname === "/"}
-           >
-             Home
-           </Nav.Link>
-           <Nav.Link 
-             as={Link} 
-             to="/find-a-job" 
-             onClick={handleNavClick} 
-             active={location.pathname === "/find-a-job"}
-           >
-             Find a Job
-           </Nav.Link>
-           <Nav.Link 
-             as={Link} 
-             to="/about" 
-             onClick={handleNavClick} 
-             active={location.pathname === "/about"}
-           >
-             About
-           </Nav.Link>
-           <Nav.Link 
-             as={Link} 
-             to="/contact" 
-             onClick={handleNavClick} 
-             active={location.pathname === "/contact"}
-           >
-             Contact
-           </Nav.Link>
-           <Button 
-             as={Link} 
-             to="/register" 
-             className="nav-btn1" 
-             onClick={handleNavClick}
-           >
-             Register
-           </Button>
-           <Button 
-             as={Link} 
-             to="/login" 
-             className="nav-btn" 
-             onClick={handleNavClick}
-           >
-             Login
-           </Button>
-         </Nav>
-       </Navbar.Collapse>
-     </Navbar>
+      {/* <Header extraClass="about-page" />  */}
+      {/* <main> */}
+      <Navbar 
+    expand="lg" 
+    fixed="top" 
+    className="about-header" 
+    expanded={expanded} 
+    onToggle={() => setExpanded(!expanded)}
+>
+    <Navbar.Brand className="about-brand">
+        <img src={LOGO6} alt="Logo" className="about-logo" />
+        <div className="about-brand-text">
+            <span className="about-brand-title">Hire</span>Check
+            <p className="about-subtitle">Get your dream job</p>
+        </div>
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mx-auto">
+            <Nav.Link 
+              as={Link} 
+              to="/" 
+              onClick={handleNavClick} 
+              active={location.pathname === "/"}
+              className="about-nav-link"
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/find-a-job" 
+              onClick={handleNavClick} 
+              active={location.pathname === "/find-a-job"}
+              className="about-nav-link"
+            >
+              Find a Job
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/about" 
+              onClick={handleNavClick} 
+              active={location.pathname === "/about"}
+              className="about-nav-link"
+            >
+              About
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/contact" 
+              onClick={handleNavClick} 
+              active={location.pathname === "/contact"}
+              className="about-nav-link"
+            >
+              Contact
+            </Nav.Link>
+            <Button 
+              as={Link} 
+              to="/register" 
+              className="about-nav-btn1" 
+              onClick={handleNavClick}
+            >
+              Register
+            </Button>
+            <Button 
+              as={Link} 
+              to="/login" 
+              className="about-nav-btn" 
+              onClick={handleNavClick}
+            >
+              Login
+            </Button>
+        </Nav>
+    </Navbar.Collapse>
+</Navbar>
+
 
 {/* Section One */}
 <section className="about-section-one">
@@ -246,6 +256,7 @@ const About = () => {
     </div>
   </div>
 </footer>
+{/* </main> */}
     </div>
   );
 };

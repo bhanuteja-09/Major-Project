@@ -13,6 +13,7 @@ import profileImage2 from '../assets/profile1.png';
 import profileImage3 from '../assets/profile1.png';
 import Modal from '../components/Modal/Modal';
 // import '../components/Modal/Modal.css';
+// import Header from '../components/Header';
 
 const Home = () => {
   // For header
@@ -28,29 +29,30 @@ const Home = () => {
   const handleCloseModal = () => setModalShow(false);
   return (
     <div>
-      {/* Header */}
+      {/* <Header extraClass="extraClass-home" /> */}
       <Navbar 
-        expand="lg" 
-        fixed="top" 
-        className="header-navbar" 
-        expanded={expanded} 
-        onToggle={() => setExpanded(!expanded)} // Toggle state when the button is clicked
-      >
-        <Navbar.Brand className="brand">
-          <img src={LOGO6} alt="Logo" className="logo" />
-          <div className="brand-text">
-            <span className="brand-title">Hire</span>Check
-            <p className="subtitle">Get your dream job</p>
-          </div>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
+    expand="lg" 
+    fixed="top" 
+    className="home-header" 
+    expanded={expanded} 
+    onToggle={() => setExpanded(!expanded)}
+>
+    <Navbar.Brand className="home-brand">
+        <img src={LOGO6} alt="Logo" className="home-logo" />
+        <div className="home-brand-text">
+            <span className="home-brand-title">Hire</span>Check
+            <p className="home-subtitle">Get your dream job</p>
+        </div>
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mx-auto">
             <Nav.Link 
               as={Link} 
               to="/" 
               onClick={handleNavClick} 
               active={location.pathname === "/"}
+              className="home-nav-link"
             >
               Home
             </Nav.Link>
@@ -59,6 +61,7 @@ const Home = () => {
               to="/find-a-job" 
               onClick={handleNavClick} 
               active={location.pathname === "/find-a-job"}
+              className="home-nav-link"
             >
               Find a Job
             </Nav.Link>
@@ -67,6 +70,7 @@ const Home = () => {
               to="/about" 
               onClick={handleNavClick} 
               active={location.pathname === "/about"}
+              className="home-nav-link"
             >
               About
             </Nav.Link>
@@ -75,13 +79,14 @@ const Home = () => {
               to="/contact" 
               onClick={handleNavClick} 
               active={location.pathname === "/contact"}
+              className="home-nav-link"
             >
               Contact
             </Nav.Link>
             <Button 
               as={Link} 
               to="/register" 
-              className="nav-btn1" 
+              className="home-nav-btn1" 
               onClick={handleNavClick}
             >
               Register
@@ -89,14 +94,15 @@ const Home = () => {
             <Button 
               as={Link} 
               to="/login" 
-              className="nav-btn" 
+              className="home-nav-btn" 
               onClick={handleNavClick}
             >
               Login
             </Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+        </Nav>
+    </Navbar.Collapse>
+</Navbar>
+
 
 
       {/* Section One */}

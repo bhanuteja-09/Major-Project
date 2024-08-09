@@ -1,5 +1,5 @@
 /* Header styling */
-.header-navbar {
+.home-header {
   /* background-color: #c9bbc9; */
   background-color: #bfaea9; /*fixed
   /* background-color: #f08ff2;  */
@@ -11,12 +11,12 @@
 }
 
 /* Ensure the brand section adjusts with the header width */
-.header-navbar .brand {
+.home-header .home-brand {
   display: flex;
   align-items: center; /* Center align items vertically */
 }
 
-.header-navbar .brand .logo {
+.home-header .home-brand .home-logo {
   position: relative;
   left: 10px;
   border-radius: 50%; /* Make the logo circular */
@@ -25,36 +25,36 @@
   margin-right: 15px; /* Space between logo and text */
 }
 
-.header-navbar .brand .brand-text {
+.home-header .home-brand .home-brand-text {
   position: relative;
   top: 10px; /* Adjust vertical alignment */
 }
 
-.header-navbar .brand .brand-title {
+.home-header .home-brand .home-brand-title {
   font-weight: bold;
   font-size: 1.5rem; /* Adjust size as needed */
   color: #ffffff; /* Text color */
 }
 
-.header-navbar .brand .subtitle {
+.home-header .home-brand .home-subtitle {
   font-size: 0.8rem; /* Smaller text size for the subtitle */
   color: #ffffff; /* Text color */
   margin-top: 5px; /* Space between brand title and subtitle */
 }
 
-.header-navbar .navbar-nav .nav-link {
+.home-header .navbar-nav .home-nav-link {
   color: #ffffff; /* White text color */
   font-weight: bold; /* Make text bold */
   margin: 0 15px; /* Space between navigation links */
 }
 
-.nav-link {
+.home-nav-link {
   position:relative;
   /* right: 200px; */
   font-size: 18px;
 }
 
-.nav-link::after{
+.home-nav-link::after{
   content:'';
   width: 0;
   height: 3px;
@@ -65,18 +65,18 @@
   transition: 0.5s;
   
 }
-.nav-link:hover::after{
+.home-nav-link:hover::after{
   width:80%;
 }
 
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-  .header-navbar {
+  .home-header {
       width: 98%; /* Ensure header width on tablets */
   }
 
-  .header-navbar .navbar-nav {
+  .home-header .navbar-nav {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -84,21 +84,21 @@
       left: 60px;
   }
 
-  .header-navbar .navbar-nav .nav-link {
+  .home-header .navbar-nav .home-nav-link{
       font-weight: bold;
       margin: 0 25px; /* Space between navigation links */
   }
 
-  .header-navbar .header-buttons {
+  .home-header .home-buttons {
       display: none; /* Hide buttons on smaller screens */
   }
-  .nav-link {
+  .home-nav-link {
       position:relative;
       /* right: 200px; */
       font-size: 18px;
   }
   
-  .nav-link::after{
+  .home-nav-link::after{
       content:'';
       width: 0;
       height: 3px;
@@ -109,50 +109,50 @@
       transition: 0.5s;
       
   }
-  .nav-link:hover::after{
+  .home-nav-link:hover::after{
       width:100%;
   }
-  .header-navbar .navbar-toggler {
+  .home-header .navbar-toggler {
       position: relative;
       right: 30px;
   }
 }
 
-@media (max-width: 576px) {
-  .header-navbar {
+@media (max-width: 420px) {
+  .home-header {
       width: 98%; /* Ensure header width on mobile devices */
   }
 
-  .header-navbar .navbar-nav {
+  .home-header .navbar-nav {
       font-size: 0.9rem; /* Adjust font size for smaller screens */
       flex-direction: column; /* Stack links vertically */
       align-items: center; /* Center align items */
   }
 
-  .header-navbar .navbar-nav .nav-link {
+  .home-header .navbar-nav home-nav-link {
       font-weight: bold;
       margin: 10px 0; /* Space between navigation links */
   }
 
-  .header-navbar .header-buttons {
+  .home-header .home-buttons {
       display: flex; /* Show buttons */
       flex-direction: column; /* Stack buttons vertically */
       align-items: center; /* Center align buttons */
       margin-top: 10px; /* Space above buttons */
   }
 
-  .header-navbar .header-buttons .nav-btn {
+  .home-header .home-buttons .home-nav-btn1 {
       
       margin: 10px 0; /* Space between buttons */
       position: static; /* Remove any absolute positioning */
   }
-  .nav-link {
+  .home-nav-link {
       position:relative;
       /* right: 200px; */
       font-size: 18px;
   }
   
-  .nav-link::after{
+  .home-nav-link::after{
       content:'';
       width: 0;
       height: 3px;
@@ -163,10 +163,10 @@
       transition: 0.5s;
       
   }
-  .nav-link:hover::after{
+  .home-nav-link:hover::after{
       width:100%;
   }
-  .header-navbar .navbar-toggler {
+  .home-header .navbar-toggler {
       position: relative;
       right: 30px;
       /* border: none; */
@@ -181,7 +181,7 @@
 }
 
 /* Style nav links as buttons */
-.header-navbar .nav-btn {
+.home-header .home-nav-btn {
   color: #ffffff !important; /* Force text color */
   background-color: #7754d7 !important; /* Custom background color */
   border: 1px solid #f4f6f4 !important; /* Border color */
@@ -196,13 +196,13 @@
   font-weight: bold;
 }
 
-.header-navbar .nav-btn:hover {
+.home-header .home-nav-btn:hover {
   background-color: #4538b6 !important; /* Darker background on hover */
   color: #ffffff !important; /* White text color on hover */
   border-color: #e3eae6 !important; /* Border color on hover */
 }
 
-.header-navbar .nav-btn1 {
+.home-header .home-nav-btn1 {
   color: #ffffff !important; /* Force text color */
   background-color: #46444b !important; /* Custom background color */
   border: 1px solid #f4f6f4 !important; /* Border color */
@@ -217,7 +217,7 @@
   font-weight: bold;
 }
 
-.header-navbar .nav-btn1:hover {
+.home-header .home-nav-btn1:hover {
   background-color: #313135 !important; /* Darker background on hover */
   color: #ffffff !important; /* White text color on hover */
   border-color: #e3eae6 !important; /* Border color on hover */

@@ -16,27 +16,28 @@ const Contact = () => {
     <div>
       {/* Header */}
       <Navbar 
-        expand="lg" 
-        fixed="top" 
-        className="header-navbar" 
-        expanded={expanded} 
-        onToggle={() => setExpanded(!expanded)} // Toggle state when the button is clicked
-      >
-        <Navbar.Brand className="brand">
-          <img src={LOGO6} alt="Logo" className="logo" />
-          <div className="brand-text">
-            <span className="brand-title">Hire</span>Check
-            <p className="subtitle">Get your dream job</p>
-          </div>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
+    expand="lg" 
+    fixed="top" 
+    className="contact-header" 
+    expanded={expanded} 
+    onToggle={() => setExpanded(!expanded)}
+>
+    <Navbar.Brand className="contact-brand">
+        <img src={LOGO6} alt="Logo" className="contact-logo" />
+        <div className="contact-brand-text">
+            <span className="contact-brand-title">Hire</span>Check
+            <p className="contact-subtitle">Get your dream job</p>
+        </div>
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mx-auto">
             <Nav.Link 
               as={Link} 
               to="/" 
               onClick={handleNavClick} 
               active={location.pathname === "/"}
+              className="contact-nav-link"
             >
               Home
             </Nav.Link>
@@ -45,6 +46,7 @@ const Contact = () => {
               to="/find-a-job" 
               onClick={handleNavClick} 
               active={location.pathname === "/find-a-job"}
+              className="contact-nav-link"
             >
               Find a Job
             </Nav.Link>
@@ -53,6 +55,7 @@ const Contact = () => {
               to="/about" 
               onClick={handleNavClick} 
               active={location.pathname === "/about"}
+              className="contact-nav-link"
             >
               About
             </Nav.Link>
@@ -61,13 +64,14 @@ const Contact = () => {
               to="/contact" 
               onClick={handleNavClick} 
               active={location.pathname === "/contact"}
+              className="contact-nav-link"
             >
               Contact
             </Nav.Link>
             <Button 
               as={Link} 
               to="/register" 
-              className="nav-btn1" 
+              className="contact-nav-btn1" 
               onClick={handleNavClick}
             >
               Register
@@ -75,14 +79,15 @@ const Contact = () => {
             <Button 
               as={Link} 
               to="/login" 
-              className="nav-btn" 
+              className="contact-nav-btn" 
               onClick={handleNavClick}
             >
               Login
             </Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+        </Nav>
+    </Navbar.Collapse>
+</Navbar>
+
 
       {/* Section One: Google Map */}
       <section className="map-section">
