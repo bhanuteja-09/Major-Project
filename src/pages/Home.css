@@ -120,7 +120,10 @@
 
 @media (max-width: 420px) {
   .home-header {
-      width: 98%; /* Ensure header width on mobile devices */
+    position:relative;
+    margin-left: 4px;
+    margin-right: auto;
+      width: 96%; /* Ensure header width on mobile devices */
   }
 
   .home-header .navbar-nav {
