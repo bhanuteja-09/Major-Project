@@ -122,7 +122,10 @@
 
 @media (max-width: 420px) {
   .contact-header {
-      width: 98%; /* Ensure header width on mobile devices */
+    width: 81%; /* Ensure header width on mobile devices */
+    margin-left: 4px; /* Remove any left margin */
+    margin-right: auto; /* Align to the left */
+    position: relative; /* Ensure it's positioned relative for margin adjustments */
   }
 
   .contact-header .navbar-nav {
