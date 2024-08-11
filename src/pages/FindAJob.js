@@ -18,7 +18,13 @@ const jobs = [
   { id: 3, title: 'App Developer', company: 'Company Name 3', location: 'Bangalore', salary: '16,000/month', posted: '3 days ago', image: job3, type: 'Full Time' },
   { id: 4, title: 'Frontend Developer', company: 'Company Name 3', location: 'Chennai', salary: '15,000/month', posted: '10 days ago', image: job2, type: 'Full Time' },
   { id: 5, title: 'Fullstack Developer', company: 'Company Name 3', location: 'Bangalore', salary: '25,000/month', posted: '2 days ago', image: job8, type: 'Freelance' },
-  { id: 6, title: 'MERN Developer', company: 'Company Name 3', location: 'Chennai', salary: '20,000/month', posted: '1 days ago', image: job7, type: 'Full Time' },
+  { id: 6, title: 'Test Engineer', company: 'Company Name 3', location: 'Chennai', salary: '20,000/month', posted: '1 days ago', image: job7, type: 'Full Time' },
+  { id: 7, title: 'React JS Developer', company: 'Company Name 3', location: 'Vishakapatnam', salary: '13,000/month', posted: '8 days ago', image: job7, type: 'Remote' },
+  { id: 8, title: 'Angular Developer', company: 'Company Name 3', location: 'Bangalore', salary: '18,000/month', posted: '4 days ago', image: job7, type: 'Full Time' },
+  { id: 9, title: 'Senior Software Engneer', company: 'Company Name 3', location: 'Hyderabad', salary: '14,000/month', posted: '30 days ago', image: job7, type: 'Full Time' },
+  { id: 10, title: 'Java Developer', company: 'Company Name 3', location: 'Chennai', salary: '10,000/month', posted: '1 days ago', image: job7, type: 'Full Time' },
+  { id: 11, title: 'MEAN Developer', company: 'Company Name 3', location: 'Vishakapatnam', salary: '28,000/month', posted: '3 days ago', image: job7, type: 'Full Time' },
+  { id: 12, title: 'Junior Software Developer', company: 'Company Name 3', location: 'Chennai', salary: '22,000/month', posted: '6 days ago', image: job7, type: 'Freelance' },
 ];
 
 const FindAJob = () => {
