@@ -227,9 +227,20 @@
   border-color: #e3eae6 !important; /* Border color on hover */
 }
 
+/* General styling for sections */
+.home-section-one, .home-section-two2, .home-section-three, .home-section-four, .home-section-five {
+  width: 98%;
+  margin: 0 auto;
+  padding: 60px 0;
+  box-sizing: border-box;
+  min-height: 100vh; 
+}
+
 
   /* Section One */
   .about-section-one {
+    margin-top: auto;
+    margin-bottom: 0;
     padding-top: 80px; /* Ensure the section is positioned correctly below the header */
     position: relative;
     top:100px;
@@ -237,7 +248,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../assets/aboutimage3.jpg') no-repeat center center/cover; /* Background image */
+    background: url('../assets/aboutimage4.jpg'); /* Background image */
+    background-size: cover; /* Adjust size to cover the container */
+    background-position: center 10%; /* Move the image down by 60% */
+    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+
     color: #fbf6f6;
     width: 98%; /* Match the width of the header */
     margin: 0 auto; /* Center the section */
@@ -271,6 +286,169 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: add shadow for better readability */
 }
 
+/* Section Two */
+.home-section-two2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9a8888;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.home-section-two2 .container2 {
+  position:relative;
+  top:50px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.text-content2, .profile-photo2 {
+  width: 50%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.text-content2 {
+  text-align: justify;
+  position: relative;
+  top: 70px;
+  left: 10px;
+}
+
+/* Style for the profile-photo section */
+.profile-photo2 {
+  position: relative;
+  text-align: center;
+}
+
+/* Small box styling */
+.since-box2 {
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
+  width: 120px;
+  height: 120px;
+  background-color: #3d3599;
+  color: #c4bbbb;
+  border: 2px solid #bfbfc8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.home-section-two2 .text-content2 h2 {
+  font-size: 2.0rem;
+  margin-bottom: 10px;
+}
+
+.home-section-two2 .text-content2 h3 {
+  color: #1500ff;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.home-section-two2 .text-content2 p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Default button styles */
+.btn-post-job2 {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 3px solid blue;
+  color: #0e0d0d;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.btn-post-job2:hover {
+  background-color: #0033cc;
+  color: #ffffff;
+}
+
+.home-section-two2 .profile-photo2 img {
+  position: relative;
+  bottom: 60px;
+  width: 450px;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Hide mobile profile photo by default */
+.mobile-profile-photo2 {
+  display: none;
+}
+
+/* .home-section-five2{
+  width:98%;
+  background-color: #9895b5;
+} */
+
+/* Adjust for tablets and smaller desktops */
+@media (max-width: 992px) {
+  .home-section-two2 {
+    flex-direction: column;
+  }
+
+  .home-section-two2 .text-content2 {
+    position: relative;
+    left: 70px;
+    top: 18px;
+  }
+
+  .home-section-two2 .text-content2,
+  .home-section-two2 .profile-photo2 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .home-section-two2 .profile-photo2 img {
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .btn-post-job2, .btn-upload-cv {
+    margin-top: 10px;
+  }
+
+  .process-box2 {
+    margin-bottom: 20px;
+  }
+  .profile-photo2 {
+    position: relative;
+    text-align: center;
+  }
+
+  .since-box2 {
+    position: absolute;
+    bottom: -5px;
+    left: 70px;
+    width: 120px;
+    height: 120px;
+    background-color: #3d3599;
+    color: #c4bbbb;
+    border: 2px solid #bfbfc8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+}
 
 /* Responsive adjustments */
 @media (min-width: 1280px) {
@@ -301,5 +479,96 @@
   }
   .about-section-one h1 {
     font-size: 2rem; /* Further adjustment for very small screens */
+  }
+}
+
+/* Adjust for mobile devices */
+@media (max-width: 420px) {
+  .home-section-two2 {
+    flex-direction: column;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .home-section-two2 .text-content2 {
+    position: relative;
+    left: 10px;
+    width: 1500%;
+    padding: 0px;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  .home-section-two2 .text-content2 h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .home-section-two2 .text-content2 h3 {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .profile-photo2 {
+    display: none;
+  }
+
+  .home-section-two2 .mobile-profile-photo2 {
+    display: block;
+    position: relative;
+    right: -5px;
+    top: 120px;
+    width: 1000%;
+    text-align: center;
+  }
+
+  .home-section-two2 .mobile-profile-photo2 img {
+    width: 110%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .btn-post-job2, .btn-upload-cv {
+    margin-top: 10px;
+  }
+
+  .process-box2{
+    margin-bottom: 20px;
+  }
+  .since-box2 {
+    position: absolute;
+    bottom: 395px;
+    left: 55px;
+    width: 60px;
+    height: 60px;
+    background-color: #3d3599;
+    color: #c4bbbb;
+    border: 2px solid #bfbfc8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.0rem;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .mobile-since-box2 {
+    position: absolute;
+    bottom: 225px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #3d3599;
+    color: #c4bbbb;
+    border: 2px solid #bfbfc8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.0rem;
+    font-weight: bold;
+    border-radius: 10px;
   }
 }

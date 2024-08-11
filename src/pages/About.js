@@ -110,9 +110,9 @@ const About = () => {
       </section>
       
 {/* Section Two */}
-<section className="home-section-two">
-        <div className="container">
-        <div className="text-content">
+<section className="home-section-two2">
+        <div className="container2">
+        <div className="text-content2">
             <Animate
               play
               duration={1.5}
@@ -143,17 +143,17 @@ const About = () => {
                 Our platform is designed to be user-friendly, offering easy navigation and powerful search features.
                 Employers can reach a wide audience and job seekers can explore various opportunities that match their skills and interests.
               </p>
-              <button className="btn-post-job">Post a Job</button>
+              <button className="btn-post-job2">Post a Job</button>
             </Animate>
           </div>
-          <div className="profile-photo">
+          <div className="profile-photo2">
             <img src={profileImage} alt="Profile" />
-            <div class="since-box">Since 1995</div>
+            <div class="since-box2">Since 1995</div>
           </div>
           
-          <div className="mobile-profile-photo">
+          <div className="mobile-profile-photo2">
         <img src={mobileProfileImage} alt="Mobile Profile Photo" />
-        <div class="mobile-since-box">Since 1995</div>
+        <div class="mobile-since-box2">Since 1995</div>
       </div>
         </div>
       </section>
