@@ -1,0 +1,261 @@
+
+  .main-content {
+    margin-top: 140px; /* Adjust based on the header's height */
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+  }
+  
+  .filter-btn, .reset-btn {
+    width: 100%; /* Full width buttons */
+  }
+
+  /* Job item styles */
+  .job-item {
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    background-color: #fffdfd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .job-image-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .job-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .job-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px; /* Adjust as needed */
+  }
+  
+  .job-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .job-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .freelance-btn {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background: transparent;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+  
+  .job-location, .salary, .time-ago {
+    display: flex;
+    align-items: center;
+  }
+  
+  .job-location svg, .salary svg, .time-ago svg {
+    margin-right: 5px;
+  }
+  
+ /* Ensure the container for job details uses flexbox */
+ .job-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Ensure items are displayed side by side */
+  .job-info-row div {
+    display: flex;
+    align-items: center; /* Center icons and text vertically */
+    margin-right: 20px; /* Space between items */
+  }
+  
+  /* Remove the margin-right from the last item */
+  .job-info-row div:last-child {
+    margin-right: 0;
+  }
+  
+  /* Adjust spacing for icons */
+  .job-info-row i {
+    margin-right: 5px; /* Space between icon and text */
+  }
+  
+  .filter-box, .job-list-box {
+  padding: 15px;
+}
+
+/* .filter-box {
+    border: 1px solid #d3d3d3; 
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e3d0d0;
+  }
+  
+  .job-list-box {
+
+    border: 1px solid #d3d3d3; 
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #c19e9e; 
+  } */
+  
+/* Pagination container */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Individual pagination button */
+  .page-btn {
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .page-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .page-btn:focus {
+    outline: none;
+  }
+  
+  /* Active page button */
+  .page-btn.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .page-btn.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  
+  /* Footer styles */
+  .footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .footer h5 {
+    color: #ffffff;
+  }
+  
+  
+ /* Tablet view adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .job-image {
+    width: 70%; /* Further reduce image size for tablet view if needed */
+  }
+  .job-info-row {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .job-info-row div {
+    margin-bottom: 10px; /* Space between rows */
+    margin-right: 0; /* Remove right margin */
+  }
+
+
+  .job-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .job-title-row h3 {
+    margin: 0; /* Remove default margin */
+    flex: 1; /* Allow title to use available space */
+    overflow: hidden; /* Prevent title from overflowing */
+    white-space: nowrap; /* Prevent title from wrapping */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  }
+
+  .job-title-row .freelance-btn {
+    margin-left: 10px; /* Space between title and button */
+  }
+}
+
+
+/* Mobile View Adjustments */
+@media (max-width: 767px) {
+    .job-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+      padding: 10px; /* Padding around the job item */
+    }
+  
+    .job-image-box {
+      width: 100%; /* Full width for the image container */
+      text-align: center; /* Center the image */
+      margin-bottom: 10px; /* Space below image */
+    }
+  
+    .job-image {
+      width: 80%; /* Adjust image width for mobile view */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 8px; /* Rounded corners for the image */
+    }
+  
+    .job-details {
+      width: 100%; /* Full width for details */
+      text-align: center; /* Center text and button */
+    }
+  
+    .job-title-row {
+      display: block; /* Stack title and button vertically */
+      margin-bottom: 10px; /* Space below title/button */
+    }
+  
+    .job-title-row h3 {
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+      margin-bottom: 5px; /* Space below title */
+    }
+  
+    .job-title-row .freelance-btn {
+      display: inline-block; /* Inline button */
+      margin: 0; /* Remove default margin */
+    }
+  
+    .job-info-row {
+      display: block; /* Stack information vertically */
+      margin-top: 10px; /* Space above info row */
+    }
+  
+    .job-info-row div {
+      margin-bottom: 5px; /* Space between info items */
+    }
+  }
+
+  
+  
