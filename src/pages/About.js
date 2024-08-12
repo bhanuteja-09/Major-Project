@@ -110,7 +110,7 @@ const About = () => {
       </section>
       
 {/* Section Two */}
-<section className="home-section-two2">
+<section className="about-section-two2">
         <div className="container2">
         <div className="text-content2">
             <Animate
