@@ -7,6 +7,15 @@ import { FaMapMarkerAlt, FaDollarSign, FaClock } from 'react-icons/fa';
 import job1 from '../assets/job1.png';
 import job2 from '../assets/job2.jpg';
 import job3 from '../assets/job3.png';
+// import job4 from '../assets/job1.png'; // Add these image imports
+// import job5 from '../assets/job1.png';
+// import job6 from '../assets/job1.png';
+// import job7 from '../assets/job1.png';
+// import job8 from '../assets/job1.png';
+// import job9 from '../assets/job1.png';
+// import job10 from '../assets/job1.png';
+// import job11 from '../assets/job1.png';
+// import job12 from '../assets/job1.png';
 
 // Job Data
 const jobs = [
@@ -39,8 +48,97 @@ const jobs = [
     salary: "30000",
     posted: "Last 30 Days",
     image: job3
+  },
+  {
+    id: 4,
+    title: "Web Developer",
+    company: "WebWorks",
+    location: "Chennai",
+    type: "Freelance",
+    salary: "18000",
+    posted: "Today",
+    image: job1
+  },
+  {
+    id: 5,
+    title: "UX Designer",
+    company: "DesignCo",
+    location: "Hyderabad",
+    type: "Part-time",
+    salary: "17000",
+    posted: "Last 7 Days",
+    image: job1
+  },
+  {
+    id: 6,
+    title: "Marketing Manager",
+    company: "MarketPros",
+    location: "Bangalore",
+    type: "Full-time",
+    salary: "25000",
+    posted: "Last 30 Days",
+    image: job1
+  },
+  {
+    id: 7,
+    title: "Content Writer",
+    company: "ContentInc",
+    location: "Remote",
+    type: "Freelance",
+    salary: "12000",
+    posted: "Today",
+    image: job1
+  },
+  {
+    id: 8,
+    title: "HR Specialist",
+    company: "HRWorld",
+    location: "Chennai",
+    type: "Full-time",
+    salary: "22000",
+    posted: "Last 7 Days",
+    image: job1
+  },
+  {
+    id: 9,
+    title: "Sales Executive",
+    company: "SalesForce",
+    location: "Hyderabad",
+    type: "Part-time",
+    salary: "14000",
+    posted: "Last 30 Days",
+    image: job1
+  },
+  {
+    id: 10,
+    title: "Business Analyst",
+    company: "AnalyzeIt",
+    location: "Bangalore",
+    type: "Freelance",
+    salary: "20000",
+    posted: "Today",
+    image: job1
+  },
+  {
+    id: 11,
+    title: "Software Architect",
+    company: "ArchitectsInc",
+    location: "Remote",
+    type: "Full-time",
+    salary: "35000",
+    posted: "Last 7 Days",
+    image: job1
+  },
+  {
+    id: 12,
+    title: "Graphic Designer",
+    company: "DesignIt",
+    location: "Chennai",
+    type: "Part-time",
+    salary: "16000",
+    posted: "Last 30 Days",
+    image: job1
   }
-  // Add more jobs to ensure you have a total of 12 jobs for testing
 ];
 
 const FindAJob = () => {
@@ -161,7 +259,7 @@ const FindAJob = () => {
                   ))}
 
                   <Form.Label>Salary Range</Form.Label>
-                  {['15,000', '10,000', '16,000', '20,000'].map(salary => (
+                  {['15,000', '10,000', '16,000', '20,000','25,000','30,000'].map(salary => (
                     <Form.Check
                       key={salary}
                       type="checkbox"
