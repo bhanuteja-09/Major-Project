@@ -3,19 +3,20 @@ import { Navbar, Nav, Button, Form } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import LOGO6 from '../assets/LOGO6.png';
 import './FindAJob.css';
+
 import { FaMapMarkerAlt, FaDollarSign, FaClock } from 'react-icons/fa';
 import job1 from '../assets/job1.png';
 import job2 from '../assets/job2.jpg';
 import job3 from '../assets/job3.png';
-// import job4 from '../assets/job1.png'; // Add these image imports
-// import job5 from '../assets/job1.png';
-// import job6 from '../assets/job1.png';
-// import job7 from '../assets/job1.png';
-// import job8 from '../assets/job1.png';
-// import job9 from '../assets/job1.png';
-// import job10 from '../assets/job1.png';
-// import job11 from '../assets/job1.png';
-// import job12 from '../assets/job1.png';
+import job4 from '../assets/job5.jpg'; // Add these image imports
+import job5 from '../assets/job7.png';
+import job6 from '../assets/job8.png';
+import job7 from '../assets/job1.png';
+import job8 from '../assets/job2.jpg';
+import job9 from '../assets/job3.png';
+import job10 from '../assets/job5.jpg';
+import job11 from '../assets/job7.png';
+import job12 from '../assets/job8.png';
 
 // Job Data
 const jobs = [
@@ -57,7 +58,7 @@ const jobs = [
     type: "Freelance",
     salary: "18000",
     posted: "Today",
-    image: job1
+    image: job4
   },
   {
     id: 5,
@@ -67,7 +68,7 @@ const jobs = [
     type: "Part-time",
     salary: "17000",
     posted: "Last 7 Days",
-    image: job1
+    image: job5
   },
   {
     id: 6,
@@ -77,7 +78,7 @@ const jobs = [
     type: "Full-time",
     salary: "25000",
     posted: "Last 30 Days",
-    image: job1
+    image: job6
   },
   {
     id: 7,
@@ -87,7 +88,7 @@ const jobs = [
     type: "Freelance",
     salary: "12000",
     posted: "Today",
-    image: job1
+    image: job7
   },
   {
     id: 8,
@@ -97,7 +98,7 @@ const jobs = [
     type: "Full-time",
     salary: "22000",
     posted: "Last 7 Days",
-    image: job1
+    image: job8
   },
   {
     id: 9,
@@ -107,7 +108,7 @@ const jobs = [
     type: "Part-time",
     salary: "14000",
     posted: "Last 30 Days",
-    image: job1
+    image: job9
   },
   {
     id: 10,
@@ -117,7 +118,7 @@ const jobs = [
     type: "Freelance",
     salary: "20000",
     posted: "Today",
-    image: job1
+    image: job10
   },
   {
     id: 11,
@@ -127,7 +128,7 @@ const jobs = [
     type: "Full-time",
     salary: "35000",
     posted: "Last 7 Days",
-    image: job1
+    image: job11
   },
   {
     id: 12,
@@ -137,7 +138,7 @@ const jobs = [
     type: "Part-time",
     salary: "16000",
     posted: "Last 30 Days",
-    image: job1
+    image: job12
   }
 ];
 
@@ -306,7 +307,7 @@ const FindAJob = () => {
                       <p className="company-name">{job.company}</p>
                       <div>
                       <p className="location"><FaMapMarkerAlt /> {job.location}</p>
-                      <p className="salary"><FaDollarSign /> {job.salary}</p>
+                      <p className="salary">₹ {job.salary}</p>
                       </div>
                       <p className="posted"><FaClock /> {job.posted}</p>
                       <Button variant="primary" className="view-details-btn">View Details</Button>

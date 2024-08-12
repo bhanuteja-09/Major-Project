@@ -8,9 +8,9 @@ import LOGO6 from '../assets/LOGO6.png';
 import profileImage from '../assets/profile1.png'; // Ensure the path is correct
 import mobileProfileImage from '../assets/profile1 (2).png'; // Ensure the path is correct
 import {Animate} from 'react-simple-animate';
-import profileImage1 from '../assets/profile1.png';
-import profileImage2 from '../assets/profile1.png';
-import profileImage3 from '../assets/profile1.png';
+import profileImage1 from '../assets/profile1-whitebg.jpg';
+import profileImage2 from '../assets/profile4.jpg';
+import profileImage3 from '../assets/profile5.jpg';
 import Modal from '../components/Modal/Modal';
 // import '../components/Modal/Modal.css';
 // import Header from '../components/Header';
@@ -254,23 +254,23 @@ const Home = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="director-info">
-              <div className="director-photo">
-                <img src={profileImage1} alt="Director 1" />
+            <div className="director-photo">
+                <img src={profileImage1} alt="Director 2" />
               </div>
-              <h4 className="director-name">John Doe</h4>
-              <p className="director-title">Creative Director</p>
-              <p className="director-description">John Doe is a seasoned professional with over 20 years of experience in the industry. He specializes in creative direction and has led numerous successful projects across various sectors. His innovative approach and strategic vision make him a key asset to our team.</p>
+              <h4 className="director-name">Jane Smith</h4>
+              <p className="director-title">Marketing Director</p>
+              <p className="director-description">Jane Smith brings a wealth of expertise in marketing and brand management. With a proven track record of elevating brand profiles and executing high-impact campaigns, she is instrumental in shaping our marketing strategies and driving growth.</p>
               {/* <button className="btn-view-director">View Other Directors</button> */}
             </div>
           </div>
           <div className="carousel-item">
             <div className="director-info">
-              <div className="director-photo">
-                <img src={profileImage2} alt="Director 2" />
+            <div className="director-photo">
+                <img src={profileImage2} alt="Director 1" />
               </div>
-              <h4 className="director-name">Jane Smith</h4>
-              <p className="director-title">Marketing Director</p>
-              <p className="director-description">Jane Smith brings a wealth of expertise in marketing and brand management. With a proven track record of elevating brand profiles and executing high-impact campaigns, she is instrumental in shaping our marketing strategies and driving growth.</p>
+              <h4 className="director-name">John Doe</h4>
+              <p className="director-title">Creative Director</p>
+              <p className="director-description">John Doe is a seasoned professional with over 20 years of experience in the industry. He specializes in creative direction and has led numerous successful projects across various sectors. His innovative approach and strategic vision make him a key asset to our team.</p>
               {/* <button className="btn-view-director">View Other Directors</button> */}
             </div>
           </div>
