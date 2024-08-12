@@ -304,8 +304,10 @@ const FindAJob = () => {
                         <Button variant="outline-primary" className="freelance-btn">{job.type}</Button>
                       </div>
                       <p className="company-name">{job.company}</p>
+                      <div>
                       <p className="location"><FaMapMarkerAlt /> {job.location}</p>
                       <p className="salary"><FaDollarSign /> {job.salary}</p>
+                      </div>
                       <p className="posted"><FaClock /> {job.posted}</p>
                       <Button variant="primary" className="view-details-btn">View Details</Button>
                     </div>
