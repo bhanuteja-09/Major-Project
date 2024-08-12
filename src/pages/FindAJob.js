@@ -4,52 +4,100 @@ import { Link, useLocation } from 'react-router-dom';
 import LOGO6 from '../assets/LOGO6.png';
 import './FindAJob.css';
 import { FaMapMarkerAlt, FaDollarSign, FaClock } from 'react-icons/fa';
-import job5 from '../assets/job5.jpg';
 import job1 from '../assets/job1.png';
-import job3 from '../assets/job3.png';
 import job2 from '../assets/job2.jpg';
-import job7 from '../assets/job7.png';
-import job8 from '../assets/job8.png';
+import job3 from '../assets/job3.png';
 
 // Job Data
 const jobs = [
-  { id: 1, title: 'Web Developer', company: 'Company Name 1', location: 'Hyderabad', salary: '15,000/month', posted: '15 days ago', image: job5, type: 'Freelance' },
-  { id: 2, title: 'Backend Developer', company: 'Company Name 2', location: 'Bangalore', salary: '18,000/month', posted: '7 days ago', image: job1, type: 'Full Time' },
-  { id: 3, title: 'App Developer', company: 'Company Name 3', location: 'Bangalore', salary: '16,000/month', posted: '3 days ago', image: job3, type: 'Full Time' },
-  { id: 4, title: 'Frontend Developer', company: 'Company Name 3', location: 'Chennai', salary: '15,000/month', posted: '10 days ago', image: job2, type: 'Full Time' },
-  { id: 5, title: 'Fullstack Developer', company: 'Company Name 3', location: 'Bangalore', salary: '25,000/month', posted: '2 days ago', image: job8, type: 'Freelance' },
-  { id: 6, title: 'Test Engineer', company: 'Company Name 3', location: 'Chennai', salary: '20,000/month', posted: '1 days ago', image: job7, type: 'Full Time' },
-  { id: 7, title: 'React JS Developer', company: 'Company Name 3', location: 'Vishakapatnam', salary: '13,000/month', posted: '8 days ago', image: job7, type: 'Remote' },
-  { id: 8, title: 'Angular Developer', company: 'Company Name 3', location: 'Bangalore', salary: '18,000/month', posted: '4 days ago', image: job7, type: 'Full Time' },
-  { id: 9, title: 'Senior Software Engneer', company: 'Company Name 3', location: 'Hyderabad', salary: '14,000/month', posted: '30 days ago', image: job7, type: 'Full Time' },
-  { id: 10, title: 'Java Developer', company: 'Company Name 3', location: 'Chennai', salary: '10,000/month', posted: '1 days ago', image: job7, type: 'Full Time' },
-  { id: 11, title: 'MEAN Developer', company: 'Company Name 3', location: 'Vishakapatnam', salary: '28,000/month', posted: '3 days ago', image: job7, type: 'Full Time' },
-  { id: 12, title: 'Junior Software Developer', company: 'Company Name 3', location: 'Chennai', salary: '22,000/month', posted: '6 days ago', image: job7, type: 'Freelance' },
+  {
+    id: 1,
+    title: "Software Engineer",
+    company: "TechCorp",
+    location: "Hyderabad",
+    type: "Full-time",
+    salary: "20000",
+    posted: "Today",
+    image: job1
+  },
+  {
+    id: 2,
+    title: "Data Scientist",
+    company: "DataCorp",
+    location: "Bangalore",
+    type: "Part-time",
+    salary: "15000",
+    posted: "Last 7 Days",
+    image: job2
+  },
+  {
+    id: 3,
+    title: "Product Manager",
+    company: "ProductCorp",
+    location: "Remote",
+    type: "Full-time",
+    salary: "30000",
+    posted: "Last 30 Days",
+    image: job3
+  }
+  // Add more jobs to ensure you have a total of 12 jobs for testing
 ];
 
 const FindAJob = () => {
   const [expanded, setExpanded] = useState(false);
   const location = useLocation();
-  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [selectedFilters, setSelectedFilters] = useState({
+    location: [],
+    type: [],
+    salary: [],
+    posted: []
+  });
+  const [filteredJobs, setFilteredJobs] = useState(jobs);
   const [currentPage, setCurrentPage] = useState(1);
   const jobsPerPage = 3;
 
   const handleNavClick = () => setExpanded(false);
 
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChange = (e, filterType) => {
     const value = e.target.value;
-    setSelectedFilters(prevFilters =>
-      prevFilters.includes(value)
-        ? prevFilters.filter(filter => filter !== value)
-        : [...prevFilters, value]
-    );
+    setSelectedFilters(prevFilters => {
+      const updatedFilters = prevFilters[filterType].includes(value)
+        ? prevFilters[filterType].filter(filter => filter !== value)
+        : [...prevFilters[filterType], value];
+      return {
+        ...prevFilters,
+        [filterType]: updatedFilters
+      };
+    });
   };
 
-  const filteredJobs = jobs.filter(job =>
-    (selectedFilters.includes(job.location) || selectedFilters.length === 0) &&
-    (selectedFilters.includes(job.type) || selectedFilters.length === 0) &&
-    (selectedFilters.includes(job.salary) || selectedFilters.length === 0)
-  );
+  const handleFilterClick = () => {
+    const normalizedSalaryFilters = selectedFilters.salary.map(s => s.replace(/,/g, ''));
+
+    const updatedFilteredJobs = jobs.filter(job =>
+      (selectedFilters.location.length === 0 || selectedFilters.location.includes(job.location)) &&
+      (selectedFilters.type.length === 0 || selectedFilters.type.includes(job.type)) &&
+      (normalizedSalaryFilters.length === 0 || normalizedSalaryFilters.includes(job.salary.replace(/,/g, ''))) &&
+      (selectedFilters.posted.length === 0 || selectedFilters.posted.includes(job.posted))
+    );
+
+    console.log("Selected Filters:", selectedFilters);
+    console.log("Filtered Jobs:", updatedFilteredJobs);
+
+    setFilteredJobs(updatedFilteredJobs);
+    setCurrentPage(1); // Reset to the first page after filtering
+  };
+
+  const handleResetClick = () => {
+    setSelectedFilters({
+      location: [],
+      type: [],
+      salary: [],
+      posted: []
+    });
+    setFilteredJobs(jobs);
+    setCurrentPage(1); // Reset to the first page after resetting filters
+  };
 
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
@@ -95,8 +143,8 @@ const FindAJob = () => {
                       type="checkbox"
                       label={location}
                       value={location}
-                      checked={selectedFilters.includes(location)}
-                      onChange={handleCheckboxChange}
+                      checked={selectedFilters.location.includes(location)}
+                      onChange={(e) => handleCheckboxChange(e, 'location')}
                     />
                   ))}
 
@@ -107,8 +155,8 @@ const FindAJob = () => {
                       type="checkbox"
                       label={type}
                       value={type}
-                      checked={selectedFilters.includes(type)}
-                      onChange={handleCheckboxChange}
+                      checked={selectedFilters.type.includes(type)}
+                      onChange={(e) => handleCheckboxChange(e, 'type')}
                     />
                   ))}
 
@@ -119,8 +167,8 @@ const FindAJob = () => {
                       type="checkbox"
                       label={salary}
                       value={salary}
-                      checked={selectedFilters.includes(salary)}
-                      onChange={handleCheckboxChange}
+                      checked={selectedFilters.salary.includes(salary)}
+                      onChange={(e) => handleCheckboxChange(e, 'salary')}
                     />
                   ))}
 
@@ -131,14 +179,14 @@ const FindAJob = () => {
                       type="checkbox"
                       label={posted}
                       value={posted}
-                      checked={selectedFilters.includes(posted)}
-                      onChange={handleCheckboxChange}
+                      checked={selectedFilters.posted.includes(posted)}
+                      onChange={(e) => handleCheckboxChange(e, 'posted')}
                     />
                   ))}
 
                   <div className="button-group mt-3">
-                    <Button variant="primary" className="filter-btn">Filter</Button>
-                    <Button variant="secondary" className="reset-btn" onClick={() => setSelectedFilters([])}>Reset</Button>
+                    <Button variant="primary" className="filter-btn" onClick={handleFilterClick}>Filter</Button>
+                    <Button variant="secondary" className="reset-btn" onClick={handleResetClick}>Reset</Button>
                   </div>
                 </Form.Group>
               </Form>
@@ -158,11 +206,10 @@ const FindAJob = () => {
                         <Button variant="outline-primary" className="freelance-btn">{job.type}</Button>
                       </div>
                       <p className="company-name">{job.company}</p>
-                      <div className="job-info-row">
-                        <div className="job-location"><FaMapMarkerAlt /> {job.location}</div>
-                        <div className="job-salary"><FaDollarSign /> {job.salary}</div>
-                        <div className="job-posted"><FaClock /> {job.posted}</div>
-                      </div>
+                      <p className="location"><FaMapMarkerAlt /> {job.location}</p>
+                      <p className="salary"><FaDollarSign /> {job.salary}</p>
+                      <p className="posted"><FaClock /> {job.posted}</p>
+                      <Button variant="primary" className="view-details-btn">View Details</Button>
                     </div>
                   </div>
                 ))}
@@ -177,18 +224,16 @@ const FindAJob = () => {
                 >
                   Previous
                 </Button>
-
-                {[...Array(totalPages)].map((_, index) => (
+                {Array.from({ length: totalPages }, (_, index) => (
                   <Button
                     key={index + 1}
-                    variant={currentPage === index + 1 ? 'primary' : 'secondary'}
+                    variant="light"
+                    className={`page-btn ${currentPage === index + 1 ? 'active' : ''}`}
                     onClick={() => paginate(index + 1)}
-                    className="page-btn"
                   >
                     {index + 1}
                   </Button>
                 ))}
-
                 <Button
                   variant="secondary"
                   className="page-btn next"
@@ -202,45 +247,6 @@ const FindAJob = () => {
           </div>
         </div>
       </div>
-
-       {/* Footer */}
-<footer className="home-footer">
-  <div className="container">
-    <div className="row">
-      <div className="col-md-4">
-        <h5 className="aboutus">About Us</h5>
-        <p>Learn more about our mission and values.</p>
-      </div>
-      <div className="col-md-4">
-        <h5 className="contactinfo">Contact Info</h5>
-        <p>Get in touch with us for any inquiries.</p>
-        <p>Phone: +888044338899</p>
-        <p>Email: <a href="mailto:info@hirecheck.com">info@hirecheck.com</a></p>
-      </div>
-      <div className="col-md-4">
-        <h5 className="importantlinks">Important Links</h5>
-        <ul>
-        <li><Link to="/" className="footer-link">Home</Link></li>
-              <li><Link to="/find-a-job" className="footer-link">Find a Job</Link></li>
-              <li><Link to="/about" className="footer-link">About Us</Link></li>
-              <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
-              <li><Link to="#login" className="footer-link">Login</Link></li>
-        </ul>
-      </div>
-    </div>
-    <div className="row footer-bottom">
-      <div className="col-md-6 text-center text-md-left">
-        <p>&copy; 2024 HireCheck. All rights reserved.</p>
-      </div>
-      <div className="col-md-6 text-center text-md-right">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-twitter"></i></a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-linkedin-in"></i></a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon"><i className="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
     </div>
   );
 };
