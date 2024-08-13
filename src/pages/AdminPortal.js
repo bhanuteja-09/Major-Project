@@ -344,6 +344,75 @@ const AdminPortal = () => {
                   </tr>
                 </thead>
                 <tbody>
+                   <tr>
+                    <td>Sr. No</td>
+                    <td>Job Title</td>
+                    <td>No. of Posts</td>
+                    <td>Qualification Required</td>
+                    <td>Experience Required</td>
+                    <td>Last Date to Apply</td>
+                    <td>Company</td>
+                    <td>Country</td>
+                    <td>State</td>
+                    <td>Job Posted Date</td>
+                    <td>
+                        <button className="edit-btn">
+                          <i className="fas fa-edit"></i>
+                        </button>
+                      </td>
+                      <td>
+                        <button className="delete-btn">
+                          <i className="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                    <td>Sr. No</td>
+                    <td>Job Title</td>
+                    <td>No. of Posts</td>
+                    <td>Qualification Required</td>
+                    <td>Experience Required</td>
+                    <td>Last Date to Apply</td>
+                    <td>Company</td>
+                    <td>Country</td>
+                    <td>State</td>
+                    <td>Job Posted Date</td>
+                    <td>
+                        <button className="edit-btn">
+                          <i className="fas fa-edit"></i>
+                        </button>
+                      </td>
+                      <td>
+                        <button className="delete-btn">
+                          <i className="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                    <td>Sr. No</td>
+                    <td>Job Title</td>
+                    <td>No. of Posts</td>
+                    <td>Qualification Required</td>
+                    <td>Experience Required</td>
+                    <td>Last Date to Apply</td>
+                    <td>Company</td>
+                    <td>Country</td>
+                    <td>State</td>
+                    <td>Job Posted Date</td>
+                    <td>
+                        <button className="edit-btn">
+                          <i className="fas fa-edit"></i>
+                        </button>
+                      </td>
+                      <td>
+                        <button className="delete-btn">
+                          <i className="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                 
                   {jobList.map((job, index) => (
                     <tr key={index}>
                       <td>{index + 1}</td>
