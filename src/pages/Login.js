@@ -29,7 +29,7 @@ const Login = () => {
       const adminPassword = 'password';
 
       if (username === adminUsername && password === adminPassword) {
-        navigate('/admin-dashboard');
+        navigate('/admin-portal');
       } else {
         setErrorMessage('Invalid admin credentials');
       }

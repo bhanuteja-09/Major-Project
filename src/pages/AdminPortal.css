@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background for the whole page */
+}
+
+.admin-portal {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px; /* Adjust width for better appearance */
+    background-color: #afa6a3; /* Dark blue-gray for the sidebar */
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed; /* Fix the sidebar to the left */
+    top: 0;
+    left: 0;
+    border-right: 2px solid #34495e; /* Slightly lighter blue-gray border */
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 24px;
+    color: blue; /* Bright blue for the title */
+    padding-bottom: 15px;
+    border-bottom: 2px solid #34495e; /* Border color matching sidebar */
+    font-weight: bold; /* Bold font for emphasis */
+    text-align: center; /* Center align the title */
+    font-style: italic; /* Italicize the text */
+}
+
+.sidebar ul {
+    position:relative;
+    right:14px;
+    list-style: none;
+    padding: 0;
+    margin: 40px 0; /* Add margin to separate from the header */
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Add margin between items */
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px; /* Slightly larger font size for better readability */
+    text-align: left; /* Align text to the left */
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 18px; /* Icon size */
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: blue; /* Bright blue for active and hover state */
+    color: #fff; /* White text for contrast */
+}
+
+.logout-button {
+    margin-top: auto; /* Push button to the bottom of the sidebar */
+    padding: 10px;
+    background-color: rgb(55, 47, 47); /* Red background for logout button */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Font size */
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: rgb(41, 37, 37); /* Darker red on hover */
+}
+
+.main-content1 {
+    margin-left: 250px; /* Adjust margin to make space for sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(100% - 250px); /* Adjust width to fit remaining space */
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.header {
+    background-color: rgb(99, 99, 250); /* Blue background for the header */
+    color: #fff; /* White text color */
+    padding: 5px 20px;
+    position: fixed;
+    top: 0;
+    left: 250px; /* Ensure it is positioned to the right of the sidebar */
+    width: calc(100% - 250px); /* Adjust width to fit the remaining space */
+    box-sizing: border-box;
+    border-bottom: 2px solid #34495e; /* Add a border at the bottom */
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+.content1 {
+    margin-top: 60px; /* Ensure content starts below the fixed header */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 200px; /* Adjust width for medium screens */
+        margin: 0;
+    }
+
+    .main-content1 {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .header {
+        left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-portal {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 2px solid #34495e;
+    }
+
+    .main-content1 {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .header {
+        left: 0;
+        width: 100%;
+        position: relative; /* Change to relative on smaller screens */
+    }
+
+    .content1 {
+        margin-top: 80px; /* Adjust margin for smaller screens if needed */
+    }
+}
