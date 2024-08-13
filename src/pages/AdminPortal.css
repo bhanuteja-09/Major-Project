@@ -38,8 +38,8 @@ body {
 }
 
 .sidebar ul {
-    position:relative;
-    right:14px;
+    position: relative;
+    right: 14px;
     list-style: none;
     padding: 0;
     margin: 40px 0; /* Add margin to separate from the header */
@@ -71,7 +71,7 @@ body {
 .logout-button {
     margin-top: auto; /* Push button to the bottom of the sidebar */
     padding: 10px;
-    background-color: rgb(55, 47, 47); /* Red background for logout button */
+    background-color: rgb(55, 47, 47); /* Dark red background for logout button */
     color: #fff; /* White text color */
     border: none;
     border-radius: 5px;
@@ -108,6 +108,65 @@ body {
 
 .content1 {
     margin-top: 60px; /* Ensure content starts below the fixed header */
+}
+
+/* Dashboard Styles */
+.dashboard-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between boxes */
+    margin-top: 20px; /* Space above dashboard boxes */
+}
+
+.dashboard-box {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    flex: 1;
+    min-width: 250px; /* Minimum width of each box */
+    max-width: 300px; /* Maximum width for larger screens */
+    height: 150px; /* Increased height for better appearance */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* White text color */
+    font-weight: bold;
+}
+
+.box-1 {
+    background-color: #f39c12; /* Yellow */
+}
+
+.box-2 {
+    background-color: #e74c3c; /* Red */
+}
+
+.box-3 {
+    background-color: #2ecc71; /* Green */
+}
+
+.box-4 {
+    background-color: #3498db; /* Blue */
+}
+
+.box-5 {
+    background-color: #9b59b6; /* Purple */
+}
+
+.box-6 {
+    background-color: #e67e22; /* Orange */
+}
+
+.dashboard-box h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.dashboard-box p {
+    margin: 10px 0 0;
+    font-size: 24px;
 }
 
 /* Responsive Styles */
@@ -156,3 +215,147 @@ body {
         margin-top: 80px; /* Adjust margin for smaller screens if needed */
     }
 }
+
+
+
+/* Styles for New Job Form */
+.add-job-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Increase width for desktop screens */
+    margin: 20px auto;
+  }
+  
+  .add-job-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .add-job-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .add-job-form .form-group.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .add-job-form .form-item {
+    flex: 1;
+  }
+  
+  .add-job-form .form-item.col {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .add-job-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .add-job-form input,
+  .add-job-form textarea,
+  .add-job-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .add-job-form textarea {
+    resize: vertical;
+  }
+  
+  
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+.submit-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background: #0056b3;
+}
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .add-job-form {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .add-job-form .form-group.row {
+      flex-direction: column;
+    }
+  
+    .add-job-form .form-item {
+      width: 100%;
+    }
+  }
+  
+  
+  /* Add styles for the table in job-list */
+  .job-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .job-list th,
+  .job-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .job-list th {
+    background: #f4f4f4;
+  }
+  
+  .job-list tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .job-list button {
+    background: #5bc0de;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .job-list button:hover {
+    background: #31b0d5;
+  }
+  .edit-btn {
+    color: #5bc0de;
+  }
+  
+  .delete-btn {
+    color: #d9534f;
+  }
+  
+  .edit-btn:hover {
+    color: #32f646;
+  }
+  
+  .delete-btn:hover {
+    color: #c9302c;
+  }
+  

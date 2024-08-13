@@ -1,0 +1,60 @@
+/* Form Styles */
+.add-job-form {
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Center align form */
+}
+
+.add-job-form h2 {
+    margin-bottom: 20px;
+    color: #333; /* Dark color for heading */
+}
+
+.add-job-form .form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+.add-job-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-job-form input,
+.add-job-form textarea,
+.add-job-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Light border for inputs */
+    box-sizing: border-box;
+}
+
+.add-job-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.add-job-form button {
+    background-color: #3498db; /* Blue background for button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-job-form button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .add-job-form {
+        padding: 10px;
+    }
+}
