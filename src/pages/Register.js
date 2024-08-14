@@ -218,7 +218,6 @@ const Register = () => {
               <p>Already registered? <Link to="/login">Click here</Link></p>
             </div>
           </form>
-          {/* Display success message */}
           {successMessage && <p className="success-message">{successMessage}</p>}
         </div>
       </div>

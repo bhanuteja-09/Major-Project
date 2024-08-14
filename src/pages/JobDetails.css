@@ -1,0 +1,85 @@
+/* JobDetails.css */
+.job-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .job-details-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .job-details-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .job-details-image-wrapper {
+    flex: 0 0 200px;
+  }
+  
+  .job-details-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .job-details-info {
+    flex: 1;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f8f9fa;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close-button:hover {
+    background: #e9ecef;
+  }
+  
+  .job-details-actions {
+    margin-top: 20px;
+  }
+  
+  .apply-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .apply-button:hover {
+    background: #0056b3;
+  }
+  

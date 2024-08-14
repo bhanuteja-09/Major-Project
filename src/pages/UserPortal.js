@@ -17,6 +17,7 @@ import job10 from '../assets/job5.jpg';
 import job11 from '../assets/job7.png';
 import job12 from '../assets/job8.png';
 import './UserPortal.css';
+import JobDetails from './JobDetails';
 
 // Job Data
 const jobs = [
@@ -163,6 +164,7 @@ const UserPortal = () => {
   const [filteredJobs, setFilteredJobs] = useState(jobs);
   const [currentPage, setCurrentPage] = useState(1);
   const jobsPerPage = 3;
+  const [selectedJob, setSelectedJob] = useState(null);
 
   const handleProfileClick = () => {
     setShowProfile(true);
@@ -224,6 +226,14 @@ const UserPortal = () => {
 
   const handleNavClick = () => {
     setExpanded(false); // Collapse the navbar
+  };
+
+  const handleViewDetails = (job) => {
+    setSelectedJob(job);
+  };
+
+  const handleCloseJobDetails = () => {
+    setSelectedJob(null);
   };
   return (
     <div>
@@ -353,7 +363,7 @@ const UserPortal = () => {
                       <p className="salary">₹ {job.salary}</p>
                       </div>
                       <p className="posted"><FaClock /> {job.posted}</p>
-                      <Button variant="primary" className="view-details-btn">View Details</Button>
+                      <Button variant="info" onClick={() => handleViewDetails(job)}>View Details</Button>
                     </div>
                   </div>
                 ))}
@@ -393,6 +403,9 @@ const UserPortal = () => {
           </div>
         )}
       </div>
+      {selectedJob && (
+        <JobDetails job={selectedJob} onClose={handleCloseJobDetails} />
+      )}
     </div>
   );
 };
