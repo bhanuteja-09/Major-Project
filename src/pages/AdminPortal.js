@@ -19,8 +19,61 @@ const AdminPortal = () => {
     state: '',
   });
   const [errors, setErrors] = useState({});
-  const [jobList, setJobList] = useState([]);
-  const [editIndex, setEditIndex] = useState(null);
+  const [jobList, setJobList] = useState([
+    {
+      id: 1,
+      jobTitle: 'Java Developer',
+      numberOfPosts: 10,
+      qualification: 'B.Tech, M.Tech',
+      experience: '0-1 Year',
+      lastDate: '2024-08-30',
+      companyName: 'X Company',
+      country: 'India',
+      state: 'Karnataka',
+      jobPostedDate: '2024-08-14',
+    },
+    {
+      id: 2,
+      jobTitle: 'Data Scientist',
+      numberOfPosts: 6,
+      qualification: 'B.Tech, MCA',
+      experience: '0-1 Year',
+      lastDate: '2024-08-30',
+      companyName: 'Y Company',
+      country: 'India',
+      state: 'Karnataka',
+      jobPostedDate: '2024-08-13',
+    },
+    {
+      id: 3,
+      jobTitle: 'Software Engineer',
+      numberOfPosts: 8,
+      qualification: 'B.Tech, M.Tech',
+      experience: '0-1 Year',
+      lastDate: '2024-08-24',
+      companyName: 'Z Company',
+      country: 'India',
+      state: 'Karnataka',
+      jobPostedDate: '2024-08-18',
+    },
+    {
+      id: 4,
+      jobTitle: 'Backend Developer',
+      numberOfPosts: 7,
+      qualification: 'B.Tech, M.Tech',
+      experience: '2 Year',
+      lastDate: '2024-08-29',
+      companyName: 'A Company',
+      country: 'India',
+      state: 'Karnataka',
+      jobPostedDate: '2024-08-19',
+    },
+    // Add more job objects as needed
+  ]);
+
+  
+   const [editJob, setEditJob] = useState(null);
+
   const navigate = useNavigate();
 
   const handleSectionChange = (section) => {
@@ -72,20 +125,20 @@ const AdminPortal = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      const updatedJobList = [...jobList];
-      if (editIndex !== null) {
-        updatedJobList[editIndex] = {
+      if (editJob) {
+        const updatedJobList = jobList.map((job) =>
+          job.id === editJob.id ? { ...editJob, ...formData } : job
+        );
+        setJobList(updatedJobList);
+        setEditJob(null); // Clear edit form
+      } else {
+        const newJob = {
+          id: jobList.length ? jobList[jobList.length - 1].id + 1 : 1,
           ...formData,
           jobPostedDate: new Date().toLocaleDateString(),
         };
-        setEditIndex(null); // Clear edit index
-      } else {
-        updatedJobList.push({
-          ...formData,
-          jobPostedDate: new Date().toLocaleDateString(),
-        });
+        setJobList([...jobList, newJob]);
       }
-      setJobList(updatedJobList);
       setFormData({
         jobTitle: '',
         numberOfPosts: '',
@@ -104,15 +157,17 @@ const AdminPortal = () => {
     }
   };
 
-  const handleEdit = (index) => {
-    setFormData(jobList[index]);
-    setEditIndex(index);
+  const handleEdit = (job) => {
+    setEditJob(job);
+    setFormData(job);
     setActiveSection('new-job'); // Navigate to the form section
   };
 
-  const handleDelete = (index) => {
-    setJobList(jobList.filter((_, i) => i !== index));
+  const handleDelete = (id) => {
+    setJobList(jobList.filter((job) => job.id !== id));
   };
+
+
 
   return (
     <div className="admin-portal">
@@ -137,12 +192,12 @@ const AdminPortal = () => {
           >
             <i className="fas fa-list-ul"></i> Job List
           </li>
-          <li
+          {/* <li
             className={activeSection === 'job-requirements' ? 'active' : ''}
             onClick={() => handleSectionChange('job-requirements')}
           >
             <i className="fas fa-clipboard-list"></i> Job Requirements
-          </li>
+          </li> */}
         </ul>
         <button className="logout-button" onClick={handleLogout}>
           Logout
@@ -178,8 +233,8 @@ const AdminPortal = () => {
           )}
           {activeSection === 'new-job' && (
             <div id="new-job" className="add-job-form">
-              <h2>{editIndex !== null ? 'Edit Job' : 'Add Job'}</h2>
-              <form onSubmit={handleSubmit}>
+               <h2>{editJob ? 'Edit Job' : 'Add Job'}</h2>
+               <form onSubmit={handleSubmit}>
                 <div className="form-group row">
                   <div className="form-item col">
                     <label htmlFor="jobTitle">Job Title <span className="required">*</span></label>
@@ -317,9 +372,7 @@ const AdminPortal = () => {
                     {errors.state && <div className="error-message">{errors.state}</div>}
                   </div>
                 </div>
-                <button type="submit" className="submit-button">
-                  {editIndex !== null ? 'Update Job' : 'Add Job'}
-                </button>
+                <button className="submit-button" type="submit">{editJob ? 'Update Job' : 'Add Job'}</button>
               </form>
             </div>
           )}
@@ -327,126 +380,60 @@ const AdminPortal = () => {
             <div id="job-list" className="job-list">
               <h2>Job List</h2>
               <table>
-                <thead>
-                  <tr>
-                    <th>Sr. No</th>
-                    <th>Job Title</th>
-                    <th>No. of Posts</th>
-                    <th>Qualification Required</th>
-                    <th>Experience Required</th>
-                    <th>Last Date to Apply</th>
-                    <th>Company</th>
-                    <th>Country</th>
-                    <th>State</th>
-                    <th>Job Posted Date</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                  </tr>
-                </thead>
-                <tbody>
-                   <tr>
-                    <td>Sr. No</td>
-                    <td>Job Title</td>
-                    <td>No. of Posts</td>
-                    <td>Qualification Required</td>
-                    <td>Experience Required</td>
-                    <td>Last Date to Apply</td>
-                    <td>Company</td>
-                    <td>Country</td>
-                    <td>State</td>
-                    <td>Job Posted Date</td>
-                    <td>
-                        <button className="edit-btn">
-                          <i className="fas fa-edit"></i>
-                        </button>
-                      </td>
-                      <td>
-                        <button className="delete-btn">
-                          <i className="fas fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                    <td>Sr. No</td>
-                    <td>Job Title</td>
-                    <td>No. of Posts</td>
-                    <td>Qualification Required</td>
-                    <td>Experience Required</td>
-                    <td>Last Date to Apply</td>
-                    <td>Company</td>
-                    <td>Country</td>
-                    <td>State</td>
-                    <td>Job Posted Date</td>
-                    <td>
-                        <button className="edit-btn">
-                          <i className="fas fa-edit"></i>
-                        </button>
-                      </td>
-                      <td>
-                        <button className="delete-btn">
-                          <i className="fas fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                    <td>Sr. No</td>
-                    <td>Job Title</td>
-                    <td>No. of Posts</td>
-                    <td>Qualification Required</td>
-                    <td>Experience Required</td>
-                    <td>Last Date to Apply</td>
-                    <td>Company</td>
-                    <td>Country</td>
-                    <td>State</td>
-                    <td>Job Posted Date</td>
-                    <td>
-                        <button className="edit-btn">
-                          <i className="fas fa-edit"></i>
-                        </button>
-                      </td>
-                      <td>
-                        <button className="delete-btn">
-                          <i className="fas fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                 
-                  {jobList.map((job, index) => (
-                    <tr key={index}>
-                      <td>{index + 1}</td>
-                      <td>{job.jobTitle}</td>
-                      <td>{job.numberOfPosts}</td>
-                      <td>{job.qualification}</td>
-                      <td>{job.experience}</td>
-                      <td>{job.lastDate}</td>
-                      <td>{job.companyName}</td>
-                      <td>{job.country}</td>
-                      <td>{job.state}</td>
-                      <td>{job.jobPostedDate}</td>
-                      <td>
-                        <button onClick={() => handleEdit(index)} className="edit-btn">
-                          <i className="fas fa-edit"></i>
-                        </button>
-                      </td>
-                      <td>
-                        <button onClick={() => handleDelete(index)} className="delete-btn">
-                          <i className="fas fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Job Title</th>
+            <th>Number of Posts</th>
+            <th>Qualification</th>
+            <th>Experience</th>
+            <th>Last Date</th>
+            <th>Company Name</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>Job Posted Date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {jobList.map((job) => (
+            <tr key={job.id}>
+              <td>{job.id}</td>
+              <td>{job.jobTitle}</td>
+              <td>{job.numberOfPosts}</td>
+              <td>{job.qualification}</td>
+              <td>{job.experience}</td>
+              <td>{job.lastDate}</td>
+              <td>{job.companyName}</td>
+              <td>{job.country}</td>
+              <td>{job.state}</td>
+              <td>{job.jobPostedDate}</td>
+              <td>
+                <button className="edit-btn" onClick={() => handleEdit(job)}>
+                  <i className="fas fa-edit"></i>
+                </button>
+              </td>
+              <td>
+                <button className="delete-btn" onClick={() => handleDelete(job.id)}>
+                  <i className="fas fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      
             </div>
           )}
-          {activeSection === 'job-requirements' && (
+          
+          {/* {activeSection === 'job-requirements' && (
             <div id="job-requirements">
               <h2>Job Requirements</h2>
-              {/* Your content for job requirements */}
+               content for job requirements
             </div>
-          )}
+          )} */}
+
         </div>
       </div>
     </div>
