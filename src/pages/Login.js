@@ -47,12 +47,22 @@ const Login = () => {
     }
   };
 
+
+  const [expanded, setExpanded] = useState(false);
+  // const location = useLocation(); // Get the current location
+  // const [modalShow, setModalShow] = useState(false);
+
+  const handleNavClick = () => {
+    setExpanded(false); // Collapse the navbar
+  };
   return (
     <div>
       <Navbar 
         expand="lg" 
         fixed="top" 
         className="home-header"
+        expanded={expanded} 
+    onToggle={() => setExpanded(!expanded)}
       >
         <Navbar.Brand className="home-brand">
           <img src={LOGO6} alt="Logo" className="home-logo" />

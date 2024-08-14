@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { auth, createUserWithEmailAndPassword } from '../firebase-config';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
@@ -23,7 +22,7 @@ const Register = () => {
   const [mobileNumber, setMobileNumber] = useState('');
   const [country, setCountry] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const navigate = useNavigate();
+  const [successMessage, setSuccessMessage] = useState(''); // State for success message
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,7 +45,17 @@ const Register = () => {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate('/welcome');
+      setSuccessMessage('Registered successfully!');
+      setErrorMessage(''); // Clear any previous error messages
+
+      // Reset form fields
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      setUsername('');
+      setAddress('');
+      setMobileNumber('');
+      setCountry('');
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
         setErrorMessage('This email is already registered');
@@ -54,6 +63,7 @@ const Register = () => {
         setErrorMessage('Error registering user');
         console.error("Error registering user:", error);
       }
+      setSuccessMessage(''); // Clear any previous success messages
     }
   };
 
@@ -135,7 +145,9 @@ const Register = () => {
       <div className="register-container">
         <div className="register-form">
           <h2>Sign Up</h2>
-          {/* {errorMessage && <p className="error-message">{errorMessage}</p>} */}
+          
+          {/* Display error message */}
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
           <form onSubmit={handleSubmit}>
             <div className="form-section">
               <h3>Login Information</h3>
@@ -205,8 +217,9 @@ const Register = () => {
               <button type="submit">Register</button>
               <p>Already registered? <Link to="/login">Click here</Link></p>
             </div>
-            {errorMessage && <p className="error-message">{errorMessage}</p>}
           </form>
+          {/* Display success message */}
+          {successMessage && <p className="success-message">{successMessage}</p>}
         </div>
       </div>
     </div>
