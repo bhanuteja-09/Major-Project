@@ -1,0 +1,32 @@
+/* src/pages/UserPortal.css */
+
+.home-header {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .home-logo {
+    height: 40px;
+  }
+  
+  .home-nav-link {
+    color: #fff;
+  }
+  
+  .home-nav-link.active {
+    font-weight: bold;
+  }
+  
+  .user-profile {
+    padding: 20px;
+  }
+  
+  .user-find-a-job {
+    padding: 20px;
+  }
+  
+  .user-find-a-job input {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
