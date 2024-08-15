@@ -158,7 +158,7 @@ const UserPortal = () => {
   const [selectedFilters, setSelectedFilters] = useState({
     location: [],
     type: [],
-    salary: [],
+    salary: [], 
     posted: []
   });
   const [filteredJobs, setFilteredJobs] = useState(jobs);
@@ -249,8 +249,16 @@ const UserPortal = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
-            <Nav.Link as={Link} to="#" onClick={handleJobSearchClick} className="home-nav-link">Job Search</Nav.Link>
+            {/* <Nav.Link as={Link} to="#" onClick={handleJobSearchClick} className="home-nav-link">Job Search</Nav.Link> */}
             {/* <Button as={Link} to="#" onClick={handleProfileClick} className="home-nav-link2">Profile</Button> */}
+            <Button 
+              as={Link} 
+              to="#" 
+              className="home-nav-btn1" 
+              onClick={handleJobSearchClick}
+            >
+              JobSearch
+            </Button>
             <Button 
               as={Link} 
               to="#" 

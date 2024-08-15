@@ -1,85 +1,199 @@
 /* JobDetails.css */
+
+/* General Styles */
 .job-details-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.job-details-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.job-details-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.job-details-image-wrapper {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.job-details-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.job-details-info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.job-details-info h2 {
+  margin-top: 0;
+}
+
+.job-details-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.application-form {
+  position:relative;
+  left:30px;
+
+  flex: 1;
+}
+
+.application-form h3 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 25px;
+  width:230px;
+  /* position:relative;
+  right:20px; */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  margin-top: 20px;
+  color: #28a745;
+  font-weight: bold;
+  text-align: center;
+  height: 200px;
+  position:relative;
+  top:30px;
+}
+
+/* Responsive Styles */
+
+/* Mobile View */
+@media (max-width: 767px) {
   .job-details-container {
-    background: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 800px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    display: flex;
+    width: 95%;
+    max-width: none;
     flex-direction: column;
   }
-  
+
   .job-details-content {
-    display: flex;
-    gap: 20px;
+    flex-direction: column;
   }
-  
-  .job-details-image-wrapper {
-    flex: 0 0 200px;
-  }
-  
-  .job-details-image {
+
+  .job-details-image-wrapper,
+  .job-details-info,
+  .application-form {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+    margin-right: 0;
   }
-  
+
+  .job-details-image-wrapper {
+    margin-bottom: 20px;
+  }
+}
+
+/* Tablet and Up */
+@media (min-width: 768px) {
+  .job-details-container {
+    flex-direction: row;
+  }
+
+  .job-details-content {
+    flex-direction: row;
+  }
+
+  .job-details-image-wrapper,
+  .job-details-info,
+  .application-form {
+    width: 30%;
+   
+  }
+
+  .job-details-image-wrapper {
+    margin-right: 20px;
+    position:relative;
+    top:100px;
+  }
+
   .job-details-info {
-    flex: 1;
+    margin-right: 20px;
+    position:relative;
+    top:80px;
   }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #f8f9fa;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #333;
+  .job-details-title{
+    text-align: left;
+   /* font-size: 25px;
+   position:relative; */
+   right:20px;
+   width:230px;
   }
-  
-  .close-button:hover {
-    background: #e9ecef;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .job-details-container {
+    width: 50%;
   }
-  
-  .job-details-actions {
-    margin-top: 20px;
-  }
-  
-  .apply-button {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: #007bff;
-    color: #fff;
-    font-size: 16px;
-  }
-  
-  .apply-button:hover {
-    background: #0056b3;
-  }
-  
+}
