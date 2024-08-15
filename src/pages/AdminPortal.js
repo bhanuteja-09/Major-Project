@@ -30,7 +30,7 @@ const AdminPortal = () => {
       companyName: 'X Company',
       country: 'India',
       state: 'Karnataka',
-      jobPostedDate: '2024-08-14',
+      jobPostedDate: '08/14/2024',
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ const AdminPortal = () => {
       companyName: 'Y Company',
       country: 'India',
       state: 'Karnataka',
-      jobPostedDate: '2024-08-13',
+      jobPostedDate: '08/13/2024',
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ const AdminPortal = () => {
       companyName: 'Z Company',
       country: 'India',
       state: 'Karnataka',
-      jobPostedDate: '2024-08-18',
+      jobPostedDate: '08/18/2024',
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ const AdminPortal = () => {
       companyName: 'A Company',
       country: 'India',
       state: 'Karnataka',
-      jobPostedDate: '2024-08-19',
+      jobPostedDate: '08/19/2024',
     },
     // Add more job objects as needed
   ]);

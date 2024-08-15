@@ -54,7 +54,7 @@ const JobDetails = ({ job, onClose }) => {
             <h3>Apply for this Job</h3>
             {!isSubmitted ? (
               <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="form-group1">
                   <label htmlFor="name">Name:</label>
                   <input
                     type="text"
@@ -65,7 +65,7 @@ const JobDetails = ({ job, onClose }) => {
                     required
                   />
                 </div>
-                <div className="form-group">
+                <div className="form-group1">
                   <label htmlFor="email">Email:</label>
                   <input
                     type="email"
@@ -76,7 +76,7 @@ const JobDetails = ({ job, onClose }) => {
                     required
                   />
                 </div>
-                <div className="form-group">
+                <div className="form-group1">
                   <label htmlFor="coverLetter">Cover Letter:</label>
                   <textarea
                     id="coverLetter"
@@ -86,10 +86,10 @@ const JobDetails = ({ job, onClose }) => {
                     required
                   />
                 </div>
-                <button type="submit" className="submit-button">Apply</button>
+                <button type="submit" className="submit-button1">Apply</button>
               </form>
             ) : (
-              <p className="success-message">Your application has been submitted successfully!</p>
+              <p className="success-message1">Your application has been submitted successfully!</p>
             )}
           </div>
         </div>
