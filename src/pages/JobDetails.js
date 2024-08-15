@@ -6,15 +6,15 @@ const JobDetails = ({ job, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    coverLetter: ''
+    resume: null // Change coverLetter to resume
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, files } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: files ? files[0] : value
     });
   };
 
@@ -27,14 +27,14 @@ const JobDetails = ({ job, onClose }) => {
     setFormData({
       name: '',
       email: '',
-      coverLetter: ''
+      resume: null
     });
   };
 
   return (
     <div className="job-details-overlay">
       <div className="job-details-container">
-        <button className="close-button" onClick={onClose}>
+        <button className="close-button1" onClick={onClose}>
           <FaTimes />
         </button>
         <div className="job-details-content">
@@ -77,11 +77,12 @@ const JobDetails = ({ job, onClose }) => {
                   />
                 </div>
                 <div className="form-group1">
-                  <label htmlFor="coverLetter">Cover Letter:</label>
-                  <textarea
-                    id="coverLetter"
-                    name="coverLetter"
-                    value={formData.coverLetter}
+                  <label htmlFor="resume">Resume:</label>
+                  <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf,.doc,.docx" // Limit file types if needed
                     onChange={handleChange}
                     required
                   />
