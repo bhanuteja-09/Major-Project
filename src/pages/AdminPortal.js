@@ -410,12 +410,12 @@ const AdminPortal = () => {
               <td>{job.state}</td>
               <td>{job.jobPostedDate}</td>
               <td>
-                <button className="edit-btn" onClick={() => handleEdit(job)}>
+                <button className="edit-btn2" onClick={() => handleEdit(job)}>
                   <i className="fas fa-edit"></i>
                 </button>
               </td>
               <td>
-                <button className="delete-btn" onClick={() => handleDelete(job.id)}>
+                <button className="delete-btn2" onClick={() => handleDelete(job.id)}>
                   <i className="fas fa-trash"></i>
                 </button>
               </td>

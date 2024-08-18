@@ -343,19 +343,156 @@ body {
   .job-list button:hover {
     background: #31b0d5;
   }
-  .edit-btn {
+  .edit-btn2 {
     color: #5bc0de;
   }
   
-  .delete-btn {
+  .delete-btn2 {
     color: #d9534f;
   }
   
-  .edit-btn:hover {
+  .edit-btn2:hover {
     color: #32f646;
   }
   
-  .delete-btn:hover {
+  .delete-btn2:hover {
     color: #c9302c;
   }
   
+  /* Mobile Styles for screens with max-width: 420px */
+@media (max-width: 420px) {
+  /* Sidebar adjustments */
+  .sidebar {
+    height:150px;
+      width: 100%;
+      padding: 10px;
+      font-size: 14px; /* Smaller font size for better readability */
+  }
+
+  .sidebar h2 {
+      font-size: 20px; /* Adjust title size */
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: row;
+    /* list-style: none;  */
+    /* Remove default bullet points */
+    padding: 0;
+    /* margin: 0; */
+    gap: 30px; /* Adjust the gap size as needed */
+  }
+  .sidebar ul li {
+    /* display: flex;
+    flex-direction: row; */
+    position:relative;
+    bottom:50px;
+    left:18px;
+    /* height:200px; */
+      padding: 0px;
+      font-size: 18px; /* Reduce font size */
+  }
+
+  .sidebar ul li i {
+      font-size: 16px; /* Adjust icon size */
+      margin-right: 8px; /* Adjust margin */
+  }
+
+  /* Main Content adjustments */
+  .main-content1 {
+      margin-left: 0;
+      padding: 10px;
+      width: 100%; /* Full width on mobile */
+  }
+
+  .header {
+      left: 0;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px; /* Adjust font size */
+  }
+
+  .content1 {
+      margin-top: 70px; /* Adjust margin for smaller screens */
+      padding: 10px;
+  }
+
+  /* Dashboard adjustments */
+  .dashboard-boxes {
+      flex-direction: column; /* Stack boxes vertically */
+      gap: 10px; /* Reduce gap between boxes */
+  }
+
+  .dashboard-box {
+      min-width: 100%;
+      max-width: 100%;
+      height: auto; /* Adjust height */
+      padding: 15px; /* Reduce padding */
+      font-size: 14px; /* Adjust font size */
+  }
+
+  .dashboard-box h3 {
+      font-size: 16px; /* Adjust heading size */
+  }
+
+  .dashboard-box p {
+      font-size: 18px; /* Adjust paragraph size */
+  }
+
+  /* Add Job Form adjustments */
+  .add-job-form {
+      padding: 15px; /* Reduce padding */
+      margin: 10px; /* Reduce margin */
+      font-size: 14px; /* Adjust font size */
+  }
+
+  .add-job-form h2 {
+      font-size: 18px; /* Adjust heading size */
+      margin-bottom: 15px; /* Reduce bottom margin */
+  }
+
+  .add-job-form .form-group {
+      margin-bottom: 15px; /* Reduce margin between form groups */
+  }
+
+  .add-job-form .form-item {
+      width: 100%; /* Full width for form items */
+      padding: 8px; /* Reduce padding */
+  }
+
+  .add-job-form input,
+  .add-job-form textarea,
+  .add-job-form select {
+      padding: 8px; /* Reduce padding */
+      font-size: 14px; /* Adjust font size */
+  }
+
+  .submit-button {
+      padding: 8px; /* Reduce padding */
+      font-size: 14px; /* Adjust font size */
+  }
+
+  /* Job List adjustments */
+  .job-list table {
+      font-size: 14px; /* Reduce font size for table */
+  }
+
+  .job-list th, .job-list td {
+      padding: 8px; /* Reduce padding */
+  }
+
+  .job-list button {
+      padding: 5px; /* Reduce padding */
+      font-size: 12px; /* Adjust font size */
+  }
+
+  /* Logout button adjustments */
+  .logout-button {
+    width:30%;
+    position: relative;
+    left:140px;
+    bottom:85px;
+    padding: 8px; /* Reduce padding */
+      font-size: 14px; /* Adjust font size */
+  }
+}
