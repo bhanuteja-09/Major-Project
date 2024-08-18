@@ -432,9 +432,9 @@ const UserPortal = () => {
                   </div>
                 </div>
                 {isEditing ? (
-                  <button onClick={handleSaveClick} className="save-btn">Save</button>
+                  <button onClick={handleSaveClick} className="save-btn1">Save</button>
                 ) : (
-                  <button onClick={handleEditClick}className="edit-btn">Edit</button>
+                  <button onClick={handleEditClick}className="edit-btn1">Edit</button>
                 )}
               </div>
             </div>
