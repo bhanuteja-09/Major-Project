@@ -193,7 +193,7 @@ const Contact = () => {
                 <li><Link to="/find-a-job" className="footer-link">Find a Job</Link></li>
                 <li><Link to="/about" className="footer-link">About Us</Link></li>
                 <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
-                <li><Link to="#login" className="footer-link">Login</Link></li>
+                <li><Link to="/login" className="footer-link">Login</Link></li>
               </ul>
             </div>
           </div>

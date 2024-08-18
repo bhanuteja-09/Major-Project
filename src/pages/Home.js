@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import './Home.css';
 import { Navbar, Nav, Button } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LOGO6 from '../assets/LOGO6.png';
 
 import profileImage from '../assets/profile1.png'; // Ensure the path is correct
@@ -16,6 +16,9 @@ import Modal from '../components/Modal/Modal';
 // import Header from '../components/Header';
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
   // For header
   const [expanded, setExpanded] = useState(false);
   const location = useLocation(); // Get the current location
@@ -27,6 +30,11 @@ const Home = () => {
 
   const handleOpenModal = () => setModalShow(true);
   const handleCloseModal = () => setModalShow(false);
+
+  const handlePostJobClick = () => {
+    navigate('/login');  // Redirect to the login page
+  };
+
   return (
     <div>
       {/* <Header extraClass="extraClass-home" /> */}
@@ -161,7 +169,7 @@ const Home = () => {
                 Our platform is designed to be user-friendly, offering easy navigation and powerful search features.
                 Employers can reach a wide audience and job seekers can explore various opportunities that match their skills and interests.
               </p>
-              <button className="btn-post-job">Post a Job</button>
+              <button className="btn-post-job" onClick={handlePostJobClick}>Post a Job</button>
             </Animate>
           </div>
           <div className="profile-photo">
@@ -327,7 +335,7 @@ const Home = () => {
               <li><Link to="/find-a-job" className="footer-link">Find a Job</Link></li>
               <li><Link to="/about" className="footer-link">About Us</Link></li>
               <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
-              <li><Link to="#login" className="footer-link">Login</Link></li>
+              <li><Link to="/login" className="footer-link">Login</Link></li>
         </ul>
       </div>
     </div>

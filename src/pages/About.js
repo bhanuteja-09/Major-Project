@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './About.css';
 import { Navbar, Nav, Button } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LOGO6 from '../assets/LOGO6.png';
 import profileImage from '../assets/profile1.png'; // Ensure the path is correct
 import mobileProfileImage from '../assets/profile1 (2).png'; // Ensure the path is correct
@@ -13,6 +13,8 @@ import profileImage3 from '../assets/profile5.jpg';
 // import '../components/Header.css';
 
 const About = () => {
+  const navigate = useNavigate();
+
  // For header
  const [expanded, setExpanded] = useState(false);
  const location = useLocation(); 
@@ -22,6 +24,10 @@ const About = () => {
    setExpanded(false); 
    // Collapse the navbar
  };
+
+ const handlePostJobClick2 = () => {
+  navigate('/login');  // Redirect to the login page
+};
  return (
    <div>
       {/* <Header extraClass="about-page" />  */}
@@ -143,7 +149,7 @@ const About = () => {
                 Our platform is designed to be user-friendly, offering easy navigation and powerful search features.
                 Employers can reach a wide audience and job seekers can explore various opportunities that match their skills and interests.
               </p>
-              <button className="btn-post-job2">Post a Job</button>
+              <button className="btn-post-job2" onClick={handlePostJobClick2}>Post a Job</button>
             </Animate>
           </div>
           <div className="profile-photo2">
@@ -240,7 +246,7 @@ const About = () => {
               <li><Link to="/find-a-job" className="footer-link">Find a Job</Link></li>
               <li><Link to="/about" className="footer-link">About Us</Link></li>
               <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
-              <li><Link to="#login" className="footer-link">Login</Link></li>
+              <li><Link to="/login" className="footer-link">Login</Link></li>
         </ul>
       </div>
     </div>
