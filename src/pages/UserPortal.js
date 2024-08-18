@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -144,17 +144,38 @@ const jobs = [
 ];
 
 const UserPortal = () => {
+  const [isEditing, setIsEditing] = useState(false);
+
+  const [userProfile, setUserProfile] = useState({
+    username: '',
+    email: '',
+    address: '',
+    mobileNumber: '',
+    country: '',
+    resumeUploaded: 'Not Uploaded'
+  });
+  const [resumeFile, setResumeFile] = useState(null);
+
+     // Retrieve user profile from local storage on component mount
+  useEffect(() => {
+    const storedProfile = JSON.parse(localStorage.getItem('userProfile'));
+    if (storedProfile) {
+      setUserProfile(storedProfile);
+    }
+  }, []);
+    // const [selectedJob, setSelectedJob] = useState(null);
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [showProfile, setShowProfile] = useState(false);
-  const [userInfo, setUserInfo] = useState({
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    jobTitle: 'Software Engineer',
-    location: 'New York, NY'
-  });
+  // const [userInfo, setUserInfo] = useState({
+  //   name: 'John Doe',
+  //   email: 'john.doe@example.com',
+  //   jobTitle: 'Software Engineer',
+  //   location: 'New York, NY'
+  // });
   const [selectedFilters, setSelectedFilters] = useState({
     location: [],
     type: [],
@@ -235,6 +256,37 @@ const UserPortal = () => {
   const handleCloseJobDetails = () => {
     setSelectedJob(null);
   };
+
+  const handleEditClick = () => {
+    setIsEditing(true);
+  };
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setUserProfile((prevProfile) => ({
+      ...prevProfile,
+      [name]: value
+    }));
+  };
+
+ 
+  const handleFileChange = (e) => {
+    setResumeFile(e.target.files[0]);
+  };
+
+  const handleSaveClick = () => {
+    const resumeUploaded = resumeFile ? resumeFile.name : userProfile.resumeUploaded;
+    const updatedProfile = {
+      ...userProfile,
+      resumeUploaded
+    };
+
+    // Update local storage with new profile data
+    localStorage.setItem('userProfile', JSON.stringify(updatedProfile));
+
+    // Update state
+    setUserProfile(updatedProfile);
+    setIsEditing(false);
+  };
   return (
     <div>
       <Navbar expand="lg" fixed="top" className="home-header" expanded={expanded} 
@@ -280,16 +332,117 @@ const UserPortal = () => {
       </Navbar>
 
       <div className="main-content">
-        {showProfile ? (
-          <div className="profile-info">
-            <h2>Profile Information</h2>
-            <p><strong>Name:</strong> {userInfo.name}</p>
-            <p><strong>Email:</strong> {userInfo.email}</p>
-            <p><strong>Job Title:</strong> {userInfo.jobTitle}</p>
-            <p><strong>Location:</strong> {userInfo.location}</p>
+      {showProfile ? (
+          <div className="content">
+          <div className="user-profile">
+            <div className="profile-container">
+              <div className="user-photo-box">
+                <div className="user-photo">👤</div>
+              </div>
+              <div className="user-info-box">
+                <div className="user-info-item">
+                  <div className="user-info-label">Username:</div>
+                  <div className="user-info-value">
+                    {isEditing ? (
+                      <input
+                        type="text"
+                        name="username"
+                        value={userProfile.username}
+                        onChange={handleFormChange}
+                      />
+                    ) : (
+                      userProfile.username
+                    )}
+                  </div>
+                </div>
+                <div className="user-info-item">
+                  <div className="user-info-label">Email:</div>
+                  <div className="user-info-value">
+                    {isEditing ? (
+                      <input
+                        type="email"
+                        name="email"
+                        value={userProfile.email}
+                        onChange={handleFormChange}
+                      />
+                    ) : (
+                      userProfile.email
+                    )}
+                  </div>
+                </div>
+                <div className="user-info-item">
+                  <div className="user-info-label">Address:</div>
+                  <div className="user-info-value">
+                    {isEditing ? (
+                      <input
+                        type="text"
+                        name="address"
+                        value={userProfile.address}
+                        onChange={handleFormChange}
+                      />
+                    ) : (
+                      userProfile.address
+                    )}
+                  </div>
+                </div>
+                <div className="user-info-item">
+                  <div className="user-info-label">Mobile Number:</div>
+                  <div className="user-info-value">
+                    {isEditing ? (
+                      <input
+                        type="text"
+                        name="mobileNumber"
+                        value={userProfile.mobileNumber}
+                        onChange={handleFormChange}
+                      />
+                    ) : (
+                      userProfile.mobileNumber
+                    )}
+                  </div>
+                </div>
+                <div className="user-info-item">
+                  <div className="user-info-label">Country:</div>
+                  <div className="user-info-value">
+                    {isEditing ? (
+                      <input
+                        type="text"
+                        name="country"
+                        value={userProfile.country}
+                        onChange={handleFormChange}
+                      />
+                    ) : (
+                      userProfile.country
+                    )}
+                  </div>
+                </div>
+                <div className="user-info-item">
+                  <div className="user-info-label">Resume Uploaded:</div>
+                  <div className="user-info-value">
+                    {isEditing ? (
+                      <div>
+                        <input
+                          type="file"
+                          onChange={handleFileChange}
+                        />
+                        <div>Current: {userProfile.resumeUploaded}</div>
+                      </div>
+                    ) : (
+                      userProfile.resumeUploaded
+                    )}
+                  </div>
+                </div>
+                {isEditing ? (
+                  <button onClick={handleSaveClick}>Save</button>
+                ) : (
+                  <button onClick={handleEditClick}>Edit</button>
+                )}
+              </div>
+            </div>
           </div>
-        ) : (
-          <div className="job-search">
+        </div>
+          // </div>
+        )  : (
+        <div className="job-search">
             <div className="container">
           <div className="row mb-3">
             <div className="col-md-3 filter-box">
@@ -411,6 +564,7 @@ const UserPortal = () => {
           </div>
         )}
       </div>
+      
       {selectedJob && (
         <JobDetails job={selectedJob} onClose={handleCloseJobDetails} />
       )}

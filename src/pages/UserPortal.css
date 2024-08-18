@@ -17,9 +17,9 @@
     font-weight: bold;
   } */
   
-  .user-profile {
+  /* .user-profile {
     padding: 20px;
-  }
+  } */
   
   .user-find-a-job {
     padding: 20px;
@@ -84,5 +84,152 @@
     padding: 5px 10px;
     cursor: pointer;
   }
+  
+  
+
+
+ /* Center the profile container */
+.main-content {
+  
+  min-height: 100vh; /* Ensure the main content covers the full viewport height */
+}
+
+.content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure the main content covers the full viewport height */
+}
+
+/* Style the profile container */
+.profile-container {
+  position:relative;
+  bottom: 110px;
+  /* right:50px; */
+  max-width: 600px; /* Set a maximum width for the profile container */
+  width: 100%;
+  background-color: #a392be; /* Add a background color */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column; /* Stack photo and info vertically on small screens */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px; /* Space between photo and user info */
+  }
+  
+  @media (min-width: 768px) {
+    .profile-container {
+      flex-direction: row; /* Arrange photo and info side by side on larger screens */
+    }
+  }
+  
+  .user-photo-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc; /* Border around the user photo box */
+    background-color: #f9f9f9; /* Background color for the box */
+    border-radius: 8px; /* Rounded corners for a cleaner look */
+    padding: 20px; /* Padding inside the box */
+    max-width: 150px; /* Maximum width for the photo box */
+    width: 100%;
+  }
+  
+  .user-photo {
+    font-size: 100px; /* Adjust size of emoji/photo */
+    width: 100%; /* Make photo fit within the box */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .user-info-box {
+    /* height: 300px; */
+    flex: 2;
+    padding: 20px;
+    border: 2px solid #ccc; /* Border around the user info box */
+    background-color: #f9f9f9; /* Background color for the box */
+    border-radius: 8px; /* Rounded corners for a cleaner look */
+    width: 100%;
+    max-width: 700px; /* Maximum width for the user info box */
+  }
+  
+  .user-info-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* Single border for each line */
+    padding: 10px 0;
+  }
+  
+  .user-info-item:last-child {
+    border-bottom: none; /* Remove border for the last item */
+  }
+  
+  .user-info-label {
+    font-weight: bold;
+    width: 150px; /* Fixed width for labels to align them properly */
+    margin-right: 20px; /* Gap between label and value */
+  }
+  
+  .user-info-value {
+    flex-grow: 1;
+    text-align: left; /* Align value to the left */
+  }
+  
+/* Media Query for desktop screens */
+@media (min-width: 1024px) {
+  .content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the main content covers the full viewport height */
+  }
+  .user-profile {
+    position:relative;
+    bottom: 40px;
+    /* right:50px; */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+}
+
+
+
+/* Additions to existing CSS */
+.edit-form input,
+.edit-form textarea {
+  width: calc(100% - 22px); /* Adjusted for padding and border */
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.edit-form label {
+  display: block;
+  margin-top: 15px;
+}
+
+.edit-form button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.edit-form button:hover {
+  background-color: #0056b3;
+}
+
+  
   
   

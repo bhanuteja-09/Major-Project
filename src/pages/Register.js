@@ -6,7 +6,6 @@ import LOGO6 from '../assets/LOGO6.png';
 import './Register.css';
 
 const Register = () => {
-  // For header
   const [expanded, setExpanded] = useState(false);
   const location = useLocation();
 
@@ -22,7 +21,7 @@ const Register = () => {
   const [mobileNumber, setMobileNumber] = useState('');
   const [country, setCountry] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState(''); // State for success message
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,8 +44,19 @@ const Register = () => {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
+
+      // Store user data in local storage
+      const userProfile = {
+        username,
+        email,
+        address,
+        mobileNumber,
+        country,
+      };
+      localStorage.setItem('userProfile', JSON.stringify(userProfile));
+
       setSuccessMessage('Registered successfully!');
-      setErrorMessage(''); // Clear any previous error messages
+      setErrorMessage('');
 
       // Reset form fields
       setEmail('');
@@ -63,7 +73,7 @@ const Register = () => {
         setErrorMessage('Error registering user');
         console.error("Error registering user:", error);
       }
-      setSuccessMessage(''); // Clear any previous success messages
+      setSuccessMessage('');
     }
   };
 
@@ -146,7 +156,6 @@ const Register = () => {
         <div className="register-form">
           <h2>Sign Up</h2>
           
-          {/* Display error message */}
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <form onSubmit={handleSubmit}>
             <div className="form-section">
@@ -209,7 +218,6 @@ const Register = () => {
                 <option value="CA">Canada</option>
                 <option value="GB">United Kingdom</option>
                 <option value="AU">Australia</option>
-                {/* Add more countries as needed */}
               </select>
             </div>
 
