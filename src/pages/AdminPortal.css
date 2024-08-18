@@ -387,7 +387,7 @@ body {
     flex-direction: row; */
     position:relative;
     bottom:50px;
-    left:18px;
+    left:35px;
     /* height:200px; */
       padding: 0px;
       font-size: 18px; /* Reduce font size */
@@ -490,7 +490,7 @@ body {
   .logout-button {
     width:30%;
     position: relative;
-    left:140px;
+    left:155px;
     bottom:85px;
     padding: 8px; /* Reduce padding */
       font-size: 14px; /* Adjust font size */
