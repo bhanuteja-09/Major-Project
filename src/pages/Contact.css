@@ -1,239 +1,225 @@
-/* Contact.css */
-
 /* Header styling */
 .contact-header {
-  /* background-color: #c9bbc9; */
-  background-color: #bfaea9; /*fixed
-  /* background-color: #f08ff2;  */
-  /* Background color */
-  z-index: 1000; /* Ensure header is on top */
-  width: 98%; /* Set the width to 98% of the viewport */
-  margin: 0 auto; /* Center the header */
-  padding: 0 15px; /* Add padding to the left and right */
+  background-color: #bfaea9;
+  z-index: 1000;
+  width: 98%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* Ensure the brand section adjusts with the header width */
 .contact-header .contact-brand {
   display: flex;
-  align-items: center; /* Center align items vertically */
+  align-items: center;
 }
 
 .contact-header .contact-brand .contact-logo {
   position: relative;
   left: 10px;
-  border-radius: 50%; /* Make the logo circular */
-  width: 95px; /* Adjust size as needed */
-  height: 90px; /* Ensure height matches width for circular shape */
-  margin-right: 15px; /* Space between logo and text */
+  border-radius: 50%;
+  width: 95px;
+  height: 90px;
+  margin-right: 15px;
 }
 
 .contact-header .contact-brand .contact-brand-text {
   position: relative;
-  top: 10px; /* Adjust vertical alignment */
+  top: 10px;
 }
 
 .contact-header .contact-brand .contact-brand-title {
   font-weight: bold;
-  font-size: 1.5rem; /* Adjust size as needed */
-  color: #ffffff; /* Text color */
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .contact-header .contact-brand .contact-subtitle {
-  font-size: 0.8rem; /* Smaller text size for the subtitle */
-  color: #ffffff; /* Text color */
-  margin-top: 5px; /* Space between brand title and subtitle */
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin-top: 5px;
 }
 
 .contact-header .navbar-nav .contact-nav-link {
-  color: #ffffff; /* White text color */
-  font-weight: bold; /* Make text bold */
-  margin: 0 15px; /* Space between navigation links */
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 15px;
 }
 
 .contact-nav-link {
-  position:relative;
-  /* right: 200px; */
+  position: relative;
   font-size: 18px;
 }
 
-.contact-nav-link::after{
-  content:'';
+.contact-nav-link::after {
+  content: '';
   width: 0;
   height: 3px;
   background: #1500ff;
   position: absolute;
-  left:10px;
+  left: 10px;
   bottom: 6px;
   transition: 0.5s;
-  
-}
-.contact-nav-link:hover::after{
-  width:80%;
 }
 
+.contact-nav-link:hover::after {
+  width: 80%;
+}
 
 /* Responsive Styles */
 @media (max-width: 992px) {
   .contact-header {
-      width: 98%; /* Ensure header width on tablets */
+    width: 98%;
   }
 
   .contact-header .navbar-nav {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: relative;
-      left: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 60px;
   }
 
-  .contact-header .navbar-nav .contact-nav-link{
-      font-weight: bold;
-      margin: 0 25px; /* Space between navigation links */
+  .contact-header .navbar-nav .contact-nav-link {
+    font-weight: bold;
+    margin: 0 25px;
   }
 
   .contact-header .contact-buttons {
-      display: none; /* Hide buttons on smaller screens */
-  }
-  .contact-nav-link {
-      position:relative;
-      /* right: 200px; */
-      font-size: 18px;
+    display: none;
   }
   
-  .contact-nav-link::after{
-      content:'';
-      width: 0;
-      height: 3px;
-      background: #1500ff;
-      position: absolute;
-      left:0px;
-      bottom: 6px;
-      transition: 0.5s;
-      
+  .contact-nav-link {
+    position: relative;
+    font-size: 18px;
   }
-  .contact-nav-link:hover::after{
-      width:100%;
+
+  .contact-nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1500ff;
+    position: absolute;
+    left: 0px;
+    bottom: 6px;
+    transition: 0.5s;
   }
+
+  .contact-nav-link:hover::after {
+    width: 100%;
+  }
+
   .contact-header .navbar-toggler {
-      position: relative;
-      right: 30px;
+    position: relative;
+    right: 30px;
   }
 }
 
 @media (max-width: 420px) {
   .contact-header {
-    width: 81%; /* Ensure header width on mobile devices */
-    margin-left: 4px; /* Remove any left margin */
-    margin-right: auto; /* Align to the left */
-    position: relative; /* Ensure it's positioned relative for margin adjustments */
+    width: 81%;
+    margin-left: 4px;
+    margin-right: auto;
+    position: relative;
   }
 
   .contact-header .navbar-nav {
-      font-size: 0.9rem; /* Adjust font size for smaller screens */
-      flex-direction: column; /* Stack links vertically */
-      align-items: center; /* Center align items */
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .contact-header .navbar-nav home-nav-link {
-      font-weight: bold;
-      margin: 10px 0; /* Space between navigation links */
+    font-weight: bold;
+    margin: 10px 0;
   }
 
   .contact-header .contact-buttons {
-      display: flex; /* Show buttons */
-      flex-direction: column; /* Stack buttons vertically */
-      align-items: center; /* Center align buttons */
-      margin-top: 10px; /* Space above buttons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
   }
 
   .contact-header .contact-buttons .contact-nav-btn1 {
-      
-      margin: 10px 0; /* Space between buttons */
-      position: static; /* Remove any absolute positioning */
+    margin: 10px 0;
+    position: static;
   }
+
   .contact-nav-link {
-      position:relative;
-      /* right: 200px; */
-      font-size: 18px;
+    position: relative;
+    font-size: 18px;
   }
-  
-  .contact-nav-link::after{
-      content:'';
-      width: 0;
-      height: 3px;
-      background: #1500ff;
-      position: absolute;
-      left:0px;
-      bottom: 6px;
-      transition: 0.5s;
-      
+
+  .contact-nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1500ff;
+    position: absolute;
+    left: 0px;
+    bottom: 6px;
+    transition: 0.5s;
   }
-  .contact-nav-link:hover::after{
-      width:100%;
+
+  .contact-nav-link:hover::after {
+    width: 100%;
   }
+
   .contact-header .navbar-toggler {
-      position: relative;
-      right: 30px;
-      /* border: none; */
-       /* Remove default border */
-      /* background: transparent;  */
-      /* Make background transparent */
-      /* outline: none;  */
-      /* Remove focus outline */
-      /* padding: 0;  */
-      /* Remove default padding */
+    position: relative;
+    right: 30px;
   }
 }
 
 /* Style nav links as buttons */
 .contact-header .contact-nav-btn {
-  color: #ffffff !important; /* Force text color */
-  background-color: #7754d7 !important; /* Custom background color */
-  border: 1px solid #f4f6f4 !important; /* Border color */
-  margin: 5px; /* Spacing between buttons */
-  padding: 10px 20px; /* Consistent padding */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1rem; /* Consistent font size */
-  width: 120px; /* Adjust width as needed */
-  text-align: center; /* Center text */
-  display: inline-block; /* Ensure buttons are displayed correctly */
-  box-shadow: none; /* Remove default button shadow if any */
+  color: #ffffff !important;
+  background-color: #7754d7 !important;
+  border: 1px solid #f4f6f4 !important;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 120px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: none;
   font-weight: bold;
 }
 
 .contact-header .contact-nav-btn:hover {
-  background-color: #4538b6 !important; /* Darker background on hover */
-  color: #ffffff !important; /* White text color on hover */
-  border-color: #e3eae6 !important; /* Border color on hover */
+  background-color: #4538b6 !important;
+  color: #ffffff !important;
+  border-color: #e3eae6 !important;
 }
 
 .contact-header .contact-nav-btn1 {
-  color: #ffffff !important; /* Force text color */
-  background-color: #46444b !important; /* Custom background color */
-  border: 1px solid #f4f6f4 !important; /* Border color */
-  margin: 5px; /* Spacing between buttons */
-  padding: 10px 20px; /* Consistent padding */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1rem; /* Consistent font size */
-  width: 120px; /* Adjust width as needed */
-  text-align: center; /* Center text */
-  display: inline-block; /* Ensure buttons are displayed correctly */
-  box-shadow: none; /* Remove default button shadow if any */
+  color: #ffffff !important;
+  background-color: #46444b !important;
+  border: 1px solid #f4f6f4 !important;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 120px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: none;
   font-weight: bold;
 }
 
 .contact-header .contact-nav-btn1:hover {
-  background-color: #313135 !important; /* Darker background on hover */
-  color: #ffffff !important; /* White text color on hover */
-  border-color: #e3eae6 !important; /* Border color on hover */
+  background-color: #313135 !important;
+  color: #ffffff !important;
+  border-color: #e3eae6 !important;
 }
+
 
 
 
 
 /* Section One: Google Map */
 .map-section {
-  margin-top: 170px; /* Adjust based on your header height */
+  margin-top: 170px; 
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -250,19 +236,19 @@
   position: relative;
   width: 88%;
   padding: 60px 0;
-  background-color: white; /* Light background for the contact form */
+  background-color: white;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 170px); /* Full viewport height minus map section */
+  min-height: calc(100vh - 170px);
 }
 
 /* Container to hold form and details side by side */
 .contact-form-container {
   width: 100%;
-  max-width: 1200px; /* Max width to prevent excessive stretching */
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -270,15 +256,16 @@
 
 /* Contact Form */
 .contact-form {
-    position:relative;
-    left:30px;
-  width: 90%; /* Increase width to 70% for tablets and desktops */
-  margin-right: 20px; /* Space between form and contact details */
+  position: relative;
+  left: 30px;
+  width: 90%;
+  margin-right: 20px;
 }
-.contactheading{
-    position:relative;
-    left:30px;
+.contactheading {
+  position: relative;
+  left: 30px;
 }
+
 /* Contact Form Header */
 .contact-form h2 {
   text-align: center;
@@ -307,10 +294,10 @@
 
 /* Contact Details Column */
 .contact-details-col {
-    position:relative;
-    left:60px;
-    top:150px;
-  width: 30%; /* Adjust width to 30% for contact details */
+  position: relative;
+  left: 60px;
+  top: 150px;
+  width: 30%;
   padding-left: 15px;
 }
 
@@ -343,75 +330,74 @@
 .submit-btn:hover {
   background-color: #0056b3;
 }
-.mail{
-    position:relative;
-    left:30px;
-    font-size: 1rem;
-  }
-
+.mail {
+  position: relative;
+  left: 30px;
+  font-size: 1rem;
+}
 
 @media (max-width: 420px) {
-  .contact-form-section{
-    position:relative;
-    /* left:30px; */
-    height:800px;
-    right:30px;
-  width: 100%; /* Increase width to 70% for tablets and desktops */
-  margin-right: 20px; /* Space between form and contact details */
-  }
-  .contact-details-list {
-    position:relative;
-    left:30px;
-    /* top:50px; */
-    bottom: 100px;
-    width: 60%; /* Adjust width to 30% for contact details */
-  }
-  .contactheading{
+  .contact-form-section {
     position: relative;
-    left:140px;
+    height: 800px;
+    right: 30px;
+    width: 100%;
+    margin-right: 20px;
   }
+
+  .contact-details-list {
+    position: relative;
+    left: 30px;
+    bottom: 100px;
+    width: 60%;
+  }
+
+  .contactheading {
+    position: relative;
+    left: 140px;
+  }
+
   .contact-form-section h2 {
-    /* position:relative;
-  left: 60px; */
     text-align: left;
     margin-bottom: 30px;
     font-size: 1.5rem;
     color: #333;
   }
-  }
+}
+
 /* Responsive adjustments for tablets and desktops */
 @media (max-width: 1024px) {
   .contact-form-section {
     padding: 40px 15px;
-    min-height: auto; /* Adjust height on smaller screens */
+    min-height: auto;
   }
   .contact-form-container {
     flex-direction: row;
     align-items: flex-start;
   }
   .contact-form {
-    width: 100%; /* Increase width to 70% for tablets */
+    width: 100%;
     margin-right: 20px;
   }
   .contact-details-col {
-    position:relative;
-    left:30px;
-    top:150px;
-    width: 40%; /* Adjust width to 30% for contact details */
+    position: relative;
+    left: 30px;
+    top: 150px;
+    width: 40%;
   }
-  .mail{
-    position:relative;
-    left:30px;
+  .mail {
+    position: relative;
+    left: 30px;
     font-size: 1rem;
   }
 }
 
-@media (min-width:425px) and (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
   .contact-form-section {
     padding: 30px 15px;
     flex-direction: column;
     align-items: flex-start;
-    min-height: auto; /* Adjust height on smaller screens */
+    min-height: auto;
   }
   .contact-form {
     width: 100%;

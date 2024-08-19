@@ -5,14 +5,13 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LOGO6 from '../assets/LOGO6.png';
 
-import profileImage from '../assets/profile1.png'; // Ensure the path is correct
-import mobileProfileImage from '../assets/profile1 (2).png'; // Ensure the path is correct
+import profileImage from '../assets/profile1.png'; 
+import mobileProfileImage from '../assets/profile1 (2).png'; 
 import {Animate} from 'react-simple-animate';
 import profileImage1 from '../assets/profile1-whitebg.jpg';
 import profileImage2 from '../assets/profile4.jpg';
 import profileImage3 from '../assets/profile5.jpg';
-import Modal from '../components/Modal/Modal';
-// import '../components/Modal/Modal.css';
+
 // import Header from '../components/Header';
 
 const Home = () => {
@@ -25,14 +24,13 @@ const Home = () => {
   // For header
   const [expanded, setExpanded] = useState(false);
   const location = useLocation(); // Get the current location
-  const [modalShow, setModalShow] = useState(false);
+  
 
   const handleNavClick = () => {
     setExpanded(false); // Collapse the navbar
   };
 
-  const handleOpenModal = () => setModalShow(true);
-  const handleCloseModal = () => setModalShow(false);
+  
 
   const handlePostJobClick = () => {
     navigate('/login');  // Redirect to the login page
@@ -56,7 +54,7 @@ const Home = () => {
   };
   return (
     <div>
-      {/* <Header extraClass="extraClass-home" /> */}
+      
       <Navbar 
     expand="lg" 
     fixed="top" 
@@ -147,9 +145,7 @@ const Home = () => {
               />
               <p>Your one-stop solution for job postings and applications.</p>
             </div>
-            {/* <div className="col-md-6 profile-photo">
-              <img src={profileImage} alt="Profile" />
-            </div> */}
+        
           </div>
         </div>
       </section>
@@ -257,11 +253,11 @@ const Home = () => {
           <div className="icon-flip">
             <div className="icon-front">
               <i class="fas fa-search"></i> 
-              {/* <!-- Front icon --> */}
+              
             </div>
             <div className="icon-back">
               <i class="fas fa-search"></i> 
-              {/* <!-- Back icon (can be the same or different) --> */}
+              
             </div>
           </div>
         </div>
@@ -273,11 +269,11 @@ const Home = () => {
           <div className="icon-flip">
             <div className="icon-front">
               <i class="fas fa-briefcase"></i> 
-              {/* <!-- Front icon --> */}
+             
             </div>
             <div className="icon-back">
               <i class="fas fa-briefcase"></i> 
-              {/* <!-- Back icon (can be the same or different) --> */}
+              
             </div>
           </div>
         </div>
@@ -289,11 +285,11 @@ const Home = () => {
           <div className="icon-flip">
             <div className="icon-front">
               <i class="fas fa-check"></i> 
-              {/* <!-- Front icon --> */}
+              
             </div>
             <div className="icon-back">
               <i class="fas fa-check"></i> 
-              {/* <!-- Back icon (can be the same or different) --> */}
+              
             </div>
           </div>
         </div>
@@ -316,7 +312,7 @@ const Home = () => {
               <h4 className="director-name">Jane Smith</h4>
               <p className="director-title">Marketing Director</p>
               <p className="director-description">Jane Smith brings a wealth of expertise in marketing and brand management. With a proven track record of elevating brand profiles and executing high-impact campaigns, she is instrumental in shaping our marketing strategies and driving growth.</p>
-              {/* <button className="btn-view-director">View Other Directors</button> */}
+              
             </div>
           </div>
           <div className="carousel-item">
@@ -327,7 +323,7 @@ const Home = () => {
               <h4 className="director-name">John Doe</h4>
               <p className="director-title">Creative Director</p>
               <p className="director-description">John Doe is a seasoned professional with over 20 years of experience in the industry. He specializes in creative direction and has led numerous successful projects across various sectors. His innovative approach and strategic vision make him a key asset to our team.</p>
-              {/* <button className="btn-view-director">View Other Directors</button> */}
+             
             </div>
           </div>
           <div className="carousel-item">
@@ -338,7 +334,7 @@ const Home = () => {
               <h4 className="director-name">Alice Johnson</h4>
               <p className="director-title">Technical Director</p>
               <p className="director-description">Michael Johnson is an expert in technology and innovation, with a strong background in software development and IT infrastructure. His leadership in technical projects ensures our technology strategies are cutting-edge and effective.</p>
-              {/* <button className="btn-view-director">View Other Directors</button> */}
+             
             </div>
           </div>
         </div>

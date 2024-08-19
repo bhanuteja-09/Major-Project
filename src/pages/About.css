@@ -2,230 +2,223 @@
 
 /* Header styling */
 .about-header {
-  /* background-color: #c9bbc9; */
-  background-color: #bfaea9; /*fixed
-  /* background-color: #f08ff2;  */
-  /* Background color */
-  z-index: 1000; /* Ensure header is on top */
-  width: 98%; /* Set the width to 98% of the viewport */
-  margin: 0 auto; /* Center the header */
-  padding: 0 15px; /* Add padding to the left and right */
+  background-color: #bfaea9;
+  z-index: 1000;
+  width: 98%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* Ensure the brand section adjusts with the header width */
 .about-header .about-brand {
   display: flex;
-  align-items: center; /* Center align items vertically */
+  align-items: center;
 }
 
 .about-header .about-brand .about-logo {
   position: relative;
   left: 10px;
-  border-radius: 50%; /* Make the logo circular */
-  width: 95px; /* Adjust size as needed */
-  height: 90px; /* Ensure height matches width for circular shape */
-  margin-right: 15px; /* Space between logo and text */
+  border-radius: 50%;
+  width: 95px;
+  height: 90px;
+  margin-right: 15px;
 }
 
 .about-header .about-brand .about-brand-text {
   position: relative;
-  top: 10px; /* Adjust vertical alignment */
+  top: 10px;
 }
 
 .about-header .about-brand .about-brand-title {
   font-weight: bold;
-  font-size: 1.5rem; /* Adjust size as needed */
-  color: #ffffff; /* Text color */
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .about-header .about-brand .about-subtitle {
-  font-size: 0.8rem; /* Smaller text size for the subtitle */
-  color: #ffffff; /* Text color */
-  margin-top: 5px; /* Space between brand title and subtitle */
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin-top: 5px;
 }
 
 .about-header .navbar-nav .about-nav-link {
-  color: #ffffff; /* White text color */
-  font-weight: bold; /* Make text bold */
-  margin: 0 15px; /* Space between navigation links */
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 15px;
 }
 
 .about-nav-link {
-  position:relative;
-  /* right: 200px; */
+  position: relative;
   font-size: 18px;
 }
 
-.about-nav-link::after{
-  content:'';
+.about-nav-link::after {
+  content: '';
   width: 0;
   height: 3px;
   background: #1500ff;
   position: absolute;
-  left:10px;
+  left: 10px;
   bottom: 6px;
   transition: 0.5s;
-  
-}
-.about-nav-link:hover::after{
-  width:80%;
 }
 
-
+.about-nav-link:hover::after {
+  width: 80%;
+}
 
 /* Responsive Styles */
 @media (max-width: 992px) {
   .about-header {
-      width: 98%; /* Ensure header width on tablets */
+    width: 98%;
   }
 
   .about-header .navbar-nav {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      position: relative;
-      left: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    left: 60px;
   }
 
-  .about-header .navbar-nav .about-nav-link{
-      font-weight: bold;
-      margin: 0 25px; /* Space between navigation links */
+  .about-header .navbar-nav .about-nav-link {
+    font-weight: bold;
+    margin: 0 25px;
   }
 
   .about-header .about-buttons {
-      display: none; /* Hide buttons on smaller screens */
+    display: none;
   }
+
   .about-nav-link {
-      position:relative;
-      /* right: 200px; */
-      font-size: 18px;
+    position: relative;
+    font-size: 18px;
   }
-  
-  .about-nav-link::after{
-      content:'';
-      width: 0;
-      height: 3px;
-      background: #1500ff;
-      position: absolute;
-      left:0px;
-      bottom: 6px;
-      transition: 0.5s;
-      
+
+  .about-nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1500ff;
+    position: absolute;
+    left: 0px;
+    bottom: 6px;
+    transition: 0.5s;
   }
-  .about-nav-link:hover::after{
-      width:100%;
+
+  .about-nav-link:hover::after {
+    width: 100%;
   }
+
   .about-header .navbar-toggler {
-      position: relative;
-      right: 30px;
+    position: relative;
+    right: 30px;
   }
 }
 
 @media (max-width: 420px) {
   .about-header {
-    position:relative;
+    position: relative;
     margin-left: 4px;
     margin-right: auto;
-    /* max-width: 57%; */
-      width: 57%; /* Ensure header width on mobile devices */
+    width: 57%;
   }
 
   .about-header .navbar-nav {
-      font-size: 0.9rem; /* Adjust font size for smaller screens */
-      flex-direction: column; /* Stack links vertically */
-      align-items: center; /* Center align items */
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .about-header .navbar-nav home-nav-link {
-      font-weight: bold;
-      margin: 10px 0; /* Space between navigation links */
+    font-weight: bold;
+    margin: 10px 0;
   }
 
   .about-header .about-buttons {
-      display: flex; /* Show buttons */
-      flex-direction: column; /* Stack buttons vertically */
-      align-items: center; /* Center align buttons */
-      margin-top: 10px; /* Space above buttons */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
   }
 
   .about-header .about-buttons .about-nav-btn1 {
-      
-      margin: 10px 0; /* Space between buttons */
-      position: static; /* Remove any absolute positioning */
+    margin: 10px 0;
+    position: static;
   }
+
   .about-nav-link {
-      position:relative;
-      /* right: 200px; */
-      font-size: 18px;
+    position: relative;
+    font-size: 18px;
   }
-  
-  .about-nav-link::after{
-      content:'';
-      width: 0;
-      height: 3px;
-      background: #1500ff;
-      position: absolute;
-      left:0px;
-      bottom: 6px;
-      transition: 0.5s;
-      
+
+  .about-nav-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1500ff;
+    position: absolute;
+    left: 0px;
+    bottom: 6px;
+    transition: 0.5s;
   }
-  .about-nav-link:hover::after{
-      width:100%;
+
+  .about-nav-link:hover::after {
+    width: 100%;
   }
+
   .about-header .navbar-toggler {
     margin-left: auto;
-}
+  }
 
-.about-header .navbar-collapse {
+  .about-header .navbar-collapse {
     position: relative;
     left: -10px;
     max-width: 97%;
-}
+  }
 }
 
-/* Style nav links as buttons */
 .about-header .about-nav-btn {
-  color: #ffffff !important; /* Force text color */
-  background-color: #7754d7 !important; /* Custom background color */
-  border: 1px solid #f4f6f4 !important; /* Border color */
-  margin: 5px; /* Spacing between buttons */
-  padding: 10px 20px; /* Consistent padding */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1rem; /* Consistent font size */
-  width: 120px; /* Adjust width as needed */
-  text-align: center; /* Center text */
-  display: inline-block; /* Ensure buttons are displayed correctly */
-  box-shadow: none; /* Remove default button shadow if any */
+  color: #ffffff !important;
+  background-color: #7754d7 !important;
+  border: 1px solid #f4f6f4 !important;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 120px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: none;
   font-weight: bold;
 }
 
 .about-header .about-nav-btn:hover {
-  background-color: #4538b6 !important; /* Darker background on hover */
-  color: #ffffff !important; /* White text color on hover */
-  border-color: #e3eae6 !important; /* Border color on hover */
+  background-color: #4538b6 !important;
+  color: #ffffff !important;
+  border-color: #e3eae6 !important;
 }
 
 .about-header .about-nav-btn1 {
-  color: #ffffff !important; /* Force text color */
-  background-color: #46444b !important; /* Custom background color */
-  border: 1px solid #f4f6f4 !important; /* Border color */
-  margin: 5px; /* Spacing between buttons */
-  padding: 10px 20px; /* Consistent padding */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1rem; /* Consistent font size */
-  width: 120px; /* Adjust width as needed */
-  text-align: center; /* Center text */
-  display: inline-block; /* Ensure buttons are displayed correctly */
-  box-shadow: none; /* Remove default button shadow if any */
+  color: #ffffff !important;
+  background-color: #46444b !important;
+  border: 1px solid #f4f6f4 !important;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 120px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: none;
   font-weight: bold;
 }
 
 .about-header .about-nav-btn1:hover {
-  background-color: #313135 !important; /* Darker background on hover */
-  color: #ffffff !important; /* White text color on hover */
-  border-color: #e3eae6 !important; /* Border color on hover */
+  background-color: #313135 !important;
+  color: #ffffff !important;
+  border-color: #e3eae6 !important;
 }
+
 
 /* General styling for sections */
 .home-section-one, .about-section-two2, .home-section-three, .home-section-four, .home-section-five {
@@ -236,55 +229,51 @@
   min-height: 100vh; 
 }
 
+/* Section One */
+.about-section-one {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 80px;
+  position: relative;
+  top: 100px;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../assets/aboutimage4.jpg');
+  background-size: cover;
+  background-position: center 10%;
+  background-repeat: no-repeat;
+  color: #fbf6f6;
+  width: 98%;
+  margin: 0 auto;
+}
 
-  /* Section One */
-  .about-section-one {
-    margin-top: auto;
-    margin-bottom: 0;
-    padding-top: 80px; /* Ensure the section is positioned correctly below the header */
-    position: relative;
-    top:100px;
-    height: 70vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('../assets/aboutimage4.jpg'); /* Background image */
-    background-size: cover; /* Adjust size to cover the container */
-    background-position: center 10%; /* Move the image down by 60% */
-    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
-
-    color: #fbf6f6;
-    width: 98%; /* Match the width of the header */
-    margin: 0 auto; /* Center the section */
-    
-  }
-
-  /* Pseudo-element for overlay color */
 .about-section-one::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 139, 0.7); /* Semi-transparent background color */
-    z-index: 1; /* Ensure overlay is above the background image but below the content */
-  }
-  
-  /* Centered content */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 139, 0.7);
+  z-index: 1;
+}
+
 .about-section-one .title-overlay {
   position: relative;
-  z-index: 2; /* Ensure text is above the overlay */
+  z-index: 2;
   text-align: center;
 }
 
 .about-section-one h1 {
-  font-size: 4rem; /* Adjust font size as needed */
+  font-size: 4rem;
   margin: 0;
   padding: 0;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: add shadow for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
+
 
 /* Section Two */
 .about-section-two2 {
@@ -389,10 +378,7 @@
   display: none;
 }
 
-/* .home-section-five2{
-  width:98%;
-  background-color: #9895b5;
-} */
+
 
 /* Adjust for tablets and smaller desktops */
 @media (max-width: 992px) {
@@ -452,33 +438,23 @@
 
 /* Responsive adjustments */
 @media (min-width: 1280px) {
-  /* .about-section-one {
-    width:98%;
-    position:relative;
-    
-    top:100px;
-    bottom: 30px;
-    height: 800px;
-    background: url('../assets/aboutimage3 (1).jpg') no-repeat center cover;
-    
-
-  } */
+ 
   .title-overlay h1 {
     font-size: 2rem;
   }
 }
 @media (max-width: 768px) {
   .about-section-one h1 {
-    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    font-size: 2.5rem; 
   }
 }
 
 @media (max-width: 576px) {
   .about-section-one {
-    padding-top: 70px; /* Adjust padding for very small screens if necessary */
+    padding-top: 70px; 
   }
   .about-section-one h1 {
-    font-size: 2rem; /* Further adjustment for very small screens */
+    font-size: 2rem; 
   }
 }
 

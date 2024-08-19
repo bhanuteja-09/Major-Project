@@ -6,7 +6,7 @@ const JobDetails = ({ job, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    resume: null // Change coverLetter to resume
+    resume: null 
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -20,7 +20,7 @@ const JobDetails = ({ job, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
+    
     console.log('Application Submitted:', formData);
     setIsSubmitted(true);
     // Optionally, reset form data after submission
@@ -82,7 +82,7 @@ const JobDetails = ({ job, onClose }) => {
                     type="file"
                     id="resume"
                     name="resume"
-                    accept=".pdf,.doc,.docx" // Limit file types if needed
+                    accept=".pdf,.doc,.docx" 
                     onChange={handleChange}
                     required
                   />

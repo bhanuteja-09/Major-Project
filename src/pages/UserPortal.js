@@ -163,19 +163,14 @@ const UserPortal = () => {
       setUserProfile(storedProfile);
     }
   }, []);
-    // const [selectedJob, setSelectedJob] = useState(null);
+   
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [showProfile, setShowProfile] = useState(false);
-  // const [userInfo, setUserInfo] = useState({
-  //   name: 'John Doe',
-  //   email: 'john.doe@example.com',
-  //   jobTitle: 'Software Engineer',
-  //   location: 'New York, NY'
-  // });
+ 
   const [selectedFilters, setSelectedFilters] = useState({
     location: [],
     type: [],
@@ -242,8 +237,7 @@ const UserPortal = () => {
 
 
   const [expanded, setExpanded] = useState(false);
-  // const location = useLocation(); // Get the current location
-  // const [modalShow, setModalShow] = useState(false);
+ 
 
   const handleNavClick = () => {
     setExpanded(false); // Collapse the navbar

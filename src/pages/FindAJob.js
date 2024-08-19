@@ -8,7 +8,7 @@ import { FaMapMarkerAlt, FaDollarSign, FaClock } from 'react-icons/fa';
 import job1 from '../assets/job1.png';
 import job2 from '../assets/job2.jpg';
 import job3 from '../assets/job3.png';
-import job4 from '../assets/job5.jpg'; // Add these image imports
+import job4 from '../assets/job5.jpg'; 
 import job5 from '../assets/job7.png';
 import job6 from '../assets/job8.png';
 import job7 from '../assets/job1.png';

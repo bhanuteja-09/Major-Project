@@ -30,8 +30,7 @@ const About = () => {
 };
  return (
    <div>
-      {/* <Header extraClass="about-page" />  */}
-      {/* <main> */}
+    
       <Navbar 
     expand="lg" 
     fixed="top" 
@@ -178,7 +177,7 @@ const About = () => {
               <h4 className="director-name">Jane Smith</h4>
               <p className="director-title">Marketing Director</p>
               <p className="director-description">Jane Smith brings a wealth of expertise in marketing and brand management. With a proven track record of elevating brand profiles and executing high-impact campaigns, she is instrumental in shaping our marketing strategies and driving growth.</p>
-              {/* <button className="btn-view-director">View Other Directors</button> */}
+              
             </div>
               
           </div>
@@ -190,7 +189,7 @@ const About = () => {
               <h4 className="director-name">John Doe</h4>
               <p className="director-title">Creative Director</p>
               <p className="director-description">John Doe is a seasoned professional with over 20 years of experience in the industry. He specializes in creative direction and has led numerous successful projects across various sectors. His innovative approach and strategic vision make him a key asset to our team.</p>
-              {/* <button className="btn-view-director">View Other Directors</button> */}
+             
             </div>
           </div>
           <div className="carousel-item">
@@ -201,7 +200,7 @@ const About = () => {
               <h4 className="director-name">Alice Johnson</h4>
               <p className="director-title">Technical Director</p>
               <p className="director-description">Michael Johnson is an expert in technology and innovation, with a strong background in software development and IT infrastructure. His leadership in technical projects ensures our technology strategies are cutting-edge and effective.</p>
-              {/* <button className="btn-view-director">View Other Directors</button> */}
+             
             </div>
           </div>
         </div>
@@ -263,7 +262,7 @@ const About = () => {
     </div>
   </div>
 </footer>
-{/* </main> */}
+
     </div>
   );
 };

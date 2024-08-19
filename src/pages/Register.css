@@ -60,7 +60,7 @@ body {
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px; /* Ensure font size is consistent */
+  font-size: 16px;
 }
   
   .form-actions {

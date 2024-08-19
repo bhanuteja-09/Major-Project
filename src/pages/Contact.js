@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Nav, Button, Row, Col, Form } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import LOGO6 from '../assets/LOGO6.png';
-import './Contact.css'; // Make sure to include the CSS file
+import './Contact.css'; 
 
 const Contact = () => {
   const [expanded, setExpanded] = useState(false);
@@ -162,9 +162,7 @@ const Contact = () => {
             <p className="mail">Send us your query anytime</p>
           </li>
 
-          {/* <li>
-            <i className="fas fa-info-circle"></i> Send us your query anytime
-          </li> */}
+          
         </ul>
       </Col>
     </Row>

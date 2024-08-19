@@ -1,207 +1,177 @@
-/* src/pages/UserPortal.css */
+.user-find-a-job {
+  padding: 20px;
+}
 
-/* .home-header {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .home-logo {
-    height: 40px;
-  }
-  
-  .home-nav-link {
-    color: #fff;
-  }
-  
-  .home-nav-link.active {
-    font-weight: bold;
-  } */
-  
-  /* .user-profile {
-    padding: 20px;
-  } */
-  
-  .user-find-a-job {
-    padding: 20px;
-  }
-  
-  .user-find-a-job input {
-    margin-bottom: 10px;
-    padding: 5px;
-  }
-  
-   .home-nav-btn {
-    color: #ffffff !important; /* Force text color */
-    background-color: #cdc8dc !important; /* Custom background color */
-    border: 1px solid #f4f6f4 !important; /* Border color */
-    margin: 5px; /* Spacing between buttons */
-    padding: 10px 20px; /* Consistent padding */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Consistent font size */
-    width: 120px; /* Adjust width as needed */
-    text-align: center; /* Center text */
-    display: inline-block; /* Ensure buttons are displayed correctly */
-    box-shadow: none; /* Remove default button shadow if any */
-    font-weight: bold;
-  }
+.user-find-a-job input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
 
+.home-nav-btn {
+  color: #ffffff !important;
+  background-color: #cdc8dc !important;
+  border: 1px solid #f4f6f4 !important;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 120px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: none;
+  font-weight: bold;
+}
 
-  .job-details-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .job-details-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-    position: relative;
-  }
-  
-  .job-details-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: #333;
-    color: #fff;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
+.job-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.job-details-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.job-details-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
   
   
 
 
  /* Center the profile container */
-.main-content {
-  
-  min-height: 100vh; /* Ensure the main content covers the full viewport height */
+ .main-content {
+  min-height: 100vh;
 }
 
 .content {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  min-height: 100vh; /* Ensure the main content covers the full viewport height */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Style the profile container */
 .profile-container {
-  position:relative;
+  position: relative;
   bottom: 90px;
-  /* right:50px; */
-  max-width: 600px; /* Set a maximum width for the profile container */
+  max-width: 600px;
   width: 100%;
-  background-color: #a392be; /* Add a background color */
-  padding: 20px; /* Add padding for spacing */
-  border-radius: 10px; /* Add rounded corners */
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  background-color: #a392be;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
-  
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
   .profile-container {
-    display: flex;
-    flex-direction: column; /* Stack photo and info vertically on small screens */
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    gap: 20px; /* Space between photo and user info */
+    flex-direction: row;
   }
-  
-  @media (min-width: 768px) {
-    .profile-container {
-      flex-direction: row; /* Arrange photo and info side by side on larger screens */
-    }
-  }
-  
-  .user-photo-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #ccc; /* Border around the user photo box */
-    background-color: #f9f9f9; /* Background color for the box */
-    border-radius: 8px; /* Rounded corners for a cleaner look */
-    padding: 20px; /* Padding inside the box */
-    max-width: 150px; /* Maximum width for the photo box */
-    width: 100%;
-  }
-  
-  .user-photo {
-    font-size: 100px; /* Adjust size of emoji/photo */
-    width: 100%; /* Make photo fit within the box */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .user-info-box {
-    /* height: 300px; */
-    flex: 2;
-    padding: 20px;
-    border: 2px solid #ccc; /* Border around the user info box */
-    background-color: #f9f9f9; /* Background color for the box */
-    border-radius: 8px; /* Rounded corners for a cleaner look */
-    width: 100%;
-    max-width: 700px; /* Maximum width for the user info box */
-  }
-  
-  .user-info-item {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd; /* Single border for each line */
-    padding: 10px 0;
-  }
-  
-  .user-info-item:last-child {
-    border-bottom: none; /* Remove border for the last item */
-  }
-  
-  .user-info-label {
-    font-weight: bold;
-    width: 150px; /* Fixed width for labels to align them properly */
-    margin-right: 20px; /* Gap between label and value */
-  }
-  
-  .user-info-value {
-    flex-grow: 1;
-    text-align: left; /* Align value to the left */
-  }
-  
+}
+
+.user-photo-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 150px;
+  width: 100%;
+}
+
+.user-photo {
+  font-size: 100px;
+  width: 100%;
+  height: auto;
+}
+
+.user-info-box {
+  flex: 2;
+  padding: 20px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.user-info-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.user-info-item:last-child {
+  border-bottom: none;
+}
+
+.user-info-label {
+  font-weight: bold;
+  width: 150px;
+  margin-right: 20px;
+}
+
+.user-info-value {
+  flex-grow: 1;
+  text-align: left;
+}
+
 /* Media Query for desktop screens */
 @media (min-width: 1024px) {
   .content {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure the main content covers the full viewport height */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
+
   .user-profile {
-    position:relative;
+    position: relative;
     bottom: 40px;
-    /* right:50px; */
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
   }
 }
 
-
-
-/* Buttons */
 .edit-btn1, .save-btn1 {
   display: inline-block;
   padding: 10px 20px;
@@ -212,28 +182,27 @@
   cursor: pointer;
   text-align: center;
   margin-top: 20px;
-  width:25%;
+  width: 25%;
 }
 
 .edit-btn1:hover, .save-btn1:hover {
   background-color: #181a1c;
   color: white;
 }
- 
-  
- /* Mobile View Styling */
+
 @media (max-width: 420px) {
   .content {
-   position: relative;
-   top:90px;
+    position: relative;
+    top: 90px;
   }
+
   .user-profile {
     padding: 15px;
     margin: 10px;
   }
 
   .profile-container {
-    width:370px;
+    width: 370px;
     flex-direction: column;
   }
 
@@ -264,7 +233,6 @@
     text-align: left;
     margin-left: 0;
     color: #333;
-    text-align: left;
   }
 
   .edit-btn, .save-btn {

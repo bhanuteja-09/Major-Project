@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import LOGO6 from '../assets/LOGO6.png';
-import { signInWithEmailAndPassword } from 'firebase/auth'; // Import Firebase sign-in function
-import { auth } from '../firebase-config'; // Ensure this is correctly imported
+import { signInWithEmailAndPassword } from 'firebase/auth'; 
+import { auth } from '../firebase-config'; 
 import './Login.css';
 
 const Login = () => {
@@ -49,12 +49,12 @@ const Login = () => {
 
 
   const [expanded, setExpanded] = useState(false);
-  // const location = useLocation(); // Get the current location
-  // const [modalShow, setModalShow] = useState(false);
+  
 
   const handleNavClick = () => {
     setExpanded(false); // Collapse the navbar
   };
+  
   return (
     <div>
       <Navbar 

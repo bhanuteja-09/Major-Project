@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AdminPortal.css'; // Import your CSS file
+import './AdminPortal.css'; 
 
 const AdminPortal = () => {
   const [activeSection, setActiveSection] = useState('dashboard');
@@ -68,7 +68,7 @@ const AdminPortal = () => {
       state: 'Karnataka',
       jobPostedDate: '08/19/2024',
     },
-    // Add more job objects as needed
+   
   ]);
 
   
@@ -192,12 +192,7 @@ const AdminPortal = () => {
           >
             <i className="fas fa-list-ul"></i> Job List
           </li>
-          {/* <li
-            className={activeSection === 'job-requirements' ? 'active' : ''}
-            onClick={() => handleSectionChange('job-requirements')}
-          >
-            <i className="fas fa-clipboard-list"></i> Job Requirements
-          </li> */}
+          
         </ul>
         <button className="logout-button" onClick={handleLogout}>
           Logout
@@ -427,12 +422,7 @@ const AdminPortal = () => {
             </div>
           )}
           
-          {/* {activeSection === 'job-requirements' && (
-            <div id="job-requirements">
-              <h2>Job Requirements</h2>
-               content for job requirements
-            </div>
-          )} */}
+         
 
         </div>
       </div>
