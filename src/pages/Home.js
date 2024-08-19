@@ -16,6 +16,9 @@ import Modal from '../components/Modal/Modal';
 // import Header from '../components/Header';
 
 const Home = () => {
+  const [showUploadOptions, setShowUploadOptions] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [uploadSuccess, setUploadSuccess] = useState(false);
 
   const navigate = useNavigate();
 
@@ -35,6 +38,22 @@ const Home = () => {
     navigate('/login');  // Redirect to the login page
   };
 
+
+  const handleOpenUpload = () => {
+    setShowUploadOptions(true);
+  };
+ const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleFileUpload = () => {
+    if (selectedFile) {
+      setTimeout(() => {
+        setUploadSuccess(true);
+        setShowUploadOptions(false);
+      }, 1000);
+    }
+  };
   return (
     <div>
       {/* <Header extraClass="extraClass-home" /> */}
@@ -189,12 +208,41 @@ const Home = () => {
       <div className="container">
         <h2>Featured Tours Packages</h2>
         <h3>Make a Difference with Your Online Resume</h3>
-        <button className="btn-upload-cv" onClick={handleOpenModal}>
-          Upload Your CV
-        </button>
-        <Modal show={modalShow} handleClose={handleCloseModal} />
+        
+        {!showUploadOptions && !uploadSuccess && (
+          <button 
+            className="btn-upload-cv" 
+            onClick={handleOpenUpload}
+            style={{ marginTop: '20px' }}
+          >
+            Upload Your CV
+          </button>
+        )}
+        
+        {showUploadOptions && !uploadSuccess && (
+          <div className="upload-box">
+            <input 
+              type="file" 
+              onChange={handleFileChange} 
+              className="file-input"
+            />
+            <button 
+              className="btn-submit" 
+              onClick={handleFileUpload}
+            >
+              Submit
+            </button>
+          </div>
+        )}
+
+        {uploadSuccess && (
+          <div className="cv-success-message">
+            <h3>Successfully uploaded your CV!</h3>
+          </div>
+        )}
       </div>
     </section>
+
 
       {/* Section Four */}
       <section className="home-section-four">
