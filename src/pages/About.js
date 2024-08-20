@@ -9,8 +9,7 @@ import {Animate} from 'react-simple-animate';
 import profileImage1 from '../assets/profile1-whitebg.jpg';
 import profileImage2 from '../assets/profile4.jpg';
 import profileImage3 from '../assets/profile5.jpg';
-// import Header from '../components/Header';
-// import '../components/Header.css';
+
 
 const About = () => {
   const navigate = useNavigate();

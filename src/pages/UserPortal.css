@@ -68,6 +68,32 @@
  /* Center the profile container */
  .main-content {
   min-height: 100vh;
+  background-color: #efe9eb;
+  width:98%;
+  position:relative;
+  left:15px;
+  bottom:28px;
+}
+
+@media (max-width:820px){
+  .main-content {
+    min-height: 100vh;
+    background-color: #efe9eb;
+    width:98%;
+    position:relative;
+    left:8px;
+    bottom:28px;
+  }
+}
+@media (max-width:420px){
+  .main-content {
+    min-height: 100vh;
+    background-color: #efe9eb;
+    width:96%;
+    position:relative;
+    left:4.5px;
+    bottom:28px;
+  }
 }
 
 .content {
