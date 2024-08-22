@@ -40,6 +40,12 @@ const Home = () => {
   const handleOpenUpload = () => {
     setShowUploadOptions(true);
   };
+
+  const handleCloseUpload = () => {
+    setShowUploadOptions(false);
+    setUploadSuccess(false); // Reset upload success state
+  };
+  
  const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
@@ -217,6 +223,13 @@ const Home = () => {
         
         {showUploadOptions && !uploadSuccess && (
           <div className="upload-box">
+          <button 
+          className="btn-close-upload" 
+          onClick={handleCloseUpload}
+        >
+          &times;
+        </button>
+
             <input 
               type="file" 
               onChange={handleFileChange} 

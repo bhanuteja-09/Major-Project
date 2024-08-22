@@ -415,6 +415,36 @@
   }
 }
 
+.btn-close-upload {
+ position:relative;
+ left:140px;
+ border-radius: 20%;
+}
+
+
+/* Mobile View */
+/* @media (max-width: 767px) {
+ 
+  .btn-close-upload {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+ 
+} */
+
+/* Tablet and Up */
+/* @media (min-width: 768px) {
+  
+
+  .btn-close-upload {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+
+} */
 
 
 .home-section-three {
