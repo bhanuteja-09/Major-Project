@@ -50,11 +50,18 @@ A React application for finding jobs.
 - Ensure the `homepage` field in `package.json` is set to:
   ```json
   "homepage": "https://bhanuteja-09.github.io/Major-Project"
-## In this Website having two login types
+
+## Hirecheck website having public pages to access everyone
+1. Home
+2. FindAJob
+3. About
+4. Contact 
+
+## HireCheck Website having two login types for accessing the adminportal and userportal
 
 1. Admin Login to go to the admin portal
 
-username: admin
+username: admin,
 passsword: password
 
 2. User Login
