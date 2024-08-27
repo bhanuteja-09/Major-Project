@@ -67,3 +67,7 @@ passsword: password
 2. User Login
 
 Any registered user can login to the userportal
+
+## Hirecheck Project is Deployed in GitHub Pages, Here is the Deployment Link
+
+HireCheck Delpoyment Link: https://bhanuteja-09.github.io/Major-Project/
