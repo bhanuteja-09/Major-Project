@@ -50,3 +50,13 @@ A React application for finding jobs.
 - Ensure the `homepage` field in `package.json` is set to:
   ```json
   "homepage": "https://bhanuteja-09.github.io/Major-Project"
+## In this Website having two login types
+
+1. Admin Login to go to the admin portal
+
+username: admin
+passsword: password
+
+2. User Login
+
+Any registered user can login to the userportal
