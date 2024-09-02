@@ -229,7 +229,7 @@ const Home = () => {
         >
           &times;
         </button>
-
+          
             <input 
               type="file" 
               onChange={handleFileChange} 

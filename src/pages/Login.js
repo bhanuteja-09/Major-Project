@@ -77,6 +77,7 @@ const Login = () => {
             <Nav.Link 
               as={Link} 
               to="/" 
+              onClick={handleNavClick} 
               className="home-nav-link"
             >
               Home
@@ -84,13 +85,15 @@ const Login = () => {
             <Nav.Link 
               as={Link} 
               to="/register" 
+              onClick={handleNavClick} 
               className="home-nav-link"
             >
               Register
             </Nav.Link>
             <Nav.Link 
               as={Link} 
-              to="/login" 
+              to="/login"
+              onClick={handleNavClick}  
               className="home-nav-link"
             >
               Login

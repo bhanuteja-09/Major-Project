@@ -203,6 +203,7 @@ const UserPortal = () => {
     });
   };
 
+  // Applies selected filters to the job list
   const handleFilterClick = () => {
     const normalizedSalaryFilters = selectedFilters.salary.map(s => s.replace(/,/g, ''));
 
